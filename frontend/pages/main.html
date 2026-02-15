@@ -1,0 +1,1147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BraineX</title>
+    <link rel="manifest" href="/manifest.json">
+    <link rel="stylesheet" href="/assets/css/design-system.css">
+    <link rel="stylesheet" href="/assets/css/skeleton.css">
+    <link rel="stylesheet" href="/assets/css/animations.css">
+    <link rel="stylesheet" href="/assets/css/components/dashboard.css">
+    <script src="/assets/js/theme.js"></script>
+    <style id="critical-css">
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #333
+        }
+
+        header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #fff;
+            padding: 1rem 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, .1)
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 2rem
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 1rem
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: .5rem
+        }
+
+        .logo-icon {
+            width: 40px;
+            height: 40px;
+            background: #fff;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 2rem
+        }
+
+        .nav-menu a {
+            color: #fff;
+            text-decoration: none
+        }
+
+        .mobile-menu-btn {
+            display: none
+        }
+
+        @media(max-width:768px) {
+            .mobile-menu-btn {
+                display: block
+            }
+
+            .nav-menu {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+                flex-direction: column;
+                padding: 2rem;
+                gap: 1rem
+            }
+        }
+
+        .hero {
+            margin-top: 80px
+        }
+    </style>
+    <link rel="stylesheet" href="/assets/css/main.css">
+    <link rel="stylesheet" href="/assets/css/enhanced-styles.css">
+    <link rel="stylesheet" href="/assets/css/unified-cards.css">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <meta name="description"
+        content="BraineX - Scholarships, mentorship, projects, roadmaps, and events to power your academic journey.">
+    <meta name="keywords"
+        content="scholarships, mentorship, student projects, educational roadmaps, events, mentors, opportunities">
+    <meta property="og:title" content="BraineX">
+    <meta property="og:description"
+        content="Your gateway to scholarships, mentorship, projects, and global opportunities.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://BraineX.example/main.html">
+    <meta property="og:image" content="https://BraineX.example/og-image.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="BraineX">
+    <meta name="twitter:description" content="Discover scholarships, mentors, projects, and roadmaps.">
+    <meta name="twitter:image" content="https://BraineX.example/og-image.png">
+    <link rel="preload" as="style" href="/assets/css/main.css">
+    <link rel="prefetch" href="/scholarships">
+    <link rel="prefetch" href="/mentors">
+    <link rel="prefetch" href="/programs">
+
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <nav role="navigation" aria-label="Primary navigation">
+                <div class="logo">
+                    <img src="/assets/images/logo.png" alt="BraineX Logo" class="logo-img">
+                    <span>BraineX</span>
+                </div>
+                <button class="mobile-menu-btn" type="button" aria-label="Toggle navigation menu"
+                    aria-controls="navMenu" aria-expanded="false">☰</button>
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="/" class="active">Home</a></li>
+                    <li><a href="/pages/fields.html">Fields</a></li>
+                    <li><a href="/pages/universities.html">Universities</a></li>
+                    <li><a href="/pages/programs.html">Programs</a></li>
+                    <li><a href="/pages/scholarships.html">Scholarships</a></li>
+                    <li><a href="/pages/projects.html">Projects</a></li>
+                    <li><a href="/pages/roadmaps.html">Roadmaps</a></li>
+                    <li><a href="/pages/mentors.html">Mentors</a></li>
+                    <li><a href="/pages/events.html">Events</a></li>
+                    <li><a href="/pages/notion.html">My Goals</a></li>
+                    <li><a href="/pages/about.html">About</a></li>
+                </ul>
+                <div class="auth-buttons">
+                    <a href="#login" class="btn btn-outline">Log In</a>
+                    <a href="#signup" class="btn btn-primary">Sign Up</a>
+                </div>
+                <button class="theme-toggle" type="button" aria-label="Toggle color theme" aria-pressed="false">🌙
+                    Dark</button>
+            </nav>
+        </div>
+    </header>
+    <main id="mainContent" role="main">
+
+        <!-- Hero Section -->
+        <section class="hero" id="home">
+            <div class="container">
+
+                <h1>Your Gateway to Scholarships, Mentorship & Global Opportunities</h1>
+                <p>Access scholarships, launch projects, follow roadmaps, get mentorship, and shape your future with our
+                    ecosystem.</p>
+                <a href="#signup" class="btn btn-primary" style="font-size: 1.2rem; 
+            padding: 1rem 3rem;">Get Started</a>
+            </div>
+        </section>
+
+        <!-- Categories -->
+        <section class="categories">
+            <div class="container">
+                <div class="category-grid">
+                    <a href="/scholarships" class="category-card" style="text-decoration: none; color: inherit;">
+                        <div class="category-icon">🔍</div>
+                        <h3>Find Scholarship</h3>
+                        <p>Discover scholarships tailored to your field and goals</p>
+                    </a>
+                    <a href="/fields" class="category-card" style="text-decoration: none; color: inherit;">
+                        <div class="category-icon">🌍</div>
+                        <h3>Explore Fields</h3>
+                        <p>Browse through diverse academic disciplines and career paths</p>
+                    </a>
+                    <a href="/projects" class="category-card" style="text-decoration: none; color: inherit;">
+                        <div class="category-icon">🚀</div>
+                        <h3>Start a Project</h3>
+                        <p>Launch your own research or innovative project</p>
+                    </a>
+                    <a href="/roadmaps" class="category-card" style="text-decoration: none; color: inherit;">
+                        <div class="category-icon">🗺️</div>
+                        <h3>Follow a Roadmap</h3>
+                        <p>Step-by-step guides to achieve your academic goals</p>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Benefits -->
+        <section class="benefits">
+            <div class="container">
+                <h2>Why Choose Our Platform</h2>
+                <div class="features-grid">
+                    <div class="interactive-card">
+                        <div class="card-icon-wrapper">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <h3>Scholarships</h3>
+                        <p>Find financial aid tailored to your profile. Access thousands of opportunities from global
+                            institutions.</p>
+                        <a href="/scholarships" class="card-link">Learn more <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                    <div class="interactive-card">
+                        <div class="card-icon-wrapper">
+                            <i class="fas fa-map-marked-alt"></i>
+                        </div>
+                        <h3>Roadmaps</h3>
+                        <p>Step-by-step guides for high school success. Navigate your academic journey with clarity.</p>
+                        <a href="/roadmaps" class="card-link">Learn more <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                    <div class="interactive-card">
+                        <div class="card-icon-wrapper">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <h3>Mentorship</h3>
+                        <p>Connect with peers and experienced mentors. Get guidance from those who have walked the path.
+                        </p>
+                        <a href="/mentors" class="card-link">Learn more <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Tracks -->
+        <section class="tracks">
+            <div class="container">
+                <h2>Featured Tracks</h2>
+                <div class="slider-container">
+                    <div class="slider" id="tracksSlider">
+                        <div class="track-card" data-id="ai-data-science">
+                            <h3>🤖 Artificial Intelligence & Data Science</h3>
+                            <p>Explore the cutting-edge world of AI, machine learning, and data analytics</p>
+                            <div class="track-stats">
+                                <div class="stat"><span>Scholarships:</span><strong>152</strong></div>
+                                <div class="stat"><span>Roadmaps:</span><strong>18</strong></div>
+                                <div class="stat"><span>Mentors:</span><strong>6</strong></div>
+                            </div>
+                            <button class="btn-explore" onclick="openTrackDetail('ai-data-science')">Explore
+                                Track</button>
+                        </div>
+                        <div class="track-card" data-id="biotech">
+                            <h3>🧬 Biotech & Health Sciences</h3>
+                            <p>Advance medical research and healthcare innovation</p>
+                            <div class="track-stats">
+                                <div class="stat"><span>Scholarships:</span><strong>128</strong></div>
+                                <div class="stat"><span>Roadmaps:</span><strong>15</strong></div>
+                                <div class="stat"><span>Mentors:</span><strong>8</strong></div>
+                            </div>
+                            <button class="btn-explore" onclick="openTrackDetail('biotech')">Explore Track</button>
+                        </div>
+                        <div class="track-card" data-id="climate-tech">
+                            <h3>🌱 Climate Tech & Sustainability</h3>
+                            <p>Build solutions for environmental challenges and sustainable future</p>
+                            <div class="track-stats">
+                                <div class="stat"><span>Scholarships:</span><strong>94</strong></div>
+                                <div class="stat"><span>Roadmaps:</span><strong>12</strong></div>
+                                <div class="stat"><span>Mentors:</span><strong>5</strong></div>
+                            </div>
+                            <button class="btn-explore" onclick="openTrackDetail('climate-tech')">Explore Track</button>
+                        </div>
+                        <div class="track-card" data-id="engineering">
+                            <h3>⚙️ Engineering & Robotics</h3>
+                            <p>Design and build the technologies of tomorrow</p>
+                            <div class="track-stats">
+                                <div class="stat"><span>Scholarships:</span><strong>176</strong></div>
+                                <div class="stat"><span>Roadmaps:</span><strong>22</strong></div>
+                                <div class="stat"><span>Mentors:</span><strong>10</strong></div>
+                            </div>
+                            <button class="btn-explore" onclick="openTrackDetail('engineering')">Explore Track</button>
+                        </div>
+                        <div class="track-card" data-id="entrepreneurship">
+                            <h3>💡 Entrepreneurship & Innovation</h3>
+                            <p>Turn your ideas into impactful startups and ventures</p>
+                            <div class="track-stats">
+                                <div class="stat"><span>Scholarships:</span><strong>86</strong></div>
+                                <div class="stat"><span>Roadmaps:</span><strong>14</strong></div>
+                                <div class="stat"><span>Mentors:</span><strong>12</strong></div>
+                            </div>
+                            <button class="btn-explore" onclick="openTrackDetail('entrepreneurship')">Explore
+                                Track</button>
+                        </div>
+                        <div class="track-card" data-id="social-impact">
+                            <h3>🌍 Social Impact & Global Policy</h3>
+                            <p>Drive change in diplomacy, human rights, and sustainable development</p>
+                            <div class="track-stats">
+                                <div class="stat"><span>Scholarships:</span><strong>112</strong></div>
+                                <div class="stat"><span>Roadmaps:</span><strong>16</strong></div>
+                                <div class="stat"><span>Mentors:</span><strong>7</strong></div>
+                            </div>
+                            <button class="btn-explore" onclick="openTrackDetail('social-impact')">Explore
+                                Track</button>
+                        </div>
+                        <div class="track-card" data-id="creative-tech">
+                            <h3>🎨 Digital Media, Design & Creative Tech</h3>
+                            <p>Create immersive experiences and digital art</p>
+                            <div class="track-stats">
+                                <div class="stat"><span>Scholarships:</span><strong>68</strong></div>
+                                <div class="stat"><span>Roadmaps:</span><strong>10</strong></div>
+                                <div class="stat"><span>Mentors:</span><strong>9</strong></div>
+                            </div>
+                            <button class="btn-explore" onclick="openTrackDetail('creative-tech')">Explore
+                                Track</button>
+                        </div>
+                        <div class="track-card" data-id="economics">
+                            <h3>💰 Economics & Finance</h3>
+                            <p>Master financial systems and economic policy</p>
+                            <div class="track-stats">
+                                <div class="stat"><span>Scholarships:</span><strong>142</strong></div>
+                                <div class="stat"><span>Roadmaps:</span><strong>19</strong></div>
+                                <div class="stat"><span>Mentors:</span><strong>11</strong></div>
+                            </div>
+                            <button class="btn-explore" onclick="openTrackDetail('economics')">Explore Track</button>
+                        </div>
+                    </div>
+                    <div class="slider-controls">
+                        <button class="slider-btn btn-prev" aria-label="Scroll tracks left"
+                            aria-controls="tracksSlider">‹</button>
+                        <button class="slider-btn btn-next" aria-label="Scroll tracks right"
+                            aria-controls="tracksSlider">›</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Track Detail Modal -->
+        <div id="trackModal" class="modal">
+            <div class="modal-content" style="max-width: 700px;">
+                <button class="close-modal" onclick="window.closeModal()">&times;</button>
+                <div id="trackModalContent">
+                    <!-- Content populated by JavaScript -->
+                </div>
+            </div>
+        </div>
+
+        <!-- Login Modal -->
+        <div id="loginModal" class="modal">
+            <div class="modal-content">
+                <button class="close-modal">&times;</button>
+                <h2>Welcome Back</h2>
+                <p>Sign in to access your personalized dashboard</p>
+                <div id="loginSuccess" class="success-message">
+                    <strong>Success!</strong> You have been logged in successfully.
+                </div>
+                <form id="loginForm" class="auth-form">
+                    <div class="form-group">
+                        <label for="loginEmail">Email Address</label>
+                        <input type="email" id="loginEmail" name="email" required>
+                        <div class="error-message" id="emailError">Please enter a valid email address</div>
+                    </div>
+                    <div class="form-group">
+                        <label for="loginPassword">Password</label>
+                        <div class="password-toggle">
+                            <input type="password" id="loginPassword" name="password" required>
+                            <button type="button" class="btn-toggle-password" data-target="loginPassword">👁️</button>
+                        </div>
+                        <div class="error-message" id="passwordError">Password must be at least 6 characters</div>
+                    </div>
+                    <div class="checkbox-group">
+                        <input type="checkbox" id="rememberMe" name="remember">
+                        <label for="rememberMe">Remember me</label>
+                    </div>
+                    <button type="submit" class="btn-submit">Sign In</button>
+                </form>
+                <div class="divider">
+                    <span>or</span>
+                </div>
+                <div class="social-login">
+                    <button class="btn-social" data-provider="google">🔍</button>
+                    <button class="btn-social" data-provider="facebook">📘</button>
+                    <button class="btn-social" data-provider="linkedin">💼</button>
+                </div>
+            </div>
+            <div class="form-footer">
+                <p>Don't have an account? <a href="#" class="js-switch-signup">Sign up here</a></p>
+                <p><a href="#" class="js-forgot-password">Forgot your password?</a></p>
+            </div>
+        </div>
+        </div>
+
+        </div>
+
+        <!-- Signup Modal -->
+        <div id="signupModal" class="modal">
+            <div class="modal-content">
+                <button class="close-modal">&times;</button>
+                <h2>Join BraineX</h2>
+                <p>Create your account and unlock endless opportunities</p>
+                <div id="signupSuccess" class="success-message">
+                    <strong>Success!</strong> Your account has been created successfully.
+                </div>
+                <form id="signupForm" class="auth-form">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="firstName">First Name</label>
+                            <input type="text" id="firstName" name="firstName" required>
+                            <div class="error-message" id="firstNameError">First name is required</div>
+                        </div>
+                        <div class="form-group">
+                            <label for="lastName">Last Name</label>
+                            <input type="text" id="lastName" name="lastName" required>
+                            <div class="error-message" id="lastNameError">Last name is required</div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="signupEmail">Email Address</label>
+                        <input type="email" id="signupEmail" name="email" required>
+                        <div class="error-message" id="signupEmailError">Please enter a valid email address</div>
+                    </div>
+                    <div class="form-group">
+                        <label for="signupPassword">Password</label>
+                        <div class="password-toggle">
+                            <input type="password" id="signupPassword" name="password" required>
+                            <button type="button" class="btn-toggle-password" data-target="signupPassword">👁️</button>
+                        </div>
+                        <div class="error-message" id="signupPasswordError">Password must be at least 6 characters</div>
+                    </div>
+                    <div class="form-group">
+                        <label for="confirmPassword">Confirm Password</label>
+                        <div class="password-toggle">
+                            <input type="password" id="confirmPassword" name="confirmPassword" required>
+                            <button type="button" class="btn-toggle-password" data-target="confirmPassword">👁️</button>
+                        </div>
+                        <div class="error-message" id="confirmPasswordError">Passwords do not match</div>
+                    </div>
+                    <div class="form-group">
+                        <label for="fieldOfInterest">Field of Interest</label>
+                        <select id="fieldOfInterest" name="field" required>
+                            <option value="">Select your field</option>
+                            <option value="ai">Artificial Intelligence</option>
+                            <option value="biotech">Biotech & Health Sciences</option>
+                            <option value="climate">Climate Tech</option>
+                            <option value="engineering">Engineering</option>
+                            <option value="entrepreneurship">Entrepreneurship</option>
+                            <option value="social">Social Impact</option>
+                            <option value="media">Digital Media</option>
+                            <option value="economics">Economics & Finance</option>
+                        </select>
+                        <div class="error-message" id="fieldError">Please select your field of interest</div>
+                    </div>
+                    <div class="checkbox-group">
+                        <input type="checkbox" id="agreeTerms" name="terms" required>
+                        <label for="agreeTerms">I agree to the <a href="#terms">Terms of Service</a> and <a
+                                href="#privacy">Privacy Policy</a></label>
+                    </div>
+                    <div class="checkbox-group">
+                        <input type="checkbox" id="newsletter" name="newsletter">
+                        <label for="newsletter">Subscribe to our newsletter for updates</label>
+                    </div>
+                    <button type="submit" class="btn-submit">Create Account</button>
+                </form>
+                <div class="divider">
+                    <span>or</span>
+                </div>
+                <div class="social-login">
+                    <button class="btn-social" data-provider="google">🔍</button>
+                    <button class="btn-social" data-provider="facebook">📘</button>
+                    <button class="btn-social" data-provider="linkedin">💼</button>
+                </div>
+                <div class="form-footer">
+                    <p>Already have an account? <a href="#" class="js-switch-login">Sign in here</a></p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Track Modal -->
+        <div id="trackModal" class="modal">
+            <div class="modal-content">
+                <button class="close-modal" onclick="window.closeModal()">&times;</button>
+                <div id="trackModalContent">
+                    <!-- Dynamic Content -->
+                </div>
+            </div>
+        </div>
+
+        <!-- Scholarship Modal -->
+        <div id="scholarshipModal" class="modal">
+            <div class="modal-content">
+                <button class="close-modal" onclick="window.closeModal()">&times;</button>
+                <div id="scholarshipModalContent">
+                    <!-- Dynamic Content -->
+                </div>
+            </div>
+        </div>
+
+        <!-- About Section -->
+        <section id="about" class="about">
+            <div class="container">
+                <h2>About BraineX</h2>
+                <div class="about-card-unified"
+                    style="background: var(--card-bg); border-radius: 12px; padding: 2rem; box-shadow: var(--card-shadow); border: 1px solid var(--card-border);">
+                    <div class="about-content">
+                        <div class="about-text">
+                            <h3>Empowering Global Education</h3>
+                            <p>BraineX is the world's leading platform connecting ambitious students with life-changing
+                                educational opportunities. We bridge the gap between talent and opportunity, making
+                                quality
+                                education accessible to everyone, everywhere.</p>
+
+                            <h3 style="margin-top: 1.5rem;">Our Mission</h3>
+                            <p>To democratize access to world-class education and create a global community of learners,
+                                mentors, and innovators who are shaping the future.</p>
+
+                            <div class="stats-grid" style="margin-top: 2rem;">
+                                <div class="stat-card">
+                                    <div class="stat-number">50,000+</div>
+                                    <div class="stat-label">Active Students</div>
+                                </div>
+                                <div class="stat-card">
+                                    <div class="stat-number">2,500+</div>
+                                    <div class="stat-label">Scholarships Listed</div>
+                                </div>
+                                <div class="stat-card">
+                                    <div class="stat-number">500+</div>
+                                    <div class="stat-label">Expert Mentors</div>
+                                </div>
+                                <div class="stat-card">
+                                    <div class="stat-number">150+</div>
+                                    <div class="stat-label">Partner Universities</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Scholarships Section -->
+        <section id="scholarships" class="scholarships">
+            <div class="container">
+                <h2>Latest Scholarship Opportunities</h2>
+                <div class="scholarship-filters">
+                    <button class="filter-btn active" data-filter="all">All</button>
+                    <button class="filter-btn" data-filter="undergraduate">Undergraduate</button>
+                    <button class="filter-btn" data-filter="graduate">Graduate</button>
+                    <button class="filter-btn" data-filter="international">International</button>
+                    <button class="filter-btn" data-filter="research">Research</button>
+                </div>
+                <div class="scholarship-grid">
+                    <div class="scholarship-card" data-category="undergraduate">
+                        <div class="scholarship-header">
+                            <h3>Gates Cambridge Scholarship</h3>
+                            <span class="scholarship-amount">Full Funding</span>
+                        </div>
+                        <div class="scholarship-details">
+                            <p><strong>University:</strong> University of Cambridge</p>
+                            <p><strong>Field:</strong> All Fields</p>
+                            <p><strong>Deadline:</strong> December 15, 2024</p>
+                            <p><strong>Level:</strong> Graduate</p>
+                        </div>
+                        <p class="scholarship-description">Prestigious scholarship for outstanding applicants from
+                            outside the UK to pursue graduate study at Cambridge.</p>
+                        <div class="scholarship-tags">
+                            <span class="tag">Full Funding</span>
+                            <span class="tag">International</span>
+                            <span class="tag">Graduate</span>
+                        </div>
+                        <a href="./scholarships.html?id=gates-cambridge" class="btn-apply"
+                            style="text-decoration: none;">View Details</a>
+                    </div>
+
+                    <div class="scholarship-card" data-category="research">
+                        <div class="scholarship-header">
+                            <h3>NSF Graduate Research Fellowship</h3>
+                            <span class="scholarship-amount">$37,000/year</span>
+                        </div>
+                        <div class="scholarship-details">
+                            <p><strong>Organization:</strong> National Science Foundation</p>
+                            <p><strong>Field:</strong> STEM Fields</p>
+                            <p><strong>Deadline:</strong> October 25, 2024</p>
+                            <p><strong>Level:</strong> Graduate</p>
+                        </div>
+                        <p class="scholarship-description">Support for graduate research in science, technology,
+                            engineering, and mathematics.</p>
+                        <div class="scholarship-tags">
+                            <span class="tag">STEM</span>
+                            <span class="tag">Research</span>
+                            <span class="tag">US Citizens</span>
+                        </div>
+                        <a href="./scholarships.html?id=gates-cambridge" class="btn-apply"
+                            style="text-decoration: none; text-align: center; display: inline-block;">View Details</a>
+                    </div>
+
+                    <div class="scholarship-card" data-category="undergraduate">
+                        <div class="scholarship-header">
+                            <h3>Rhodes Scholarship</h3>
+                            <span class="scholarship-amount">Full Funding</span>
+                        </div>
+                        <div class="scholarship-details">
+                            <p><strong>University:</strong> University of Oxford</p>
+                            <p><strong>Field:</strong> All Fields</p>
+                            <p><strong>Deadline:</strong> October 6, 2024</p>
+                            <p><strong>Level:</strong> Graduate</p>
+                        </div>
+                        <p class="scholarship-description">The world's oldest graduate scholarship program, enabling
+                            exceptional young people to study at Oxford.</p>
+                        <div class="scholarship-tags">
+                            <span class="tag">Full Funding</span>
+                            <span class="tag">International</span>
+                            <span class="tag">Leadership</span>
+                        </div>
+                        <a href="./scholarships.html?id=gates-cambridge" class="btn-apply"
+                            style="text-decoration: none; text-align: center; display: inline-block;">View Details</a>
+                    </div>
+
+                    <div class="scholarship-card" data-category="international">
+                        <div class="scholarship-header">
+                            <h3>Erasmus+ Master's Programme</h3>
+                            <span class="scholarship-amount">€1,400/month</span>
+                        </div>
+                        <div class="scholarship-details">
+                            <p><strong>Region:</strong> European Union</p>
+                            <p><strong>Field:</strong> Various Fields</p>
+                            <p><strong>Deadline:</strong> January 15, 2025</p>
+                            <p><strong>Level:</strong> Master's</p>
+                        </div>
+                        <p class="scholarship-description">Joint master's programmes between universities in different
+                            European countries.</p>
+                        <div class="scholarship-tags">
+                            <span class="tag">Europe</span>
+                            <span class="tag">Master's</span>
+                            <span class="tag">Mobility</span>
+                        </div>
+                        <a href="./scholarships.html?id=gates-cambridge" class="btn-apply"
+                            style="text-decoration: none; text-align: center; display: inline-block;">View Details</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Mentors Section -->
+        <section id="mentors" class="mentors-section">
+            <div class="container">
+                <h2>Connect with Expert Mentors</h2>
+                <p class="section-subtitle">Get guidance from industry professionals and successful alumni</p>
+
+                <div class="mentors-grid">
+                    <div class="mentor-card" style="background: var(--card-bg); color: var(--text-primary);">
+                        <div class="mentor-avatar">
+                            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='50' fill='%23667eea'/%3E%3Ctext x='50' y='60' text-anchor='middle' fill='white' font-size='40' font-family='Arial'%3EDS%3C/text%3E%3C/svg%3E"
+                                alt="Dr. Sarah Chen">
+                        </div>
+                        <h3>Dr. Sarah Chen</h3>
+                        <p class="mentor-title">AI Research Scientist</p>
+                        <p class="mentor-company">Google DeepMind</p>
+                        <div class="mentor-expertise">
+                            <span>Machine Learning</span>
+                            <span>PhD Applications</span>
+                            <span>Research</span>
+                        </div>
+                        <p class="mentor-bio">Former Stanford PhD, now leading AI research. Helps students with research
+                            applications and career planning in tech.</p>
+                        <div class="mentor-stats">
+                            <div><strong>50+</strong> Mentees</div>
+                            <div><strong>4.9★</strong> Rating</div>
+                        </div>
+                        <a href="/mentors" class="btn-connect" style="text-decoration: none;">Connect</a>
+                    </div>
+
+                    <div class="mentor-card" style="background: var(--card-bg); color: var(--text-primary);">
+                        <div class="mentor-avatar">
+                            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='50' fill='%23667eea'/%3E%3Ctext x='50' y='60' text-anchor='middle' fill='white' font-size='40' font-family='Arial'%3EMJ%3C/text%3E%3C/svg%3E"
+                                alt="Michael Johnson">
+                        </div>
+                        <h3>Michael Johnson</h3>
+                        <p class="mentor-title">Investment Banking VP</p>
+                        <p class="mentor-company">Goldman Sachs</p>
+                        <div class="mentor-expertise">
+                            <span>Finance</span>
+                            <span>MBA Applications</span>
+                            <span>Banking</span>
+                        </div>
+                        <p class="mentor-bio">Wharton MBA with 10 years in investment banking. Specializes in finance
+                            career paths and business school applications.</p>
+                        <div class="mentor-stats">
+                            <div><strong>75+</strong> Mentees</div>
+                            <div><strong>4.8★</strong> Rating</div>
+                        </div>
+                        <a href="/mentors" class="btn-connect" style="text-decoration: none;">Connect</a>
+                    </div>
+
+                    <div class="mentor-card" style="background: var(--card-bg); color: var(--text-primary);">
+                        <div class="mentor-avatar">
+                            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='50' fill='%23667eea'/%3E%3Ctext x='50' y='60' text-anchor='middle' fill='white' font-size='40' font-family='Arial'%3EAP%3C/text%3E%3C/svg%3E"
+                                alt="Dr. Aisha Patel">
+                        </div>
+                        <h3>Dr. Aisha Patel</h3>
+                        <p class="mentor-title">Medical Researcher</p>
+                        <p class="mentor-company">Johns Hopkins</p>
+                        <div class="mentor-expertise">
+                            <span>Medicine</span>
+                            <span>Research</span>
+                            <span>MD/PhD</span>
+                        </div>
+                        <p class="mentor-bio">MD/PhD from Harvard, now conducting groundbreaking medical research.
+                            Guides pre-med students through the application process.</p>
+                        <div class="mentor-stats">
+                            <div><strong>60+</strong> Mentees</div>
+                            <div><strong>5.0★</strong> Rating</div>
+                        </div>
+                        <a href="/mentors" class="btn-connect" style="text-decoration: none;">Connect</a>
+                    </div>
+
+                    <div class="mentor-card" style="background: var(--card-bg); color: var(--text-primary);">
+                        <div class="mentor-avatar">
+                            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='50' fill='%23667eea'/%3E%3Ctext x='50' y='60' text-anchor='middle' fill='white' font-size='40' font-family='Arial'%3ERK%3C/text%3E%3C/svg%3E"
+                                alt="Robert Kim">
+                        </div>
+                        <h3>Robert Kim</h3>
+                        <p class="mentor-title">Startup Founder</p>
+                        <p class="mentor-company">TechCorp (Acquired by Meta)</p>
+                        <div class="mentor-expertise">
+                            <span>Entrepreneurship</span>
+                            <span>Startups</span>
+                            <span>Business</span>
+                        </div>
+                        <p class="mentor-bio">Serial entrepreneur with two successful exits. Mentors students interested
+                            in starting their own companies.</p>
+                        <div class="mentor-stats">
+                            <div><strong>40+</strong> Mentees</div>
+                            <div><strong>4.9★</strong> Rating</div>
+                        </div>
+                        <a href="/mentors" class="btn-connect" style="text-decoration: none;">Connect</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Roadmaps Section -->
+        <section id="roadmaps" class="roadmaps">
+            <div class="container">
+                <h2>🗺️ Step-by-Step Roadmaps</h2>
+                <p class="section-subtitle"
+                    style="text-align: center; font-size: 1.1rem; color: #64748b; margin-bottom: 2.5rem;">Follow proven
+                    pathways to achieve your academic and career goals</p>
+
+                <div class="roadmap-tabs" role="tablist" aria-label="Roadmap categories">
+                    <button class="roadmap-tab active" data-tab="undergrad" role="tab" aria-selected="true"
+                        aria-controls="undergrad-roadmap" id="tab-undergrad">
+                        <span class="tab-icon">🎓</span>
+                        <span class="tab-label">Undergraduate</span>
+                    </button>
+                    <button class="roadmap-tab" data-tab="graduate" role="tab" aria-selected="false"
+                        aria-controls="graduate-roadmap" id="tab-graduate">
+                        <span class="tab-icon">🎯</span>
+                        <span class="tab-label">Graduate School</span>
+                    </button>
+                    <button class="roadmap-tab" data-tab="career" role="tab" aria-selected="false"
+                        aria-controls="career-roadmap" id="tab-career">
+                        <span class="tab-icon">💼</span>
+                        <span class="tab-label">Career Switch</span>
+                    </button>
+                </div>
+
+                <div class="roadmap-content active" id="undergrad-roadmap" role="tabpanel"
+                    aria-labelledby="tab-undergrad">
+                    <div class="roadmap-timeline">
+                        <div class="timeline-item">
+                            <div class="timeline-marker">1</div>
+                            <div class="timeline-content">
+                                <h3>High School Preparation (9th-12th Grade)</h3>
+                                <ul>
+                                    <li>Maintain strong GPA (3.5+)</li>
+                                    <li>Take challenging courses (AP, IB, Honors)</li>
+                                    <li>Develop extracurricular activities</li>
+                                    <li>Build leadership experience</li>
+                                    <li>Start standardized test prep (SAT/ACT)</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-marker">2</div>
+                            <div class="timeline-content">
+                                <h3>College Research & Applications (11th-12th Grade)</h3>
+                                <ul>
+                                    <li>Research universities and programs</li>
+                                    <li>Take standardized tests</li>
+                                    <li>Write compelling personal essays</li>
+                                    <li>Secure strong recommendation letters</li>
+                                    <li>Apply for scholarships</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-marker">3</div>
+                            <div class="timeline-content">
+                                <h3>College Success (Freshman-Senior Year)</h3>
+                                <ul>
+                                    <li>Excel academically (3.5+ GPA)</li>
+                                    <li>Build relationships with professors</li>
+                                    <li>Gain research or internship experience</li>
+                                    <li>Develop professional network</li>
+                                    <li>Prepare for post-graduation plans</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-marker">4</div>
+                            <div class="timeline-content">
+                                <h3>Post-Graduation Planning (Junior-Senior Year)</h3>
+                                <ul>
+                                    <li>Explore career paths or graduate school options</li>
+                                    <li>Complete internships in target field</li>
+                                    <li>Network with alumni and professionals</li>
+                                    <li>Prepare job applications or grad school tests</li>
+                                    <li>Build a professional portfolio or CV</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="roadmap-stats">
+                        <div class="stat-card">
+                            <div class="stat-number">4</div>
+                            <div class="stat-label">Key Phases</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-number">8-10</div>
+                            <div class="stat-label">Years Timeline</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-number">85%</div>
+                            <div class="stat-label">Success Rate</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="roadmap-content" id="graduate-roadmap" role="tabpanel" aria-labelledby="tab-graduate">
+                    <div class="roadmap-timeline">
+                        <div class="timeline-item">
+                            <div class="timeline-marker">1</div>
+                            <div class="timeline-content">
+                                <h3>Preparation Phase (1-2 years before)</h3>
+                                <ul>
+                                    <li>Research programs and faculty</li>
+                                    <li>Strengthen academic credentials</li>
+                                    <li>Gain research experience</li>
+                                    <li>Prepare for standardized tests (GRE, GMAT, etc.)</li>
+                                    <li>Build professional relationships</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-marker">2</div>
+                            <div class="timeline-content">
+                                <h3>Application Phase (6-12 months before)</h3>
+                                <ul>
+                                    <li>Write compelling statement of purpose</li>
+                                    <li>Secure strong recommendation letters</li>
+                                    <li>Complete applications thoroughly</li>
+                                    <li>Apply for fellowships and funding</li>
+                                    <li>Prepare for interviews</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-marker">3</div>
+                            <div class="timeline-content">
+                                <h3>Success in Graduate School</h3>
+                                <ul>
+                                    <li>Excel in coursework and research</li>
+                                    <li>Publish research findings</li>
+                                    <li>Attend conferences and network</li>
+                                    <li>Develop teaching and leadership skills</li>
+                                    <li>Plan for career after graduation</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-marker">4</div>
+                            <div class="timeline-content">
+                                <h3>Career Launch & Beyond</h3>
+                                <ul>
+                                    <li>Defend thesis/dissertation successfully</li>
+                                    <li>Apply for postdoc or industry positions</li>
+                                    <li>Leverage alumni network for opportunities</li>
+                                    <li>Continue publishing and presenting research</li>
+                                    <li>Establish yourself as an expert in your field</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="roadmap-stats">
+                        <div class="stat-card">
+                            <div class="stat-number">4</div>
+                            <div class="stat-label">Key Phases</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-number">2-6</div>
+                            <div class="stat-label">Years Duration</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-number">92%</div>
+                            <div class="stat-label">Completion Rate</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="roadmap-content" id="career-roadmap" role="tabpanel" aria-labelledby="tab-career">
+                    <div class="roadmap-timeline">
+                        <div class="timeline-item">
+                            <div class="timeline-marker">1</div>
+                            <div class="timeline-content">
+                                <h3>Self-Assessment & Planning (Months 1-3)</h3>
+                                <ul>
+                                    <li>Identify transferable skills</li>
+                                    <li>Research target industries</li>
+                                    <li>Set clear career goals</li>
+                                    <li>Create learning plan</li>
+                                    <li>Build financial runway</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-marker">2</div>
+                            <div class="timeline-content">
+                                <h3>Skill Development & Education (Months 3-12)</h3>
+                                <ul>
+                                    <li>Acquire new skills through courses</li>
+                                    <li>Gain practical experience</li>
+                                    <li>Build portfolio projects</li>
+                                    <li>Network with industry professionals</li>
+                                    <li>Consider additional education/certifications</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-marker">3</div>
+                            <div class="timeline-content">
+                                <h3>Job Search & Transition (Months 9-18)</h3>
+                                <ul>
+                                    <li>Update resume and LinkedIn profile</li>
+                                    <li>Apply strategically to target roles</li>
+                                    <li>Prepare for interviews in new field</li>
+                                    <li>Negotiate offers and transitions</li>
+                                    <li>Continue learning in your new career</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="roadmap-stats">
+                        <div class="stat-card">
+                            <div class="stat-number">3</div>
+                            <div class="stat-label">Key Phases</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-number">12-18</div>
+                            <div class="stat-label">Months Avg</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-number">78%</div>
+                            <div class="stat-label">Success Rate</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section id="faq" class="faq">
+            <div class="container">
+                <h2>Frequently Asked Questions</h2>
+                <div class="faq-grid">
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3>How do I find the right scholarship for me?</h3>
+                            <span class="faq-toggle">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Our advanced matching algorithm analyzes your academic background, interests, and goals
+                                to recommend personalized scholarship opportunities. You can also use our search filters
+                                to find scholarships by field, deadline, and program type.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3>Is BraineX free to use?</h3>
+                            <span class="faq-toggle">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Yes! BraineX is completely free for students. We believe in democratizing access to
+                                education. Premium features for enhanced mentorship and priority support are available
+                                for those who want additional benefits.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3>How does mentor matching work?</h3>
+                            <span class="faq-toggle">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>We match you with mentors based on your field of interest, career goals, and learning
+                                style. Our mentors are industry professionals and successful alumni who volunteer their
+                                time to guide the next generation.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3>Can I access scholarships from any country?</h3>
+                            <span class="faq-toggle">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Absolutely! We feature scholarships from universities and organizations worldwide. Our
+                                database includes opportunities for domestic and international students across all
+                                continents.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3>What support do you provide for applications?</h3>
+                            <span class="faq-toggle">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>We provide comprehensive application support including essay review, interview
+                                preparation, document guidance, and deadline tracking. Our mentors and resources help
+                                you put your best foot forward.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3>How often is the scholarship database updated?</h3>
+                            <span class="faq-toggle">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Our scholarship database is updated in real-time through direct API connections with
+                                universities and organizations. New opportunities are added daily, and expired ones are
+                                automatically removed.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+    </main>
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <a href="#home">Home</a>
+                    <a href="#fields">Fields</a>
+                    <a href="#scholarships">Scholarships</a>
+                    <a href="#roadmaps">Roadmaps</a>
+                </div>
+                <div class="footer-section">
+                    <h4>Resources</h4>
+                    <a href="#blog">Blog</a>
+                    <a href="#events">Events</a>
+                    <a href="#mentors">Find a Mentor</a>
+                    <a href="#faq">FAQ</a>
+                </div>
+                <div class="footer-section">
+                    <h4>About</h4>
+                    <a href="#about">About Us</a>
+                    <a href="#partners">Partners</a>
+                    <a href="#contact">Contact</a>
+                </div>
+                <div class="footer-section">
+                    <h4>Connect</h4>
+                    <a href="#">Twitter</a>
+                    <a href="#">LinkedIn</a>
+                    <a href="#">Instagram</a>
+                </div>
+            </div>
+            <p>&copy; 2025 BraineX. All rights reserved.</p>
+        </div>
+    </footer>
+    <script defer src="/assets/js/auth-api.js?v=hotfix.1"></script>
+    <script defer src="/assets/js/buttonStateEngine.js?v=hotfix.1"></script>
+    <script defer src="/assets/js/global.js"></script>
+    <!-- Make openTrackDetail available before ES module loads -->
+    <script>
+        window.openTrackDetail = function (trackId) {
+            const trackData = {
+                'ai-data-science': { name: 'Artificial Intelligence & Data Science', icon: '🤖', description: 'Explore the cutting-edge world of AI, machine learning, and data analytics.', scholarshipsCount: 152, roadmapsCount: 18, mentorsCount: 6, skills: ['Machine Learning', 'Deep Learning', 'Python', 'TensorFlow'], careers: ['AI Engineer', 'Data Scientist', 'ML Researcher'] },
+                'biotech': { name: 'Biotech & Health Sciences', icon: '🧬', description: 'Advance medical research and healthcare innovation.', scholarshipsCount: 128, roadmapsCount: 15, mentorsCount: 8, skills: ['Molecular Biology', 'Genetics', 'Bioinformatics'], careers: ['Biotech Researcher', 'Clinical Scientist'] },
+                'climate-tech': { name: 'Climate Tech & Sustainability', icon: '🌱', description: 'Build solutions for environmental challenges.', scholarshipsCount: 94, roadmapsCount: 12, mentorsCount: 5, skills: ['Environmental Science', 'Renewable Energy'], careers: ['Sustainability Consultant', 'Climate Scientist'] },
+                'engineering': { name: 'Engineering & Robotics', icon: '⚙️', description: 'Design and build the technologies of tomorrow.', scholarshipsCount: 176, roadmapsCount: 22, mentorsCount: 10, skills: ['Mechanical Design', 'Electronics', 'Control Systems'], careers: ['Robotics Engineer', 'Mechanical Engineer'] },
+                'entrepreneurship': { name: 'Entrepreneurship & Innovation', icon: '💡', description: 'Turn your ideas into impactful startups.', scholarshipsCount: 86, roadmapsCount: 14, mentorsCount: 12, skills: ['Business Strategy', 'Fundraising', 'Leadership'], careers: ['Startup Founder', 'Product Manager'] },
+                'social-impact': { name: 'Social Impact & Global Policy', icon: '🌍', description: 'Drive change in diplomacy and human rights.', scholarshipsCount: 112, roadmapsCount: 16, mentorsCount: 7, skills: ['Policy Analysis', 'International Relations'], careers: ['Policy Analyst', 'NGO Director'] },
+                'creative-tech': { name: 'Digital Media & Creative Tech', icon: '🎨', description: 'Create immersive experiences and digital art.', scholarshipsCount: 68, roadmapsCount: 10, mentorsCount: 9, skills: ['UI/UX Design', 'Motion Graphics'], careers: ['UX Designer', 'Creative Director'] },
+                'economics': { name: 'Economics & Finance', icon: '💰', description: 'Master financial systems and economic policy.', scholarshipsCount: 142, roadmapsCount: 19, mentorsCount: 11, skills: ['Financial Analysis', 'Econometrics'], careers: ['Investment Banker', 'Economist'] }
+            };
+            const track = trackData[trackId];
+            if (!track) { console.warn('Track not found:', trackId); return; }
+
+            const modal = document.getElementById('trackModal');
+            const content = document.getElementById('trackModalContent');
+            if (!modal || !content) { console.error('Modal not found'); return; }
+
+            content.innerHTML = '<h2>' + track.icon + ' ' + track.name + '</h2>' +
+                '<div class="modal-body">' +
+                '<p style="font-size:1.1rem;color:var(--text-secondary);margin-bottom:1.5rem;">' + track.description + '</p>' +
+                '<div style="display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin-bottom:1.5rem;">' +
+                '<div style="text-align:center;padding:1rem;background:var(--bg-secondary,#f3f4f6);border-radius:8px;"><span style="display:block;font-size:1.5rem;font-weight:700;color:var(--primary-color,#667eea);">' + track.scholarshipsCount + '</span><span style="font-size:0.875rem;">Scholarships</span></div>' +
+                '<div style="text-align:center;padding:1rem;background:var(--bg-secondary,#f3f4f6);border-radius:8px;"><span style="display:block;font-size:1.5rem;font-weight:700;color:var(--primary-color,#667eea);">' + track.roadmapsCount + '</span><span style="font-size:0.875rem;">Roadmaps</span></div>' +
+                '<div style="text-align:center;padding:1rem;background:var(--bg-secondary,#f3f4f6);border-radius:8px;"><span style="display:block;font-size:1.5rem;font-weight:700;color:var(--primary-color,#667eea);">' + track.mentorsCount + '</span><span style="font-size:0.875rem;">Mentors</span></div>' +
+                '</div>' +
+                '<div style="margin-bottom:1.5rem;"><h4 style="margin-bottom:0.75rem;">Key Skills</h4><div style="display:flex;flex-wrap:wrap;gap:0.5rem;">' + track.skills.map(function (s) { return '<span style="padding:0.25rem 0.75rem;background:linear-gradient(135deg,#667eea,#764ba2);color:white;border-radius:20px;font-size:0.875rem;">' + s + '</span>'; }).join('') + '</div></div>' +
+                '<div style="margin-bottom:1.5rem;"><h4 style="margin-bottom:0.75rem;">Career Paths</h4><div style="display:flex;flex-wrap:wrap;gap:0.5rem;">' + track.careers.map(function (c) { return '<span style="padding:0.25rem 0.75rem;background:var(--bg-secondary,#f3f4f6);border:1px solid var(--border-color,#e5e7eb);border-radius:20px;font-size:0.875rem;">' + c + '</span>'; }).join('') + '</div></div>' +
+                '<div style="display:flex;gap:1rem;margin-top:2rem;">' +
+                '<a href="/pages/roadmaps.html?track=' + trackId + '" style="flex:1;text-align:center;padding:0.75rem 1.5rem;background:linear-gradient(135deg,#667eea,#764ba2);color:white;border-radius:8px;text-decoration:none;font-weight:600;">View Full Roadmap</a>' +
+                '<a href="/pages/scholarships.html?field=' + trackId + '" style="flex:1;text-align:center;padding:0.75rem 1.5rem;background:var(--bg-secondary,#f3f4f6);color:var(--text-primary);border-radius:8px;text-decoration:none;font-weight:600;border:1px solid var(--border-color,#e5e7eb);">Browse Scholarships</a>' +
+                '</div></div>';
+
+            modal.style.display = 'block';
+            setTimeout(function () { modal.classList.add('show'); }, 10);
+            document.body.style.overflow = 'hidden';
+        };
+
+        window.closeModal = function () {
+            document.querySelectorAll('.modal').forEach(function (m) {
+                m.style.display = 'none';
+                m.classList.remove('show');
+            });
+            document.body.style.overflow = '';
+        };
+    </script>
+    <script type="module" src="/assets/js/main.js"></script>
+    <script defer src="/assets/js/performance.js"></script>
+    <script defer src="/assets/js/interactions.js?v=hotfix.1"></script>
+    <script defer src="/assets/js/core/interaction-handler.js"></script>
+</body>
+
+</html>

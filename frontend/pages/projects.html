@@ -1,0 +1,463 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Student Projects & Research - BraineX</title>
+    <link rel="stylesheet" href="/assets/css/design-system.css" />
+    <link rel="stylesheet" href="/assets/css/skeleton.css" />
+    <link rel="stylesheet" href="/assets/css/animations.css" />
+    <script src="/assets/js/theme.js"></script>
+    <style id="critical-css">
+      body {
+        background: var(--bg-primary);
+        color: var(--text-primary);
+      }
+
+      header {
+        background: var(--header-bg);
+      }
+    </style>
+    <link rel="stylesheet" href="/assets/css/main.css" />
+    <link rel="stylesheet" href="/assets/css/projects.css" />
+    <link rel="stylesheet" href="/assets/css/unified-cards.css" />
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+  </head>
+
+  <body>
+    <header>
+      <div class="container">
+        <nav role="navigation" aria-label="Primary navigation">
+          <div class="logo">
+            <img src="/assets/images/logo.png" alt="BraineX Logo" class="logo-img" />
+            <span>BraineX</span>
+          </div>
+          <button
+            class="mobile-menu-btn"
+            type="button"
+            aria-label="Toggle navigation menu"
+            aria-controls="navMenu"
+            aria-expanded="false"
+          >
+            ☰
+          </button>
+          <ul class="nav-menu" id="navMenu">
+            <li><a href="/">Home</a></li>
+            <li><a href="/fields">Fields</a></li>
+            <li><a href="/universities">Universities</a></li>
+            <li><a href="/programs">Programs</a></li>
+            <li><a href="/scholarships">Scholarships</a></li>
+            <li><a href="/projects" class="active">Projects</a></li>
+            <li><a href="/roadmaps">Roadmaps</a></li>
+            <li><a href="/mentors">Mentors</a></li>
+            <li><a href="/events">Events</a></li>
+            <li><a href="/notion">My Goals</a></li>
+            <li><a href="/about">About</a></li>
+          </ul>
+          <div class="auth-buttons">
+            <a href="#login" class="btn btn-outline">Log In</a>
+            <a href="#signup" class="btn btn-primary">Sign Up</a>
+          </div>
+          <button class="theme-toggle" type="button" aria-label="Toggle color theme">
+            🌙 Dark
+          </button>
+        </nav>
+      </div>
+    </header>
+    <main id="mainContent" role="main">
+      <!-- Hero Section -->
+      <section class="projects-hero">
+        <div class="container">
+          <h1>🚀 Launch Your Project</h1>
+          <p>
+            Start innovative research projects, collaborate with peers, and make an impact in your
+            field
+          </p>
+
+          <div class="hero-actions">
+            <button class="btn-hero-primary js-new-project">Start New Project</button>
+            <button class="btn-hero-secondary js-browse-projects">Browse Projects</button>
+          </div>
+
+          <div class="quick-stats">
+            <div class="stat-item">
+              <div class="stat-number">2,847</div>
+              <div class="stat-label">Active Projects</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-number">15,236</div>
+              <div class="stat-label">Students Involved</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-number">584</div>
+              <div class="stat-label">Completed Projects</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-number">$2.3M</div>
+              <div class="stat-label">Funding Raised</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Project Categories -->
+      <section class="project-categories">
+        <div class="container">
+          <h2>🎯 Project Categories</h2>
+          <div class="categories-grid">
+            <div class="category-card research-card">
+              <div class="category-icon">🔬</div>
+              <h3>Research Projects</h3>
+              <p>Scientific research and academic investigations</p>
+              <div class="category-stats">
+                <span>847 Active</span>
+                <span>15 Funding Available</span>
+              </div>
+              <button class="btn-category">Explore Research</button>
+            </div>
+
+            <div class="category-card tech-card">
+              <div class="category-icon">💻</div>
+              <h3>Tech Innovation</h3>
+              <p>Software development and technology solutions</p>
+              <div class="category-stats">
+                <span>1,234 Active</span>
+                <span>25 Funding Available</span>
+              </div>
+              <button class="btn-category">Explore Tech</button>
+            </div>
+
+            <div class="category-card social-card">
+              <div class="category-icon">🌍</div>
+              <h3>Social Impact</h3>
+              <p>Projects addressing social and environmental challenges</p>
+              <div class="category-stats">
+                <span>456 Active</span>
+                <span>12 Funding Available</span>
+              </div>
+              <button class="btn-category">Explore Social Impact</button>
+            </div>
+
+            <div class="category-card business-card">
+              <div class="category-icon">💼</div>
+              <h3>Entrepreneurship</h3>
+              <p>Startup ideas and business ventures</p>
+              <div class="category-stats">
+                <span>310 Active</span>
+                <span>8 Funding Available</span>
+              </div>
+              <button class="btn-category">Explore Startups</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Featured Projects -->
+      <section class="featured-projects">
+        <div class="container">
+          <h2>⭐ Featured Projects</h2>
+          <div class="featured-grid">
+            <div class="project-featured-card">
+              <div class="project-badge">🏆 Award Winner</div>
+              <div class="project-image">
+                <div class="project-placeholder">🧬</div>
+              </div>
+              <div class="project-content">
+                <h3>AI-Powered Drug Discovery</h3>
+                <p class="project-team">by Sarah Chen, MIT • 5 team members</p>
+                <p class="project-description">
+                  Using machine learning to accelerate the discovery of new pharmaceuticals and
+                  reduce development costs.
+                </p>
+
+                <div class="project-tags">
+                  <span class="tag">AI/ML</span>
+                  <span class="tag">Healthcare</span>
+                  <span class="tag">Research</span>
+                </div>
+
+                <div class="project-metrics">
+                  <div class="metric">
+                    <span class="metric-value">85%</span>
+                    <span class="metric-label">Progress</span>
+                  </div>
+                  <div class="metric">
+                    <span class="metric-value">$50K</span>
+                    <span class="metric-label">Funding</span>
+                  </div>
+                  <div class="metric">
+                    <span class="metric-value">12</span>
+                    <span class="metric-label">Months</span>
+                  </div>
+                </div>
+
+                <div class="project-actions">
+                  <button class="btn-project-primary">View Project</button>
+                  <button class="btn-project-secondary">Join Team</button>
+                </div>
+              </div>
+            </div>
+
+            <div class="project-featured-card">
+              <div class="project-badge">🚀 Trending</div>
+              <div class="project-image">
+                <div class="project-placeholder">🌱</div>
+              </div>
+              <div class="project-content">
+                <h3>Smart Agriculture IoT System</h3>
+                <p class="project-team">by Alex Rodriguez, Stanford • 4 team members</p>
+                <p class="project-description">
+                  IoT-based system for optimizing crop yields and reducing water usage in
+                  agriculture.
+                </p>
+
+                <div class="project-tags">
+                  <span class="tag">IoT</span>
+                  <span class="tag">Sustainability</span>
+                  <span class="tag">Engineering</span>
+                </div>
+
+                <div class="project-metrics">
+                  <div class="metric">
+                    <span class="metric-value">92%</span>
+                    <span class="metric-label">Progress</span>
+                  </div>
+                  <div class="metric">
+                    <span class="metric-value">$30K</span>
+                    <span class="metric-label">Funding</span>
+                  </div>
+                  <div class="metric">
+                    <span class="metric-value">8</span>
+                    <span class="metric-label">Months</span>
+                  </div>
+                </div>
+
+                <div class="project-actions">
+                  <button class="btn-project-primary">View Project</button>
+                  <button class="btn-project-secondary">Join Team</button>
+                </div>
+              </div>
+            </div>
+
+            <div class="project-featured-card">
+              <div class="project-badge">💡 Innovation</div>
+              <div class="project-image">
+                <div class="project-placeholder">🎓</div>
+              </div>
+              <div class="project-content">
+                <h3>Personalized Learning Platform</h3>
+                <p class="project-team">by Maya Patel, Harvard • 6 team members</p>
+                <p class="project-description">
+                  AI-driven educational platform that adapts to individual learning styles and
+                  preferences.
+                </p>
+
+                <div class="project-tags">
+                  <span class="tag">EdTech</span>
+                  <span class="tag">AI</span>
+                  <span class="tag">Education</span>
+                </div>
+
+                <div class="project-metrics">
+                  <div class="metric">
+                    <span class="metric-value">67%</span>
+                    <span class="metric-label">Progress</span>
+                  </div>
+                  <div class="metric">
+                    <span class="metric-value">$75K</span>
+                    <span class="metric-label">Funding</span>
+                  </div>
+                  <div class="metric">
+                    <span class="metric-value">18</span>
+                    <span class="metric-label">Months</span>
+                  </div>
+                </div>
+
+                <div class="project-actions">
+                  <button class="btn-project-primary">View Project</button>
+                  <button class="btn-project-secondary">Join Team</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Project Directory -->
+      <section class="project-directory" id="projectDirectory">
+        <div class="container">
+          <div class="directory-header">
+            <h2>📋 All Projects</h2>
+            <div class="directory-controls">
+              <div class="filter-controls">
+                <select class="filter-select" id="categoryFilter">
+                  <option value="">All Categories</option>
+                  <option value="research">Research</option>
+                  <option value="tech">Technology</option>
+                  <option value="social">Social Impact</option>
+                  <option value="business">Business</option>
+                  <option value="health">Healthcare</option>
+                  <option value="education">Education</option>
+                </select>
+
+                <select class="filter-select" id="skillLevelFilter">
+                  <option value="">All Skill Levels</option>
+                  <option value="beginner">Beginner Friendly</option>
+                  <option value="intermediate">Intermediate</option>
+                  <option value="advanced">Advanced</option>
+                </select>
+
+                <select class="filter-select" id="techFilter">
+                  <option value="">All Technologies</option>
+                  <option value="Python">Python</option>
+                  <option value="JavaScript">JavaScript</option>
+                  <option value="AI">AI/ML</option>
+                  <option value="React">React</option>
+                  <option value="Blockchain">Blockchain</option>
+                </select>
+
+                <select class="filter-select" id="statusFilter">
+                  <option value="">All Status</option>
+                  <option value="recruiting">Recruiting</option>
+                  <option value="active">In Progress</option>
+                  <option value="completed">Completed</option>
+                  <option value="funded">Funded</option>
+                </select>
+
+                <select class="filter-select" id="sortFilter">
+                  <option value="newest">Newest First</option>
+                  <option value="funding">Most Funded</option>
+                  <option value="popular">Most Popular</option>
+                  <option value="deadline">Ending Soon</option>
+                </select>
+              </div>
+
+              <div class="view-controls">
+                <button class="view-btn active" data-view="grid" aria-pressed="true">Grid</button>
+                <button class="view-btn" data-view="list" aria-pressed="false">List</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="projects-grid" id="projectsGrid">
+            <!-- Projects will be populated by JavaScript -->
+          </div>
+
+          <div class="load-more">
+            <button class="btn-load-more">Load More Projects</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Project Resources -->
+      <section class="project-resources">
+        <div class="container">
+          <h2>🛠️ Project Resources</h2>
+          <div class="resources-grid">
+            <div class="resource-card">
+              <div class="resource-icon">📖</div>
+              <h3>Project Guides</h3>
+              <p>Step-by-step guides for starting and managing successful projects</p>
+              <ul class="resource-list">
+                <li>Project Planning Templates</li>
+                <li>Team Management Tips</li>
+                <li>Research Methodologies</li>
+                <li>Publication Guidelines</li>
+              </ul>
+              <button class="btn-resource">Access Guides</button>
+            </div>
+
+            <div class="resource-card">
+              <div class="resource-icon">💰</div>
+              <h3>Funding Opportunities</h3>
+              <p>Find grants, competitions, and funding sources for your project</p>
+              <ul class="resource-list">
+                <li>Student Research Grants</li>
+                <li>Innovation Competitions</li>
+                <li>Crowdfunding Platforms</li>
+                <li>University Funding</li>
+              </ul>
+              <button class="btn-resource">Find Funding</button>
+            </div>
+
+            <div class="resource-card">
+              <div class="resource-icon">👥</div>
+              <h3>Collaboration Tools</h3>
+              <p>Tools and platforms to help teams work together effectively</p>
+              <ul class="resource-list">
+                <li>Project Management</li>
+                <li>Communication Tools</li>
+                <li>File Sharing</li>
+                <li>Version Control</li>
+              </ul>
+              <button class="btn-resource">Explore Tools</button>
+            </div>
+
+            <div class="resource-card">
+              <div class="resource-icon">🏆</div>
+              <h3>Showcase Opportunities</h3>
+              <p>Present your work at conferences, competitions, and exhibitions</p>
+              <ul class="resource-list">
+                <li>Student Conferences</li>
+                <li>Research Symposiums</li>
+                <li>Demo Days</li>
+                <li>Publication Venues</li>
+              </ul>
+              <button class="btn-resource">View Opportunities</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Project Creation Modal -->
+      <!-- Project Creation Modal handled by projects.js -->
+    </main>
+    <footer>
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-section">
+            <h4>Project Categories</h4>
+            <a href="#research">Research</a>
+            <a href="#tech">Technology</a>
+            <a href="#social">Social Impact</a>
+            <a href="#business">Business</a>
+          </div>
+          <div class="footer-section">
+            <h4>Resources</h4>
+            <a href="#guides">Project Guides</a>
+            <a href="#funding">Funding</a>
+            <a href="#tools">Collaboration Tools</a>
+            <a href="#showcase">Showcase</a>
+          </div>
+          <div class="footer-section">
+            <h4>Support</h4>
+            <a href="#help">Help Center</a>
+            <a href="#community">Community</a>
+            <a href="#contact">Contact</a>
+            <a href="#feedback">Feedback</a>
+          </div>
+          <div class="footer-section">
+            <h4>Connect</h4>
+            <a href="#">Discord</a>
+            <a href="#">GitHub</a>
+            <a href="#">Twitter</a>
+            <a href="#">Newsletter</a>
+          </div>
+        </div>
+        <p>&copy; 2025 BraineX. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script defer src="/assets/js/auth-api.js"></script>
+    <script defer src="/assets/js/global.js"></script>
+    <script defer src="/assets/js/main.js"></script>
+    <script defer src="/assets/js/performance.js"></script>
+    <script defer src="/assets/js/interactions.js"></script>
+    <script defer src="/assets/js/projects.js"></script>
+  </body>
+</html>
+

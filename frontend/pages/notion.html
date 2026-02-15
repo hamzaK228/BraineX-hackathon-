@@ -1,0 +1,677 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Goals - BraineX</title>
+  <link rel="stylesheet" href="/assets/css/design-system.css" />
+  <link rel="stylesheet" href="/assets/css/skeleton.css" />
+  <link rel="stylesheet" href="/assets/css/animations.css" />
+  <script src="/assets/js/theme.js"></script>
+  <style id="critical-css">
+    body {
+      background: var(--bg-primary);
+      color: var(--text-primary);
+    }
+
+    header {
+      background: var(--header-bg);
+    }
+  </style>
+  <link rel="stylesheet" href="/assets/css/main.css" />
+  <link rel="stylesheet" href="/assets/css/notion.css" />
+  <link rel="stylesheet" href="/assets/css/my-goals-enhanced.css" />
+  <link rel="stylesheet" href="/assets/css/add-modal.css" />
+  <link rel="stylesheet" href="/assets/css/unified-cards.css" />
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js"></script>
+</head>
+
+<body>
+  <header>
+    <div class="container">
+      <nav role="navigation" aria-label="Primary navigation">
+        <div class="logo">
+          <img src="/assets/images/logo.png" alt="BraineX Logo" class="logo-img" />
+          <span>BraineX</span>
+        </div>
+        <button class="mobile-menu-btn" type="button" aria-label="Toggle navigation menu" aria-controls="navMenu"
+          aria-expanded="false">
+          ☰
+        </button>
+        <ul class="nav-menu" id="navMenu">
+          <li><a href="/">Home</a></li>
+          <li><a href="/fields">Fields</a></li>
+          <li><a href="/universities">Universities</a></li>
+          <li><a href="/programs">Programs</a></li>
+          <li><a href="/scholarships">Scholarships</a></li>
+          <li><a href="/projects">Projects</a></li>
+          <li><a href="/roadmaps">Roadmaps</a></li>
+          <li><a href="/mentors">Mentors</a></li>
+          <li><a href="/events">Events</a></li>
+          <li><a href="/gym">Gym</a></li>
+          <li><a href="/notion" class="active">My Goals</a></li>
+          <li><a href="/about">About</a></li>
+        </ul>
+        <div class="auth-buttons">
+          <a href="#login" class="btn btn-outline">Log In</a>
+          <a href="#signup" class="btn btn-primary">Sign Up</a>
+        </div>
+        <button class="theme-toggle" type="button" aria-label="Toggle color theme">
+          🌙 Dark
+        </button>
+      </nav>
+    </div>
+  </header>
+  <div id="dashboardWrapper">
+    <!-- Sidebar -->
+    <aside class="sidebar" id="sidebar">
+      <div class="sidebar-header">
+        <h3>📋 My Workspace</h3>
+        <button class="sidebar-toggle js-toggle-sidebar" aria-label="Close sidebar">×</button>
+      </div>
+
+      <div class="sidebar-section">
+        <h4>📊 Dashboard</h4>
+        <ul class="sidebar-menu">
+          <li>
+            <a href="#overview" class="sidebar-link active" data-section="overview">🏠 Overview</a>
+          </li>
+          <li><a href="#goals" class="sidebar-link" data-section="goals">🎯 Goals</a></li>
+          <li>
+            <a href="#progress" class="sidebar-link" data-section="progress">📈 Progress</a>
+          </li>
+          <li>
+            <a href="#calendar" class="sidebar-link" data-section="calendar">📅 Calendar</a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="sidebar-section">
+        <h4>📝 Notes & Planning</h4>
+        <ul class="sidebar-menu">
+          <li><a href="#notes" class="sidebar-link" data-section="notes">📔 Notes</a></li>
+          <li><a href="#tasks" class="sidebar-link" data-section="tasks">✅ Tasks</a></li>
+          <li>
+            <a href="#projects" class="sidebar-link" data-section="projects">📁 Projects</a>
+          </li>
+          <li>
+            <a href="#resources" class="sidebar-link" data-section="resources">🔗 Resources</a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="sidebar-section">
+        <h4>🎓 Academic</h4>
+        <ul class="sidebar-menu">
+          <li><a href="#courses" class="sidebar-link" data-section="courses">📚 Courses</a></li>
+          <li>
+            <a href="#applications" class="sidebar-link" data-section="applications">📄 Applications</a>
+          </li>
+          <li>
+            <a href="#scholarships-tracker" class="sidebar-link" data-section="scholarships-tracker">💰 Scholarship
+              Tracker</a>
+          </li>
+          <li>
+            <a href="#deadlines" class="sidebar-link" data-section="deadlines">⏰ Deadlines</a>
+          </li>
+          <li>
+            <a href="#my-universities" class="sidebar-link" data-section="my-universities">🏛️ My Universities</a>
+          </li>
+          <li>
+            <a href="#my-programs" class="sidebar-link" data-section="my-programs">🌟 My Programs</a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="sidebar-actions">
+        <button class="btn-new js-new-item">+ New Page</button>
+        <button class="btn-template js-show-templates">📋 Templates</button>
+      </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+      <button class="sidebar-open js-toggle-sidebar" aria-label="Open sidebar">☰</button>
+
+      <!-- Overview Section -->
+      <section class="content-section active" id="overview">
+        <div class="page-header">
+          <h1>🏠 Welcome to Your Goals Dashboard</h1>
+          <p class="page-subtitle">
+            Track your academic journey, set goals, and achieve your dreams
+          </p>
+        </div>
+
+        <div class="dashboard-stats">
+          <div class="stat-card">
+            <div class="stat-icon">🎯</div>
+            <div class="stat-content">
+              <h3 id="totalGoals">0</h3>
+              <p>Active Goals</p>
+            </div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-icon">✅</div>
+            <div class="stat-content">
+              <h3 id="completedTasks">0</h3>
+              <p>Tasks Completed</p>
+            </div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-icon">📈</div>
+            <div class="stat-content">
+              <h3 id="progressPercent">0%</h3>
+              <p>Overall Progress</p>
+            </div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-icon">🔥</div>
+            <div class="stat-content">
+              <h3 id="currentStreak">0</h3>
+              <p>Day Streak</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="dashboard-grid">
+          <div class="dashboard-card">
+            <h3>📅 Upcoming Deadlines</h3>
+            <div class="deadline-list" id="upcomingDeadlines">
+              <!-- Deadlines will be populated here -->
+            </div>
+            <button class="btn-card js-switch-section" data-section="deadlines">
+              View All Deadlines
+            </button>
+          </div>
+
+          <div class="dashboard-card">
+            <h3>🎯 Recent Goals</h3>
+            <div class="goals-preview" id="recentGoals">
+              <!-- Goals will be populated here -->
+            </div>
+            <button class="btn-card js-switch-section" data-section="goals">Manage Goals</button>
+          </div>
+
+          <div class="dashboard-card">
+            <h3>📝 Quick Notes</h3>
+            <div class="quick-notes">
+              <textarea placeholder="Jot down quick thoughts..." id="quickNote"></textarea>
+              <button class="btn-save-note js-save-quick-note">Save</button>
+            </div>
+            <button class="btn-card js-switch-section" data-section="notes">
+              View All Notes
+            </button>
+          </div>
+
+          <div class="dashboard-card">
+            <h3>📊 This Week's Focus</h3>
+            <div class="focus-area" id="weeklyFocus">
+              <div class="focus-item">
+                <span class="focus-emoji">🎓</span>
+                <span>Complete scholarship applications</span>
+              </div>
+              <div class="focus-item">
+                <span class="focus-emoji">📚</span>
+                <span>Prepare for midterm exams</span>
+              </div>
+            </div>
+            <button class="btn-card js-edit-focus">Edit Focus</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Goals Section -->
+      <section class="content-section" id="goals">
+        <div class="page-header">
+          <h1>🎯 My Goals</h1>
+          <p class="page-subtitle">
+            Set, track, and achieve your academic and personal objectives
+          </p>
+          <button class="btn-primary js-open-goal-modal">+ Add New Goal</button>
+        </div>
+
+        <div class="goals-filters">
+          <div class="filter-buttons">
+            <button class="filter-btn active" data-filter="all">All Goals</button>
+            <button class="filter-btn" data-filter="academic">🎓 Academic</button>
+            <button class="filter-btn" data-filter="career">💼 Career</button>
+            <button class="filter-btn" data-filter="personal">🌟 Personal</button>
+            <button class="filter-btn" data-filter="health">💪 Health</button>
+          </div>
+          <div class="sort-options">
+            <select id="goalSort">
+              <option value="date">Sort by Date</option>
+              <option value="priority">Sort by Priority</option>
+              <option value="progress">Sort by Progress</option>
+              <option value="deadline">Sort by Deadline</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="goals-container" id="goalsContainer">
+          <!-- Goals will be populated here -->
+        </div>
+      </section>
+
+      <!-- Progress Section -->
+      <section class="content-section" id="progress">
+        <div class="page-header">
+          <h1>📈 Progress Tracking</h1>
+          <p class="page-subtitle">Visualize your achievements and growth over time</p>
+        </div>
+
+        <div class="progress-charts">
+          <div class="chart-card">
+            <h3>📊 Goals Completion Rate</h3>
+            <div class="chart-container">
+              <canvas id="goalsChart"></canvas>
+            </div>
+          </div>
+
+          <div class="chart-card">
+            <h3>📈 Monthly Progress</h3>
+            <div class="chart-container">
+              <canvas id="progressChart"></canvas>
+            </div>
+          </div>
+        </div>
+
+        <div class="progress-timeline">
+          <h3>🏆 Achievement Timeline</h3>
+          <div class="timeline" id="achievementTimeline">
+            <!-- Timeline items will be populated here -->
+          </div>
+        </div>
+      </section>
+
+      <!-- Notes Section -->
+      <section class="content-section" id="notes">
+        <div class="page-header">
+          <h1>📔 My Notes</h1>
+          <p class="page-subtitle">Capture ideas, thoughts, and important information</p>
+          <button class="btn-primary" id="createNewNoteBtn">+ New Note</button>
+        </div>
+
+        <div class="notes-grid" id="notesGrid">
+          <!-- Notes will be populated here -->
+        </div>
+      </section>
+
+      <!-- Tasks Section -->
+      <section class="content-section" id="tasks">
+        <div class="page-header">
+          <h1>✅ Task Manager</h1>
+          <p class="page-subtitle">Organize and prioritize your daily tasks</p>
+          <button class="btn-primary" id="addNewTaskBtn">+ Add Task</button>
+        </div>
+
+        <div class="tasks-board">
+          <div class="tasks-column">
+            <h3>📝 To Do</h3>
+            <div class="tasks-list" id="todoTasks">
+              <!-- Tasks will be populated here -->
+            </div>
+          </div>
+          <div class="tasks-column">
+            <h3>⏳ In Progress</h3>
+            <div class="tasks-list" id="inProgressTasks">
+              <!-- Tasks will be populated here -->
+            </div>
+          </div>
+          <div class="tasks-column">
+            <h3>✅ Completed</h3>
+            <div class="tasks-list" id="completedTasks">
+              <!-- Tasks will be populated here -->
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Calendar Section -->
+      <section class="content-section" id="calendar">
+        <div class="page-header">
+          <h1>📅 Calendar & Deadlines</h1>
+          <p class="page-subtitle">Stay organized with important dates and deadlines</p>
+          <div class="header-actions">
+            <button class="btn-secondary" id="prevMonthBtn">&lt;</button>
+            <button class="btn-secondary" id="nextMonthBtn">&gt;</button>
+            <button class="btn-primary" id="addCalendarEventBtn">+ Add Event</button>
+          </div>
+        </div>
+
+        <div class="calendar-container">
+          <div class="calendar-header">
+            <h3 id="currentMonth">December 2024</h3>
+          </div>
+          <div class="calendar-grid" id="calendarDays">
+            <!-- Calendar will be populated here -->
+          </div>
+        </div>
+
+        <div class="calendar-events">
+          <h3>📋 Upcoming Events</h3>
+          <div class="events-list" id="eventsList">
+            <!-- Events will be populated here -->
+          </div>
+        </div>
+      </section>
+
+      <!-- Projects Section -->
+      <section class="content-section" id="projects">
+        <div class="page-header">
+          <h1>📁 Project Planning</h1>
+          <p class="page-subtitle">Manage your academic and personal projects</p>
+          <button class="btn-primary" id="addNewProjectBtn">+ New Project</button>
+        </div>
+        <div class="projects-grid" id="projectsGrid">
+          <!-- Projects will be populated here -->
+        </div>
+      </section>
+
+      <!-- Resources Section -->
+      <section class="content-section" id="resources">
+        <div class="page-header">
+          <h1>🔗 Resources & Links</h1>
+          <p class="page-subtitle">Save important links, documents, and materials</p>
+          <button class="btn-primary js-add-resource">+ Add Resource</button>
+        </div>
+        <div class="resources-grid" id="resourcesGrid">
+          <!-- Resources will be populated here -->
+        </div>
+      </section>
+
+      <!-- Courses Section -->
+      <section class="content-section" id="courses">
+        <div class="page-header">
+          <h1>📚 Course Tracker</h1>
+          <p class="page-subtitle">Monitor your academic progress and grades</p>
+          <button class="btn-primary js-add-course">+ Add Course</button>
+        </div>
+        <div class="courses-grid" id="coursesGrid">
+          <!-- Courses will be populated here -->
+        </div>
+      </section>
+
+      <!-- Applications Section -->
+      <section class="content-section" id="applications">
+        <div class="page-header">
+          <h1>📄 Application Tracker</h1>
+          <p class="page-subtitle">Track your university and job applications</p>
+          <button class="btn-primary js-add-application">+ New Application</button>
+        </div>
+        <div class="applications-list" id="applicationsList">
+          <!-- Applications will be populated here -->
+        </div>
+      </section>
+
+      <!-- Scholarship Tracker Section -->
+      <section class="content-section" id="scholarships-tracker">
+        <div class="page-header">
+          <h1>💰 Scholarship Tracker</h1>
+          <p class="page-subtitle">Manage your scholarship hunt and status</p>
+          <button class="btn-primary js-add-scholarship-track">+ Add Scholarship</button>
+        </div>
+        <div class="scholarships-list" id="scholarshipTrackerList">
+          <!-- Scholarships will be populated here -->
+        </div>
+      </section>
+
+      <!-- Deadlines Section -->
+      <section class="content-section" id="deadlines">
+        <div class="page-header">
+          <h1>⏰ Upcoming Deadlines</h1>
+          <p class="page-subtitle">Never miss an important date</p>
+          <button class="btn-primary js-add-deadline">+ Add Deadline</button>
+        </div>
+        <div class="deadline-cards-grid" id="allDeadlinesList">
+          <!-- Deadlines will be populated by premium card template in JS -->
+        </div>
+      </section>
+
+      <!-- My Universities Section -->
+      <section class="content-section" id="my-universities">
+        <div class="page-header">
+          <h1>🏛️ My Universities</h1>
+          <p class="page-subtitle">Track your university wishlist and applications</p>
+          <button class="btn-primary js-add-university">+ Add University</button>
+        </div>
+        <div class="universities-grid" id="myUniversitiesGrid">
+          <!-- Populated by JS -->
+        </div>
+      </section>
+
+      <!-- My Programs Section -->
+      <section class="content-section" id="my-programs">
+        <div class="page-header">
+          <h1>🌟 My Programs</h1>
+          <p class="page-subtitle">Manage your summer programs and extracurriculars</p>
+          <button class="btn-primary js-add-program">+ Add Program</button>
+        </div>
+        <div class="programs-grid" id="myProgramsGrid">
+          <!-- Populated by JS -->
+        </div>
+      </section>
+    </main>
+
+    <!-- Add University Modal -->
+    <div class="modal" id="universityModal" role="dialog" aria-modal="true" aria-labelledby="uniModalTitle">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2 id="uniModalTitle">Add University</h2>
+          <button class="close-modal js-close-university-modal" aria-label="Close modal">
+            &times;
+          </button>
+        </div>
+        <form id="universityForm">
+          <div class="form-group">
+            <label>University Name</label>
+            <input type="text" id="uniName" required placeholder="e.g. Stanford University" />
+          </div>
+          <div class="form-group">
+            <label>Location</label>
+            <input type="text" id="uniLocation" placeholder="e.g. Stanford, CA" />
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label>Status</label>
+              <select id="uniStatus">
+                <option value="interested">Interested</option>
+                <option value="applying">Applying</option>
+                <option value="applied">Applied</option>
+                <option value="accepted">Accepted</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label>Admission Chance</label>
+              <select id="uniChance">
+                <option value="reach">Reach</option>
+                <option value="target">Target</option>
+                <option value="safety">Safety</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-actions">
+            <button type="button" class="btn-secondary js-close-university-modal">Cancel</button>
+            <button type="submit" class="btn-primary">Add University</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <!-- Add Program Modal -->
+    <div class="modal" id="programModal" role="dialog" aria-modal="true" aria-labelledby="progModalTitle">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2 id="progModalTitle">Add Program</h2>
+          <button class="close-modal js-close-program-modal" aria-label="Close modal">
+            &times;
+          </button>
+        </div>
+        <form id="programForm">
+          <div class="form-group">
+            <label>Program Name</label>
+            <input type="text" id="progName" required placeholder="e.g. RSI" />
+          </div>
+          <div class="form-group">
+            <label>Organization</label>
+            <input type="text" id="progOrg" placeholder="e.g. CEE" />
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label>Deadline</label>
+              <input type="date" id="progDeadline" />
+            </div>
+            <div class="form-group">
+              <label>Status</label>
+              <select id="progStatus">
+                <option value="interested">Interested</option>
+                <option value="drafting">Drafting</option>
+                <option value="submitted">Submitted</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-actions">
+            <button type="button" class="btn-secondary js-close-program-modal">Cancel</button>
+            <button type="submit" class="btn-primary">Add Program</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+
+    <!-- Goal Modal -->
+    <div class="modal" id="goalModal">
+      <div class="modal-content goal-modal-content">
+        <div class="modal-header">
+          <h2 id="goalModalTitle">Create New Goal</h2>
+          <button class="close-modal js-close-goal-modal" aria-label="Close modal">
+            &times;
+          </button>
+        </div>
+
+        <form id="goalForm">
+          <div class="form-group">
+            <label for="goalTitle">Goal Title *</label>
+            <input type="text" id="goalTitle" required placeholder="Enter your goal title" />
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="goalCategory">Category *</label>
+              <select id="goalCategory" required>
+                <option value="">Select Category</option>
+                <option value="academic">🎓 Academic</option>
+                <option value="career">💼 Career</option>
+                <option value="personal">🌟 Personal</option>
+                <option value="health">💪 Health</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="goalPriority">Priority *</label>
+              <select id="goalPriority" required>
+                <option value="">Select Priority</option>
+                <option value="high">🔴 High</option>
+                <option value="medium">🟡 Medium</option>
+                <option value="low">🟢 Low</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="goalDescription">Description</label>
+            <textarea id="goalDescription" placeholder="Describe your goal in detail..."></textarea>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="goalStartDate">Start Date</label>
+              <input type="date" id="goalStartDate" />
+            </div>
+            <div class="form-group">
+              <label for="goalEndDate">Target Date</label>
+              <input type="date" id="goalEndDate" />
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="goalMilestones">Milestones</label>
+            <div class="milestones-container" id="milestonesContainer">
+              <div class="milestone-item">
+                <input type="text" placeholder="Add a milestone..." />
+                <button type="button" class="js-remove-milestone">×</button>
+              </div>
+            </div>
+            <button type="button" class="btn-add-milestone js-add-milestone">
+              + Add Milestone
+            </button>
+          </div>
+
+          <div class="form-actions">
+            <button type="button" class="btn-secondary js-close-goal-modal">Cancel</button>
+            <button type="submit" class="btn-primary">Save Goal</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <!-- Note Editor Modal -->
+    <div class="modal" id="noteModal">
+      <div class="modal-content note-modal-content">
+        <div class="modal-header">
+          <input type="text" id="noteTitle" placeholder="Untitled Note" class="note-title-input" />
+          <button class="close-modal js-close-note-modal" aria-label="Close modal">
+            &times;
+          </button>
+        </div>
+
+        <div class="note-toolbar">
+          <button class="toolbar-btn" data-cmd="bold"><b>B</b></button>
+          <button class="toolbar-btn" data-cmd="italic"><i>I</i></button>
+          <button class="toolbar-btn" data-cmd="underline"><u>U</u></button>
+          <button class="toolbar-btn" data-cmd="list">• List</button>
+          <button class="toolbar-btn" data-cmd="link">🔗 Link</button>
+        </div>
+
+        <div class="note-editor">
+          <div id="noteContent" contenteditable="true" placeholder="Start writing..."></div>
+        </div>
+
+        <div class="note-actions">
+          <button class="btn-secondary" id="closeNoteModalBtn">Close</button>
+          <button class="btn-primary" id="saveNoteBtn">Save Note</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Universal Add Item Modal -->
+    <div class="add-item-modal" id="universalAddModal">
+      <div class="add-modal-content">
+        <div class="add-modal-header">
+          <h2 id="addModalTitle">Add Item</h2>
+          <button class="add-modal-close" onclick="closeAddModal()">&times;</button>
+        </div>
+        <form id="universalAddForm">
+          <div id="addModalFields"></div>
+          <div class="add-form-actions">
+            <button type="button" class="btn-add-cancel" onclick="closeAddModal()">Cancel</button>
+            <button type="submit" class="btn-add-submit">Add</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <script defer src="/assets/js/auth-api.js"></script>
+    <script defer src="/assets/js/global.js"></script>
+    <script defer src="/assets/js/main.js"></script>
+    <script defer src="/assets/js/performance.js"></script>
+    <script defer src="/assets/js/interactions.js"></script>
+    <!-- Universal Add Modal -->
+
+    <script src="/assets/js/notion_fixed_v5.js"></script>
+  </div>
+</body>
+
+</html>

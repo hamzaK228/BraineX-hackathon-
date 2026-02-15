@@ -1,0 +1,222 @@
+[
+  {
+    "id": 1,
+    "title": "Global AI Summit 2026",
+    "type": "Conference",
+    "date": "2026-03-15",
+    "location": "San Francisco, CA",
+    "description": "Join world-leading AI researchers and practitioners for three days of cutting-edge presentations, workshops, and networking.",
+    "organizer": "AI Foundation",
+    "registrationUrl": "https://example.com/ai-summit",
+    "image": "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=800"
+  },
+  {
+    "id": 2,
+    "title": "International Hackathon 2026",
+    "type": "Hackathon",
+    "date": "2026-02-20",
+    "location": "Virtual Event",
+    "description": "48-hour coding challenge with $50,000 in prizes. Build innovative solutions for real-world problems.",
+    "organizer": "TechCorp International",
+    "registrationUrl": "https://example.com/hackathon",
+    "image": "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=800"
+  },
+  {
+    "id": 3,
+    "title": "Medical Research Symposium",
+    "type": "Conference",
+    "date": "2026-04-10",
+    "location": "Boston, MA",
+    "description": "Annual gathering of medical researchers presenting breakthrough discoveries in healthcare and medicine.",
+    "organizer": "Harvard Medical School",
+    "registrationUrl": "https://example.com/med-symposium",
+    "image": "https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=800"
+  },
+  {
+    "id": 4,
+    "title": "Startup Pitch Competition",
+    "type": "Competition",
+    "date": "2026-03-05",
+    "location": "New York, NY",
+    "description": "Present your startup idea to top VCs and win up to $100,000 in seed funding.",
+    "organizer": "Entrepreneur Network",
+    "registrationUrl": "https://example.com/pitch-comp",
+    "image": "https://images.unsplash.com/photo-1559136555-9303baea8ebd?w=800"
+  },
+  {
+    "id": 5,
+    "title": "Web Development Bootcamp",
+    "type": "Workshop",
+    "date": "2026-02-15",
+    "location": "Online",
+    "description": "Intensive 2-week bootcamp covering React, Node.js, and modern web development practices.",
+    "organizer": "CodeAcademy Pro",
+    "registrationUrl": "https://example.com/webdev-bootcamp",
+    "image": "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=800"
+  },
+  {
+    "id": 6,
+    "title": "Environmental Summit 2026",
+    "type": "Conference",
+    "date": "2026-04-22",
+    "location": "Geneva, Switzerland",
+    "description": "Global leaders discuss climate action and sustainable development strategies.",
+    "organizer": "United Nations Environment",
+    "registrationUrl": "https://example.com/env-summit",
+    "image": "https://images.unsplash.com/photo-1497436072909-60f360e1d4b1?w=800"
+  },
+  {
+    "id": 7,
+    "title": "Data Science Workshop",
+    "type": "Workshop",
+    "date": "2026-02-28",
+    "location": "Chicago, IL",
+    "description": "Hands-on training in Python, machine learning, and data visualization techniques.",
+    "organizer": "Data Science Institute",
+    "registrationUrl": "https://example.com/ds-workshop",
+    "image": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800"
+  },
+  {
+    "id": 8,
+    "title": "Creative Design Conference",
+    "type": "Conference",
+    "date": "2026-05-10",
+    "location": "Los Angeles, CA",
+    "description": "Explore the latest trends in UI/UX design, branding, and digital creativity.",
+    "organizer": "Adobe Design",
+    "registrationUrl": "https://example.com/design-conf",
+    "image": "https://images.unsplash.com/photo-1558655146-9f40138edfeb?w=800"
+  },
+  {
+    "id": 9,
+    "title": "Robotics Challenge 2026",
+    "type": "Competition",
+    "date": "2026-06-15",
+    "location": "Tokyo, Japan",
+    "description": "International robotics competition for university teams. Build autonomous robots to complete challenges.",
+    "organizer": "IEEE Robotics",
+    "registrationUrl": "https://example.com/robotics",
+    "image": "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=800"
+  },
+  {
+    "id": 10,
+    "title": "Cybersecurity Summit",
+    "type": "Conference",
+    "date": "2026-03-20",
+    "location": "Washington, DC",
+    "description": "Learn about the latest threats and defense strategies from leading security experts.",
+    "organizer": "CyberSecure Alliance",
+    "registrationUrl": "https://example.com/cybersec",
+    "image": "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=800"
+  },
+  {
+    "id": 11,
+    "title": "Finance & Investment Forum",
+    "type": "Conference",
+    "date": "2026-04-05",
+    "location": "London, UK",
+    "description": "Annual gathering of financial professionals discussing market trends and investment strategies.",
+    "organizer": "Global Finance Network",
+    "registrationUrl": "https://example.com/finance-forum",
+    "image": "https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=800"
+  },
+  {
+    "id": 12,
+    "title": "Machine Learning Bootcamp",
+    "type": "Workshop",
+    "date": "2026-03-01",
+    "location": "Online",
+    "description": "6-week intensive program covering deep learning, neural networks, and practical ML applications.",
+    "organizer": "AI Learning Hub",
+    "registrationUrl": "https://example.com/ml-bootcamp",
+    "image": "https://images.unsplash.com/photo-1555949963-aa79dcee981c?w=800"
+  },
+  {
+    "id": 13,
+    "title": "Blockchain Developer Summit",
+    "type": "Conference",
+    "date": "2026-05-25",
+    "location": "Dubai, UAE",
+    "description": "Explore blockchain technology, smart contracts, and decentralized applications.",
+    "organizer": "Blockchain Foundation",
+    "registrationUrl": "https://example.com/blockchain",
+    "image": "https://images.unsplash.com/photo-1639762681485-074b7f938ba0?w=800"
+  },
+  {
+    "id": 14,
+    "title": "Psychology Research Conference",
+    "type": "Conference",
+    "date": "2026-04-18",
+    "location": "Vienna, Austria",
+    "description": "Present and discuss the latest research in cognitive psychology and behavioral science.",
+    "organizer": "International Psychology Association",
+    "registrationUrl": "https://example.com/psych-conf",
+    "image": "https://images.unsplash.com/photo-1507413245164-6160d8298b31?w=800"
+  },
+  {
+    "id": 15,
+    "title": "Entrepreneurship Workshop",
+    "type": "Workshop",
+    "date": "2026-02-10",
+    "location": "Austin, TX",
+    "description": "Learn how to launch your startup from successful founders and venture capitalists.",
+    "organizer": "Startup Academy",
+    "registrationUrl": "https://example.com/entrepreneur",
+    "image": "https://images.unsplash.com/photo-1523240795612-9a054b0db644?w=800"
+  },
+  {
+    "id": 16,
+    "title": "Healthcare Innovation Summit",
+    "type": "Conference",
+    "date": "2026-06-01",
+    "location": "Singapore",
+    "description": "Discover the future of healthcare technology, telemedicine, and digital health solutions.",
+    "organizer": "HealthTech Global",
+    "registrationUrl": "https://example.com/healthtech",
+    "image": "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=800"
+  },
+  {
+    "id": 17,
+    "title": "Mobile App Development Contest",
+    "type": "Competition",
+    "date": "2026-04-28",
+    "location": "Virtual Event",
+    "description": "Build the next breakthrough mobile app. Win prizes up to $25,000 and incubation support.",
+    "organizer": "App Innovation Labs",
+    "registrationUrl": "https://example.com/app-contest",
+    "image": "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=800"
+  },
+  {
+    "id": 18,
+    "title": "Legal Tech Conference",
+    "type": "Conference",
+    "date": "2026-05-15",
+    "location": "Seattle, WA",
+    "description": "Explore how technology is transforming the legal profession and access to justice.",
+    "organizer": "Legal Innovation Society",
+    "registrationUrl": "https://example.com/legaltech",
+    "image": "https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=800"
+  },
+  {
+    "id": 19,
+    "title": "Quantum Computing Workshop",
+    "type": "Workshop",
+    "date": "2026-06-20",
+    "location": "Cambridge, MA",
+    "description": "Introduction to quantum computing principles and hands-on experience with quantum algorithms.",
+    "organizer": "MIT Quantum Lab",
+    "registrationUrl": "https://example.com/quantum",
+    "image": "https://images.unsplash.com/photo-1635070041078-e363dbe005cb?w=800"
+  },
+  {
+    "id": 20,
+    "title": "Digital Marketing Masterclass",
+    "type": "Workshop",
+    "date": "2026-03-10",
+    "location": "Online",
+    "description": "Master SEO, social media marketing, content strategy, and paid advertising.",
+    "organizer": "Marketing Experts Academy",
+    "registrationUrl": "https://example.com/marketing",
+    "image": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800"
+  }
+]

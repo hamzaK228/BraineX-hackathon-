@@ -1,0 +1,222 @@
+[
+  {
+    "id": 1,
+    "name": "Computer Science",
+    "slug": "computer-science",
+    "description": "The study of computation, automation, and information. Computer science spans theoretical disciplines (such as algorithms, theory of computation, and information theory) to practical disciplines (including the design and implementation of hardware and software).",
+    "icon": "💻",
+    "salary": "$110,000 avg",
+    "growth": "15%",
+    "careers": "Software Engineer, Data Scientist, Systems Architect, Web Developer, AI Engineer",
+    "category": "STEM"
+  },
+  {
+    "id": 2,
+    "name": "Business Administration",
+    "slug": "business-admin",
+    "description": "The performance or management of business operations and decision-making, as well as the efficient organization of people and other resources to direct activities toward common goals and objectives.",
+    "icon": "📊",
+    "salary": "$85,000 avg",
+    "growth": "8%",
+    "careers": "Business Analyst, Project Manager, Consultant, Operations Manager, CEO",
+    "category": "Business"
+  },
+  {
+    "id": 3,
+    "name": "Psychology",
+    "slug": "psychology",
+    "description": "The scientific study of mind and behavior. Psychology includes the study of conscious and unconscious phenomena, including feelings and thoughts.",
+    "icon": "🧠",
+    "salary": "$80,000 avg",
+    "growth": "6%",
+    "careers": "Clinical Psychologist, Counselor, HR Specialist, Research Scientist, Therapist",
+    "category": "Social Sciences"
+  },
+  {
+    "id": 4,
+    "name": "Mechanical Engineering",
+    "slug": "mechanical-engineering",
+    "description": "The branch of engineering that combines engineering physics and mathematics principles with materials science, to design, analyze, manufacture, and maintain mechanical systems.",
+    "icon": "⚙️",
+    "salary": "$95,000 avg",
+    "growth": "10%",
+    "careers": "Mechanical Engineer, Aerospace Engineer, Automotive Engineer, Robotics Engineer",
+    "category": "STEM"
+  },
+  {
+    "id": 5,
+    "name": "Graphic Design",
+    "slug": "graphic-design",
+    "description": "The art and practice of planning and projecting ideas and experiences with visual and textual content using typography, imagery, color and form.",
+    "icon": "🎨",
+    "salary": "$55,000 avg",
+    "growth": "3%",
+    "careers": "Graphic Designer, UI/UX Designer, Art Director, Illustrator, Brand Designer",
+    "category": "Creative"
+  },
+  {
+    "id": 6,
+    "name": "Environmental Science",
+    "slug": "environmental-science",
+    "description": "An interdisciplinary academic field that integrates physical, biological and information sciences to the study of the environment, and the solution of environmental problems.",
+    "icon": "🌱",
+    "salary": "$73,000 avg",
+    "growth": "8%",
+    "careers": "Environmental Scientist, Conservationist, Sustainability Consultant, Ecologist",
+    "category": "STEM"
+  },
+  {
+    "id": 7,
+    "name": "Economics",
+    "slug": "economics",
+    "description": "The social science that studies the production, distribution, and consumption of goods and services.",
+    "icon": "📉",
+    "salary": "$105,000 avg",
+    "growth": "13%",
+    "careers": "Economist, Financial Analyst, Policy Analyst, Data Analyst, Investment Banker",
+    "category": "Business"
+  },
+  {
+    "id": 8,
+    "name": "Nursing",
+    "slug": "nursing",
+    "description": "A profession within the health care sector focused on the care of individuals, families, and communities so they may attain, maintain, or recover optimal health and quality of life.",
+    "icon": "🩺",
+    "salary": "$77,000 avg",
+    "growth": "9%",
+    "careers": "Registered Nurse, Nurse Practitioner, Clinical Nurse Specialist, Nurse Anesthetist",
+    "category": "Health"
+  },
+  {
+    "id": 9,
+    "name": "Data Science",
+    "slug": "data-science",
+    "description": "An interdisciplinary field focused on extracting knowledge and insights from structured and unstructured data using scientific methods, algorithms, and systems.",
+    "icon": "📈",
+    "salary": "$120,000 avg",
+    "growth": "36%",
+    "careers": "Data Scientist, Machine Learning Engineer, Data Analyst, Business Intelligence Analyst",
+    "category": "STEM"
+  },
+  {
+    "id": 10,
+    "name": "Medicine",
+    "slug": "medicine",
+    "description": "The science and practice of diagnosing, treating, and preventing disease. Medicine encompasses a variety of health care practices evolved to maintain and restore health by the prevention and treatment of illness.",
+    "icon": "⚕️",
+    "salary": "$208,000 avg",
+    "growth": "13%",
+    "careers": "Physician, Surgeon, Specialist, Medical Researcher, Hospital Administrator",
+    "category": "Health"
+  },
+  {
+    "id": 11,
+    "name": "Law",
+    "slug": "law",
+    "description": "The system of rules created and enforced through social or governmental institutions to regulate behavior. Law shapes politics, economics, history and society in various ways.",
+    "icon": "⚖️",
+    "salary": "$125,000 avg",
+    "growth": "4%",
+    "careers": "Attorney, Judge, Legal Consultant, Corporate Counsel, Public Defender",
+    "category": "Social Sciences"
+  },
+  {
+    "id": 12,
+    "name": "Electrical Engineering",
+    "slug": "electrical-engineering",
+    "description": "An engineering discipline concerned with the study, design, and application of equipment, devices, and systems which use electricity, electronics, and electromagnetism.",
+    "icon": "⚡",
+    "salary": "$100,000 avg",
+    "growth": "7%",
+    "careers": "Electrical Engineer, Electronics Engineer, Power Systems Engineer, Control Systems Engineer",
+    "category": "STEM"
+  },
+  {
+    "id": 13,
+    "name": "Marketing",
+    "slug": "marketing",
+    "description": "The activity, set of institutions, and processes for creating, communicating, delivering, and exchanging offerings that have value for customers, clients, partners, and society.",
+    "icon": "📣",
+    "salary": "$65,000 avg",
+    "growth": "10%",
+    "careers": "Marketing Manager, Digital Marketer, Brand Manager, Content Strategist, SEO Specialist",
+    "category": "Business"
+  },
+  {
+    "id": 14,
+    "name": "Architecture",
+    "slug": "architecture",
+    "description": "The art and technique of designing and building structures as distinguished from the skills associated with construction.",
+    "icon": "🏛️",
+    "salary": "$82,000 avg",
+    "growth": "3%",
+    "careers": "Architect, Urban Planner, Interior Designer, Landscape Architect, Project Manager",
+    "category": "Creative"
+  },
+  {
+    "id": 15,
+    "name": "Finance",
+    "slug": "finance",
+    "description": "The study and discipline of money, currency, and capital assets. Finance is related to but distinct from economics, which is the study of production, distribution, and consumption.",
+    "icon": "💰",
+    "salary": "$95,000 avg",
+    "growth": "15%",
+    "careers": "Financial Analyst, Investment Banker, Portfolio Manager, Risk Manager, CFO",
+    "category": "Business"
+  },
+  {
+    "id": 16,
+    "name": "Cybersecurity",
+    "slug": "cybersecurity",
+    "description": "The practice of protecting systems, networks, and programs from digital attacks. These cyberattacks are usually aimed at accessing, changing, or destroying sensitive information.",
+    "icon": "🔐",
+    "salary": "$115,000 avg",
+    "growth": "35%",
+    "careers": "Security Analyst, Penetration Tester, Security Architect, CISO, Incident Responder",
+    "category": "STEM"
+  },
+  {
+    "id": 17,
+    "name": "Education",
+    "slug": "education",
+    "description": "The process of facilitating learning, or the acquisition of knowledge, skills, values, morals, beliefs, habits, and personal development.",
+    "icon": "📚",
+    "salary": "$60,000 avg",
+    "growth": "4%",
+    "careers": "Teacher, Professor, School Administrator, Curriculum Developer, Education Consultant",
+    "category": "Social Sciences"
+  },
+  {
+    "id": 18,
+    "name": "Biotechnology",
+    "slug": "biotechnology",
+    "description": "The use of living systems and organisms to develop or make products. Any technological application that uses biological systems, living organisms, or derivatives.",
+    "icon": "🧬",
+    "salary": "$98,000 avg",
+    "growth": "11%",
+    "careers": "Biotech Researcher, Lab Director, Quality Control Analyst, Clinical Research Associate",
+    "category": "STEM"
+  },
+  {
+    "id": 19,
+    "name": "Journalism",
+    "slug": "journalism",
+    "description": "The production and distribution of reports on the interaction of events, facts, ideas, and people that are the news of the day and that informs society.",
+    "icon": "📰",
+    "salary": "$48,000 avg",
+    "growth": "-6%",
+    "careers": "Reporter, Editor, News Anchor, Investigative Journalist, Multimedia Journalist",
+    "category": "Creative"
+  },
+  {
+    "id": 20,
+    "name": "Artificial Intelligence",
+    "slug": "artificial-intelligence",
+    "description": "The simulation of human intelligence processes by machines, especially computer systems. Specific applications include expert systems, natural language processing, and machine vision.",
+    "icon": "🤖",
+    "salary": "$140,000 avg",
+    "growth": "40%",
+    "careers": "AI Engineer, Machine Learning Scientist, NLP Engineer, Research Scientist, AI Product Manager",
+    "category": "STEM"
+  }
+]

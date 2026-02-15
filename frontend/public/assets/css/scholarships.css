@@ -1,0 +1,1326 @@
+/* Enhanced Scholarship Page - Modern Design with Fields Styling */
+html[data-theme='dark'] body {
+  background: #0f0f1e;
+  color: #e0e0e0;
+}
+html[data-theme='dark'] .scholarships {
+  background: #0f0f1e !important;
+}
+html[data-theme='dark'] .scholarship-card {
+  background: rgba(22, 33, 62, 0.75) !important;
+  border-color: #2a2f45 !important;
+  color: #e0e0e0 !important;
+}
+html[data-theme='dark'] .scholarship-card:hover {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
+  color: white !important;
+  border-color: #667eea !important;
+}
+html[data-theme='dark'] .search-form {
+  background: rgba(22, 33, 62, 0.75) !important;
+  border-color: #2a2f45 !important;
+  color: #e0e0e0 !important;
+}
+html[data-theme='dark'] .scholarship-details {
+  background: rgba(22, 33, 62, 0.75) !important;
+  border-color: #2a2f45 !important;
+  color: #e0e0e0 !important;
+}
+html[data-theme='dark'] .scholarship-header {
+  background: rgba(22, 33, 62, 0.75) !important;
+  border-color: #2a2f45 !important;
+}
+html[data-theme='dark'] .scholarship-header h3 {
+  color: #ffffff !important;
+}
+html[data-theme='dark'] .results-header {
+  border-color: #2a2f45 !important;
+}
+html[data-theme='dark'] .btn-apply {
+  box-shadow: 0 8px 20px rgba(102, 126, 234, 0.35) !important;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
+}
+html[data-theme='dark'] .scholarship-filter {
+  background: #0f1425 !important;
+  color: #e0e0e0 !important;
+  border-color: #2a2f45 !important;
+}
+html[data-theme='dark'] .scholarship-filter:hover,
+html[data-theme='dark'] .scholarship-filter.active {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
+  color: white !important;
+  border-color: #667eea !important;
+}
+html[data-theme='dark'] .scholarship-timeline {
+  color: #e0e0e0 !important;
+}
+html[data-theme='dark'] .scholarship-timeline::before {
+  background: linear-gradient(180deg, #667eea 0%, #764ba2 100%) !important;
+}
+html[data-theme='dark'] .timeline-marker {
+  background: #667eea !important;
+  box-shadow: 0 0 15px rgba(102, 126, 234, 0.3) !important;
+}
+html[data-theme='dark'] .scholarship-amount {
+  color: #aab6ff !important;
+  text-shadow: 0 0 12px rgba(102, 126, 234, 0.35);
+}
+html[data-theme='dark'] .scholarships-hero {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+html[data-theme='dark'] .scholarships-hero h1 {
+  color: #ffffff !important;
+}
+html[data-theme='dark'] .scholarships-hero p {
+  color: #e0e0e0 !important;
+}
+html[data-theme='dark'] .scholarship-tag {
+  background: #0f1425 !important;
+  color: #667eea !important;
+  border-color: #2a2f45 !important;
+}
+html[data-theme='dark'] .scholarship-description {
+  color: #a0a8c0 !important;
+}
+
+/* CRITICAL: Additional dark mode overrides for complete coverage */
+html[data-theme='dark'] .search-interface {
+  background: #1e293b !important;
+  border-color: #334155 !important;
+}
+
+html[data-theme='dark'] .search-tab {
+  background: #0f172a !important;
+  color: #cbd5e1 !important;
+}
+
+html[data-theme='dark'] .search-tab:hover {
+  background: #334155 !important;
+  color: #e2e8f0 !important;
+}
+
+html[data-theme='dark'] .search-tab.active {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
+  color: white !important;
+}
+
+html[data-theme='dark'] .filter-group select,
+html[data-theme='dark'] .filter-group input {
+  background: #0f172a !important;
+  color: #e2e8f0 !important;
+  border-color: #334155 !important;
+}
+
+html[data-theme='dark'] .modal-overlay {
+  background: rgba(0, 0, 0, 0.85) !important;
+}
+
+html[data-theme='dark'] .scholarship-modal {
+  background: #1e293b !important;
+  border-color: #334155 !important;
+}
+
+html[data-theme='dark'] .scholarship-card.featured,
+html[data-theme='dark'] .scholarship-card.urgent,
+html[data-theme='dark'] .scholarship-card.new {
+  background: #1e293b !important;
+  border-left-color: currentColor !important;
+}
+
+html[data-theme='dark'] .btn-save {
+  background: #1e293b !important;
+  color: #cbd5e1 !important;
+  border-color: #334155 !important;
+}
+
+html[data-theme='dark'] .btn-save:hover {
+  background: #334155 !important;
+  border-color: #667eea !important;
+}
+
+html[data-theme='dark'] .page-btn {
+  background: #1e293b !important;
+  border-color: #334155 !important;
+  color: #cbd5e1 !important;
+}
+
+html[data-theme='dark'] .page-btn:hover {
+  background: #334155 !important;
+}
+
+html[data-theme='dark'] .page-num.active {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
+  color: white !important;
+}
+
+/* Enhanced color variables matching fields with improvements */
+:root {
+  --primary-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  --secondary-gradient: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+  --success-gradient: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+  --warning-gradient: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);
+  --card-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  --card-hover-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  --border-radius: 15px;
+  --text-primary: #333;
+  --text-secondary: #666;
+  --text-light: #888;
+  --background-light: #f8f9fa;
+  --background-gradient: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+}
+
+/* Match fields page search styling */
+.search-interface {
+  background: white;
+  border-radius: var(--border-radius);
+  box-shadow: var(--card-shadow);
+  overflow: hidden;
+  margin-bottom: 3rem;
+  border: 1px solid #f0f0f0;
+}
+
+.search-tabs {
+  display: flex;
+  background: var(--background-light);
+  border-bottom: 1px solid #e9ecef;
+}
+
+.search-tab {
+  flex: 1;
+  padding: 0.8rem 2rem;
+  background: transparent;
+  border: none;
+  color: var(--text-secondary);
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  border-radius: 0;
+}
+
+.search-tab:hover {
+  background: #e0e0e0;
+  color: var(--text-primary);
+}
+
+.search-tab.active {
+  background: var(--primary-gradient);
+  color: white;
+  border-color: #667eea;
+}
+
+.search-content {
+  display: none;
+  padding: 2.5rem;
+}
+
+.search-content.active {
+  display: block;
+}
+
+.filter-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.filter-group {
+  position: relative;
+}
+
+.filter-group label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 600;
+  color: #495057;
+  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
+}
+
+.filter-group label i {
+  color: #667eea;
+  width: 16px;
+}
+
+.modern-select {
+  width: 100%;
+  padding: 0.8rem 1rem;
+  border: 2px solid #e9ecef;
+  border-radius: 12px;
+  background: white;
+  color: #495057;
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+}
+
+.modern-select:focus {
+  outline: none;
+  border-color: #667eea;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+.modern-select:hover {
+  border-color: #ced4da;
+}
+
+/* Section Header - Matching Fields Style */
+.section-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.section-header h2 {
+  font-size: 2.5rem;
+  color: var(--text-primary);
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.section-header h2 i {
+  color: #667eea;
+}
+
+.section-subtitle {
+  font-size: 1.2rem;
+  color: var(--text-secondary);
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* Enhanced Scholarship Stats */
+.scholarship-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+  margin: 3rem auto 0;
+  max-width: 800px;
+}
+
+.scholarship-stats .stat-item {
+  background: white;
+  padding: 1.5rem;
+  border-radius: var(--border-radius);
+  box-shadow: var(--card-shadow);
+  text-align: center;
+  border: 1px solid #f0f0f0;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.scholarship-stats .stat-item::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: var(--primary-gradient);
+}
+
+.scholarship-stats .stat-item:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--card-hover-shadow);
+}
+
+.scholarship-stats .stat-number {
+  display: block;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 0.5rem;
+  background: var(--primary-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.scholarship-stats .stat-label {
+  display: block;
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* Enhanced Scholarship Cards with Premium Features */
+.scholarship-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 2.5rem;
+  margin-top: 3rem;
+}
+
+.scholarship-card {
+  background: white !important;
+  border-radius: var(--border-radius);
+  padding: 2.5rem;
+  box-shadow: var(--card-shadow);
+  border: 1px solid #f0f0f0;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  min-height: 400px;
+}
+
+html[data-theme='dark'] .scholarship-card {
+  background: #1e293b !important;
+  border-color: #334155 !important;
+}
+
+.scholarship-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(102, 126, 234, 0.05), transparent);
+  transition: left 0.6s ease;
+}
+
+.scholarship-card:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 20px 40px rgba(102, 126, 234, 0.15);
+  border-color: rgba(102, 126, 234, 0.3);
+}
+
+.scholarship-card:hover::before {
+  left: 100%;
+}
+
+/* Scholarship Card Status Indicators */
+.scholarship-card.featured {
+  border: 2px solid #ffd700;
+  background: linear-gradient(135deg, #fff9e6 0%, #ffffff 100%);
+}
+
+.scholarship-card.featured::after {
+  content: '⭐ Featured';
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: var(--warning-gradient);
+  color: white;
+  padding: 0.3rem 0.8rem;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.scholarship-card.urgent {
+  border: 2px solid #ff6b6b;
+  background: linear-gradient(135deg, #fff5f5 0%, #ffffff 100%);
+}
+
+.scholarship-card.urgent::after {
+  content: '🔥 Deadline Soon';
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: var(--secondary-gradient);
+  color: white;
+  padding: 0.3rem 0.8rem;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.7;
+  }
+}
+
+.scholarship-card.new {
+  border: 2px solid #51cf66;
+  background: linear-gradient(135deg, #f0fff4 0%, #ffffff 100%);
+}
+
+.scholarship-card.new::after {
+  content: '✨ New';
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: var(--success-gradient);
+  color: white;
+  padding: 0.3rem 0.8rem;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.scholarship-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 1.5rem;
+  gap: 1rem;
+}
+
+.scholarship-title {
+  flex: 1;
+}
+
+.scholarship-title h3 {
+  color: var(--text-primary);
+  font-size: 1.3rem;
+  margin: 0 0 0.5rem 0;
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+.scholarship-organization {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #667eea;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.scholarship-organization i {
+  color: #667eea;
+}
+
+.scholarship-amount {
+  background: var(--primary-gradient);
+  color: white;
+  padding: 0.4rem 0.8rem;
+  border-radius: 15px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.scholarship-details {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.detail-item {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-size: 0.9rem;
+  color: #6c757d;
+  padding: 0.5rem 0;
+}
+
+.detail-item i {
+  color: #667eea;
+  width: 16px;
+  flex-shrink: 0;
+}
+
+.detail-item strong {
+  color: #495057;
+}
+
+.scholarship-description {
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+  font-size: 0.95rem;
+}
+
+.scholarship-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.scholarship-tag {
+  background: #f0f4ff;
+  color: #667eea;
+  padding: 0.3rem 0.8rem;
+  border-radius: 12px;
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+.deadline-warning {
+  background: linear-gradient(135deg, #fff3e0 0%, #ffecb3 100%);
+  color: #f57c00;
+  padding: 0.6rem 1rem;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  border: 1px solid #ffcc02;
+}
+
+.scholarship-actions {
+  display: flex;
+  gap: 1rem;
+  margin-top: auto;
+  padding-top: 1.5rem;
+}
+
+/* Enhanced Scholarship Card Elements */
+.scholarship-card .scholarship-body {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.scholarship-priority {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+  padding: 0.5rem 1rem;
+  border-radius: 25px;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.scholarship-priority.high {
+  background: linear-gradient(135deg, #ff6b6b 0%, #ee5a24 100%);
+  color: white;
+}
+
+.scholarship-priority.medium {
+  background: linear-gradient(135deg, #feca57 0%, #ff9ff3 100%);
+  color: white;
+}
+
+.scholarship-priority.low {
+  background: linear-gradient(135deg, #48dbfb 0%, #0abde3 100%);
+  color: white;
+}
+
+.scholarship-match-score {
+  background: var(--primary-gradient);
+  color: white;
+  padding: 0.3rem 0.8rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  margin-left: auto;
+}
+
+.scholarship-institution {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.institution-logo {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: var(--primary-gradient);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 0.7rem;
+  font-weight: 600;
+}
+
+.scholarship-benefits {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.8rem;
+  margin: 1rem 0;
+}
+
+.benefit-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  padding: 0.4rem;
+  background: #f8f9ff;
+  border-radius: 8px;
+}
+
+.benefit-item i {
+  color: #667eea;
+  font-size: 0.8rem;
+}
+
+.scholarship-progress {
+  margin: 1rem 0;
+}
+
+.progress-bar {
+  width: 100%;
+  height: 6px;
+  background: #e9ecef;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-top: 0.5rem;
+}
+
+.progress-fill {
+  height: 100%;
+  background: var(--primary-gradient);
+  border-radius: 10px;
+  transition: width 0.3s ease;
+}
+
+.progress-info {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.8rem;
+  color: var(--text-light);
+  margin-bottom: 0.3rem;
+}
+
+.scholarship-timeline {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin: 1rem 0;
+  padding: 0.8rem;
+  background: linear-gradient(135deg, #f0f4ff 0%, #e6f3ff 100%);
+  border-radius: 10px;
+  border-left: 4px solid #667eea;
+}
+
+.timeline-icon {
+  color: #667eea;
+}
+
+.timeline-text {
+  font-size: 0.9rem;
+  color: var(--text-primary);
+  font-weight: 500;
+}
+
+/* Enhanced Action Buttons */
+.btn-apply {
+  background: var(--primary-gradient);
+  color: white;
+  padding: 1rem 1.5rem;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 0.9rem;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  flex: 1;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-apply::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left 0.5s;
+}
+
+.btn-apply:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(102, 126, 234, 0.4);
+}
+
+.btn-apply:hover::before {
+  left: 100%;
+}
+
+.btn-apply:active {
+  transform: translateY(-1px);
+}
+
+.btn-save {
+  background: white;
+  color: #667eea;
+  border: 2px solid #e0e0e0;
+  padding: 1rem;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-save::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(102, 126, 234, 0.1), transparent);
+  transition: left 0.5s;
+}
+
+.btn-save:hover {
+  background: var(--primary-gradient);
+  color: white;
+  border-color: #667eea;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(102, 126, 234, 0.3);
+}
+
+.btn-save:hover::before {
+  left: 100%;
+}
+
+.btn-share {
+  background: var(--success-gradient);
+  color: white;
+  border: none;
+  padding: 1rem;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-share::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left 0.5s;
+}
+
+.btn-share:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(75, 172, 254, 0.4);
+}
+
+.btn-share:hover::before {
+  left: 100%;
+}
+
+/* Filter Actions */
+.filter-actions {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 2rem;
+  padding-top: 2rem;
+  border-top: 1px solid #e9ecef;
+}
+
+.btn-primary {
+  background: var(--primary-gradient);
+  color: white;
+  padding: 0.8rem 1.5rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(102, 126, 234, 0.3);
+}
+
+.btn-outline {
+  background: white;
+  color: #667eea;
+  border: 2px solid #e0e0e0;
+  padding: 0.8rem 1.5rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.btn-outline:hover {
+  background: var(--primary-gradient);
+  color: white;
+  border-color: #667eea;
+  transform: translateY(-2px);
+}
+
+/* Results Summary */
+.results-summary {
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  padding: 1.5rem 2rem;
+  border-radius: 15px;
+  margin-bottom: 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid #e9ecef;
+}
+
+.results-count {
+  font-weight: 700;
+  color: #333;
+  font-size: 1.1rem;
+}
+
+.results-count span {
+  color: #667eea;
+}
+
+.sort-controls {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.sort-controls label {
+  color: #6c757d;
+  font-weight: 600;
+}
+
+.sort-select {
+  padding: 0.5rem 1rem;
+  border: 2px solid #e9ecef;
+  border-radius: 8px;
+  background: white;
+  color: #495057;
+  font-weight: 600;
+}
+
+/* Loading State */
+.loading-state {
+  text-align: center;
+  padding: 4rem 2rem;
+  color: #6c757d;
+}
+
+.loading-spinner {
+  width: 40px;
+  height: 40px;
+  border: 3px solid #f3f3f3;
+  border-top: 3px solid #667eea;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin: 0 auto 1rem auto;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Enhanced Micro-interactions */
+.scholarship-card .scholarship-title h3 {
+  transition: color 0.3s ease;
+}
+
+.scholarship-card:hover .scholarship-title h3 {
+  color: #667eea;
+}
+
+.scholarship-tag {
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.scholarship-tag:hover {
+  background: var(--primary-gradient);
+  color: white;
+  transform: scale(1.05);
+}
+
+.detail-item {
+  transition: all 0.3s ease;
+}
+
+.detail-item:hover {
+  background: rgba(102, 126, 234, 0.05);
+  border-radius: 8px;
+  padding: 0.7rem 0.5rem;
+}
+
+/* Floating Action Buttons */
+.floating-actions {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  z-index: 1000;
+}
+
+.fab {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: var(--primary-gradient);
+  color: white;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  box-shadow: 0 4px 20px rgba(102, 126, 234, 0.4);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.fab:hover {
+  transform: translateY(-3px) scale(1.1);
+  box-shadow: 0 8px 30px rgba(102, 126, 234, 0.5);
+}
+
+/* Enhanced Search Interface */
+.search-interface {
+  background: white;
+  border-radius: var(--border-radius);
+  box-shadow: var(--card-shadow);
+  overflow: hidden;
+  margin-bottom: 3rem;
+  border: 1px solid #f0f0f0;
+  position: relative;
+}
+
+.search-interface::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: var(--primary-gradient);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .search-tabs {
+    flex-direction: column;
+  }
+
+  .filter-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .scholarship-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .scholarship-card {
+    padding: 1.5rem;
+    min-height: auto;
+  }
+
+  .scholarship-details {
+    grid-template-columns: 1fr;
+  }
+
+  .scholarship-actions {
+    flex-direction: column;
+    gap: 0.8rem;
+  }
+
+  .scholarship-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .scholarship-amount {
+    align-self: flex-start;
+    margin-top: 0.5rem;
+  }
+
+  .scholarship-benefits {
+    grid-template-columns: 1fr;
+  }
+
+  .scholarship-stats {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .results-summary {
+    flex-direction: column;
+    gap: 1rem;
+    text-align: center;
+  }
+
+  .filter-actions {
+    flex-direction: column;
+  }
+
+  .section-header h2 {
+    font-size: 2rem;
+  }
+
+  .floating-actions {
+    bottom: 1rem;
+    right: 1rem;
+  }
+
+  .fab {
+    width: 50px;
+    height: 50px;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .search-content {
+    padding: 1.5rem;
+  }
+
+  .scholarship-card {
+    padding: 1.5rem;
+  }
+
+  .scholarship-title h3 {
+    font-size: 1.2rem;
+  }
+
+  .btn-primary,
+  .btn-outline {
+    padding: 0.8rem 1.5rem;
+    font-size: 0.9rem;
+  }
+}
+
+/* Success States */
+.success-message {
+  background: linear-gradient(135deg, #d4edda 0%, #c3e6cb 100%);
+  color: #155724;
+  border: 1px solid #c3e6cb;
+  padding: 1rem 1.5rem;
+  border-radius: 12px;
+  margin: 1rem 0;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.error-message {
+  background: linear-gradient(135deg, #f8d7da 0%, #f5c6cb 100%);
+  color: #721c24;
+  border: 1px solid #f5c6cb;
+  padding: 1rem 1.5rem;
+  border-radius: 12px;
+  margin: 1rem 0;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* Scholarship Card Variations */
+.scholarship-card.featured {
+  border-left: 5px solid #ffd700;
+  background: linear-gradient(135deg, #fffacd 0%, #fff8dc 100%);
+}
+
+.scholarship-card.urgent {
+  border-left: 5px solid #ff6b6b;
+  background: linear-gradient(135deg, #fff5f5 0%, #fed7d7 100%);
+}
+
+.scholarship-card.new {
+  border-left: 5px solid #51cf66;
+  background: linear-gradient(135deg, #f0fff4 0%, #c6f6d5 100%);
+}
+/* --- Refactored Sort Controls (Matching Fields Page) --- */
+.sort-controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 30px;
+  background: #f8f9fa;
+  padding: 15px;
+  border-radius: 10px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.sort-label {
+  color: #2d3748;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.sort-select {
+  padding: 8px 15px;
+  border: 2px solid #e2e8f0;
+  border-radius: 8px;
+  background: white;
+  color: #2d3748;
+  font-size: 14px;
+  cursor: pointer;
+  min-width: 150px;
+}
+
+.btn-reset {
+  background: #667eea;
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+/* Filter Tabs alignment */
+.filter-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  margin-bottom: 40px;
+}
+
+/* --- Dark Mode Overrides for Sort Controls --- */
+html[data-theme='dark'] .sort-controls {
+  background: #1e293b !important;
+}
+
+html[data-theme='dark'] .sort-label {
+  color: #e2e8f0 !important;
+}
+
+html[data-theme='dark'] .sort-select {
+  background: #0f1425 !important;
+  color: #e2e8f0 !important;
+  border-color: #2a2f45 !important;
+}
+
+/* --- Dark Mode Overrides for Stats and Categories --- */
+
+/* Quick Stats */
+html[data-theme='dark'] .scholarship-stats .stat-item {
+  background: #1e293b !important;
+  border-color: #334155 !important;
+  color: #e2e8f0 !important;
+}
+
+html[data-theme='dark'] .scholarship-stats .stat-number {
+  /* Retain gradient text if possible, or fallback to white */
+  text-shadow: 0 0 10px rgba(102, 126, 234, 0.5);
+}
+
+html[data-theme='dark'] .scholarship-stats .stat-label {
+  color: #cbd5e1 !important;
+}
+
+/* Category Cards (if not covered by fields.css) */
+html[data-theme='dark'] .category-card {
+  background: #1e293b !important;
+  border-color: #334155 !important;
+}
+
+html[data-theme='dark'] .category-card p {
+  color: #cbd5e1 !important;
+}
+
+/* Auth Buttons consistency */
+html[data-theme='dark'] .btn-outline {
+  background: transparent !important;
+  color: #e2e8f0 !important;
+  border-color: #e2e8f0 !important;
+}
+
+html[data-theme='dark'] .btn-outline:hover {
+  background: white !important;
+  color: #1e293b !important;
+}
+
+/* Fix "All Scholarships" / Filter Tabs active state in dark mode */
+html[data-theme='dark'] .filter-tab {
+  background: #1e293b;
+  color: #e2e8f0;
+  border: 1px solid #334155;
+}
+
+html[data-theme='dark'] .filter-tab:hover,
+html[data-theme='dark'] .filter-tab.active {
+  background: linear-gradient(135deg, #667eea, #764ba2) !important;
+  color: white !important;
+  border-color: transparent !important;
+}
+
+/* Detailed Fields / Saved Scholarships Button */
+.btn-saved-scholarships {
+  background: white;
+  color: #667eea;
+  border: 2px solid #667eea;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  margin: 20px auto;
+  display: table; /* Center it if appended to block */
+  transition: all 0.3s ease;
+}
+
+.btn-saved-scholarships:hover {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border-color: transparent;
+}
+
+html[data-theme='dark'] .btn-saved-scholarships {
+  background: transparent;
+  color: #cbd5e1;
+  border-color: #667eea;
+}
+
+html[data-theme='dark'] .btn-saved-scholarships:hover {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border-color: transparent;
+}

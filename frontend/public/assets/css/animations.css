@@ -1,0 +1,321 @@
+/* ========================================
+   Zero-G UI/UX Polish & Accessibility
+   ======================================== */
+
+:root {
+  /* Fluid Typography with Clamp */
+  --font-xs: clamp(0.75rem, 0.7rem + 0.25vw, 0.875rem);
+  --font-sm: clamp(0.875rem, 0.8rem + 0.375vw, 1rem);
+  --font-base: clamp(1rem, 0.95rem + 0.25vw, 1.125rem);
+  --font-lg: clamp(1.125rem, 1.05rem + 0.375vw, 1.25rem);
+  --font-xl: clamp(1.25rem, 1.15rem + 0.5vw, 1.5rem);
+  --font-2xl: clamp(1.5rem, 1.35rem + 0.75vw, 2rem);
+  --font-3xl: clamp(2rem, 1.8rem + 1vw, 2.5rem);
+  --font-4xl: clamp(2.5rem, 2.15rem + 1.75vw, 3.5rem);
+
+  /* Animation Timing */
+  --ease-elastic: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  --ease-smooth: cubic-bezier(0.4, 0, 0.2, 1);
+
+  /* Z-Index Layers */
+  --z-toast: 9999;
+  --z-nav: 1000;
+  --z-modal: 2000;
+}
+
+/* ========================================
+   Fluid Typography Application
+   ======================================== */
+body {
+  font-size: var(--font-base);
+}
+
+h1 {
+  font-size: var(--font-4xl);
+}
+
+h2 {
+  font-size: var(--font-3xl);
+}
+
+h3 {
+  font-size: var(--font-2xl);
+}
+
+h4 {
+  font-size: var(--font-xl);
+}
+
+small,
+.text-sm {
+  font-size: var(--font-sm);
+}
+
+/* ========================================
+   Glassmorphism & Sticky Nav
+   ======================================== */
+.glass-nav {
+  position: sticky;
+  top: 0;
+  z-index: var(--z-nav);
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  transition: all 0.3s var(--ease-smooth);
+}
+
+[data-theme='dark'] .glass-nav {
+  background: rgba(26, 32, 44, 0.85);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.glass-nav.scrolled {
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+}
+
+/* ========================================
+   Micro-interactions & Buttons
+   ======================================== */
+button,
+.btn,
+.btn-primary,
+.btn-secondary,
+.btn-outline {
+  position: relative;
+  overflow: hidden;
+  /* For ripple */
+  transition:
+    transform 0.2s var(--ease-smooth),
+    box-shadow 0.2s var(--ease-smooth),
+    background-color 0.2s;
+}
+
+button:active,
+.btn:active {
+  transform: scale(0.96);
+}
+
+button:hover,
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Ripple Effect */
+.ripple {
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.4);
+  transform: scale(0);
+  animation: ripple-animation 0.6s linear;
+  pointer-events: none;
+}
+
+@keyframes ripple-animation {
+  to {
+    transform: scale(4);
+    opacity: 0;
+  }
+}
+
+/* ========================================
+   Scroll Animations
+   ======================================== */
+.reveal-on-scroll {
+  opacity: 0;
+  transform: translateY(30px);
+  transition:
+    opacity 0.8s var(--ease-smooth),
+    transform 0.8s var(--ease-smooth);
+  will-change: opacity, transform;
+}
+
+.reveal-on-scroll.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Stagger delays */
+.delay-100 {
+  transition-delay: 100ms;
+}
+
+.delay-200 {
+  transition-delay: 200ms;
+}
+
+.delay-300 {
+  transition-delay: 300ms;
+}
+
+/* ========================================
+   Toast Notifications
+   ======================================== */
+.toast-container {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  z-index: var(--z-toast);
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  pointer-events: none;
+}
+
+.toast {
+  pointer-events: auto;
+  background: var(--bg-card, #fff);
+  color: var(--text-color, #333);
+  padding: 1rem 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-width: 300px;
+  border-left: 4px solid var(--primary-color, #667eea);
+  animation: toast-in 0.4s var(--ease-elastic);
+  transform-origin: right bottom;
+}
+
+.toast.toast-success {
+  border-color: #48bb78;
+}
+
+.toast.toast-error {
+  border-color: #f56565;
+}
+
+.toast.toast-bg-dark {
+  background: #2d3748;
+  color: #fff;
+}
+
+.toast.hiding {
+  animation: toast-out 0.3s ease forwards;
+}
+
+@keyframes toast-in {
+  from {
+    opacity: 0;
+    transform: translateY(20px) scale(0.9);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes toast-out {
+  to {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+}
+
+/* ========================================
+   Page Transitions
+   ======================================== */
+body {
+  animation: page-in 0.4s ease-out;
+}
+
+@keyframes page-in {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+/* ========================================
+   Mission 5: Accessibility Orbit
+   ======================================== */
+
+/* Focus Styles - High Contrast */
+:focus-visible {
+  outline: 3px solid var(--primary-color, #667eea);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+/* Skip Link */
+.skip-link {
+  position: absolute;
+  top: -100px;
+  left: 1rem;
+  background: var(--primary-color, #667eea);
+  color: white;
+  padding: 0.5rem 1rem;
+  z-index: var(--z-toast) + 1;
+  transition: top 0.2s;
+  border-radius: 0 0 4px 4px;
+}
+
+.skip-link:focus {
+  top: 0;
+}
+
+/* Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  ::before,
+  ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  .ripple {
+    display: none;
+  }
+
+  .reveal-on-scroll {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* High Contrast Mode Adjustments */
+@media (forced-colors: active) {
+  button,
+  .btn {
+    border: 2px solid ButtonText;
+  }
+
+  .glass-nav {
+    background: Canvas;
+    border-bottom: 2px solid CanvasText;
+  }
+}
+
+/* Ripple Effect */
+.btn,
+.btn-primary,
+.btn-secondary,
+.btn-action,
+button {
+  position: relative;
+  overflow: hidden;
+}
+
+span.ripple {
+  position: absolute;
+  border-radius: 50%;
+  transform: scale(0);
+  animation: ripple 0.6s linear;
+  background-color: rgba(255, 255, 255, 0.3);
+  pointer-events: none;
+}
+
+@keyframes ripple {
+  to {
+    transform: scale(4);
+    opacity: 0;
+  }
+}

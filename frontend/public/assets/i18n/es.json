@@ -1,0 +1,86 @@
+{
+  "common": {
+    "welcome": "Bienvenido a BraineX",
+    "login": "Iniciar Sesión",
+    "signup": "Registrarse",
+    "logout": "Cerrar Sesión",
+    "search": "Buscar",
+    "filter": "Filtrar",
+    "apply": "Aplicar",
+    "cancel": "Cancelar",
+    "save": "Guardar",
+    "delete": "Eliminar",
+    "edit": "Editar",
+    "loading": "Cargando...",
+    "error": "Ocurrió un error",
+    "success": "¡Éxito!"
+  },
+  "navigation": {
+    "home": "Inicio",
+    "fields": "Campos",
+    "scholarships": "Becas",
+    "mentors": "Mentores",
+    "projects": "Proyectos",
+    "events": "Eventos",
+    "about": "Acerca de",
+    "admin": "Admin"
+  },
+  "hero": {
+    "title": "Tu Puerta de Entrada a Becas y Oportunidades Globales",
+    "subtitle": "Conéctate con mentores, descubre financiamiento y desbloquea tu potencial",
+    "cta": "Explorar Oportunidades"
+  },
+  "auth": {
+    "email": "Correo Electrónico",
+    "password": "Contraseña",
+    "firstName": "Nombre",
+    "lastName": "Apellido",
+    "confirmPassword": "Confirmar Contraseña",
+    "field": "Campo de Interés",
+    "loginTitle": "Bienvenido de Nuevo",
+    "signupTitle": "Crear Cuenta",
+    "forgotPassword": "¿Olvidaste tu Contraseña?",
+    "noAccount": "¿No tienes una cuenta?",
+    "haveAccount": "¿Ya tienes una cuenta?",
+    "registerSuccess": "¡Registro exitoso!",
+    "loginSuccess": "¡Inicio de sesión exitoso!",
+    "invalidCredentials": "Correo o contraseña inválidos"
+  },
+  "scholarships": {
+    "title": "Becas",
+    "amount": "Monto",
+    "deadline": "Fecha Límite",
+    "organization": "Organización",
+    "category": "Categoría",
+    "learnMore": "Más Información",
+    "noResults": "No se encontraron becas",
+    "categories": {
+      "undergraduate": "Pregrado",
+      "graduate": "Posgrado",
+      "international": "Internacional",
+      "research": "Investigación"
+    }
+  },
+  "mentors": {
+    "title": "Mentores",
+    "experience": "Experiencia",
+    "rating": "Calificación",
+    "mentees": "{count} mentorados",
+    "bookSession": "Reservar Sesión",
+    "noResults": "No se encontraron mentores"
+  },
+  "fields": {
+    "title": "Explorar Campos",
+    "salary": "Salario Promedio",
+    "growth": "Tasa de Crecimiento",
+    "demand": "Nivel de Demanda",
+    "careers": "Carreras Profesionales"
+  },
+  "footer": {
+    "about": "Acerca de BraineX",
+    "contact": "Contacto",
+    "privacy": "Política de Privacidad",
+    "terms": "Términos de Servicio",
+    "copyright": "© 2024 BraineX. Todos los derechos reservados."
+  }
+}

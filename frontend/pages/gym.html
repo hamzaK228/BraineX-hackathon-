@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BraineX Gym | Cognitive Training</title>
+    <link rel="manifest" href="/manifest.json" />
+    <link rel="stylesheet" href="/assets/css/design-system.css" />
+    <link rel="stylesheet" href="/assets/css/animations.css" />
+    <link rel="stylesheet" href="/assets/css/pages/gym.css" />
+    <script src="/assets/js/theme.js"></script>
+    <style>
+      /* Styles moved to assets/css/pages/gym.css */
+    </style>
+  </head>
+
+  <body>
+    <nav class="glass-nav">
+      <div class="container nav-container">
+        <a href="/" class="logo">BraineX <span>Gym</span></a>
+        <div class="nav-links">
+          <a href="/">Home</a>
+          <a href="/notion">My Goals</a>
+          <a href="#" class="active">Gym</a>
+        </div>
+        <div class="auth-buttons">
+          <!-- Populated by JS -->
+        </div>
+      </div>
+    </nav>
+
+    <main class="gym-container">
+      <header class="gym-header">
+        <h1>🧠 Brain Gym</h1>
+        <p class="subtitle">Train your working memory, attention, and processing speed.</p>
+      </header>
+
+      <section class="game-selector" id="gameSelector">
+        <!-- Dual N-Back Card -->
+        <div class="game-card" data-game="dual-n-back">
+          <div class="game-icon">⚡</div>
+          <h3>Dual N-Back</h3>
+          <p>Improve Working Memory & Fluid Intelligence</p>
+          <button class="btn-primary" style="margin-top: 1rem">Play Now</button>
+        </div>
+
+        <!-- Stroop Test Card -->
+        <div class="game-card" data-game="stroop">
+          <div class="game-icon">🎨</div>
+          <h3>Stroop Test</h3>
+          <p>Train Inhibitory Control & Focus</p>
+          <button class="btn-secondary" style="margin-top: 1rem">Play Now</button>
+        </div>
+
+        <!-- Speed Match Card -->
+        <div class="game-card" data-game="speed-match">
+          <div class="game-icon">⚡</div>
+          <h3>Speed Match</h3>
+          <p>Process Symbols Rapidly</p>
+          <button class="btn-primary" style="margin-top: 1rem">Play Now</button>
+        </div>
+      </section>
+
+      <section id="activeGameArea" class="active-game-area">
+        <button class="btn-link" id="backToMenu" style="margin-bottom: 1rem">← Back to Menu</button>
+        <div id="gameRoot"></div>
+      </section>
+    </main>
+
+    <script type="module">
+      import { Store } from '/assets/js/core/Store.js';
+      import { DualNBackGame } from '/assets/js/components/DualNBackGame.js';
+      import { StroopGame } from '/assets/js/components/StroopGame.js';
+      import { SpeedMatchGame } from '/assets/js/components/SpeedMatchGame.js';
+      import { analyticsModule } from '/assets/js/core/AnalyticsStore.js';
+      import { gamificationModule } from '/assets/js/core/GamificationStore.js';
+
+      // Initialize Store (Shared state)
+      const store = new Store({
+        state: {
+          ...analyticsModule.state,
+          ...gamificationModule.state,
+        },
+        mutations: {
+          ...analyticsModule.mutations,
+          ...gamificationModule.mutations,
+        },
+        actions: {
+          ...analyticsModule.actions,
+          ...gamificationModule.actions,
+        },
+        persistenceKey: 'brainex_app_state_v1',
+      });
+
+      // Global App Context for Components
+      window.app = { store };
+
+      const gameSelector = document.getElementById('gameSelector');
+      const activeGameArea = document.getElementById('activeGameArea');
+      const backBtn = document.getElementById('backToMenu');
+      const gameRoot = document.getElementById('gameRoot');
+
+      // Handle Game Selection
+      gameSelector.addEventListener('click', (e) => {
+        const card = e.target.closest('.game-card');
+        if (card) {
+          const gameType = card.dataset.game;
+          if (gameType) launchGame(gameType);
+        }
+      });
+
+      // Handle Back Navigation
+      backBtn.addEventListener('click', () => {
+        activeGameArea.classList.remove('visible');
+        gameSelector.style.display = 'grid';
+        gameRoot.innerHTML = ''; // Destroy / Unmount
+      });
+
+      function launchGame(type) {
+        gameSelector.style.display = 'none';
+        activeGameArea.classList.add('visible');
+
+        if (type === 'dual-n-back') {
+          new DualNBackGame({
+            element: gameRoot,
+            store: window.app.store,
+          }).init();
+        } else if (type === 'stroop') {
+          new StroopGame({
+            element: gameRoot,
+            store: window.app.store,
+          }).init();
+        } else if (type === 'speed-match') {
+          new SpeedMatchGame({
+            element: gameRoot,
+            store: window.app.store,
+          }).init();
+        }
+      }
+    </script>
+  </body>
+</html>
+

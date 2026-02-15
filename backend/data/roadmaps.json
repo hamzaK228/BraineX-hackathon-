@@ -1,0 +1,800 @@
+[
+  {
+    "id": 1,
+    "title": "Full-Stack Web Developer",
+    "slug": "fullstack-developer",
+    "icon": "🌐",
+    "duration": "6-12 months",
+    "difficulty": "Intermediate",
+    "description": "Master front-end and back-end technologies to build complete web applications from scratch.",
+    "skills": ["HTML", "CSS", "JavaScript", "React", "Node.js", "MongoDB", "Git"],
+    "steps": [
+      {
+        "phase": 1,
+        "title": "HTML & CSS Fundamentals",
+        "duration": "2 weeks",
+        "resources": ["MDN Web Docs", "freeCodeCamp"]
+      },
+      {
+        "phase": 2,
+        "title": "JavaScript Basics",
+        "duration": "3 weeks",
+        "resources": ["JavaScript.info", "Eloquent JavaScript"]
+      },
+      {
+        "phase": 3,
+        "title": "React Framework",
+        "duration": "4 weeks",
+        "resources": ["React Docs", "Scrimba"]
+      },
+      {
+        "phase": 4,
+        "title": "Node.js & Express",
+        "duration": "3 weeks",
+        "resources": ["Node.js Docs", "The Odin Project"]
+      },
+      {
+        "phase": 5,
+        "title": "Database (MongoDB)",
+        "duration": "2 weeks",
+        "resources": ["MongoDB University"]
+      },
+      {
+        "phase": 6,
+        "title": "Build Projects",
+        "duration": "4 weeks",
+        "resources": ["Build a portfolio", "Deploy apps"]
+      }
+    ],
+    "category": "Technology"
+  },
+  {
+    "id": 2,
+    "title": "Data Scientist",
+    "slug": "data-scientist",
+    "icon": "📊",
+    "duration": "8-14 months",
+    "difficulty": "Advanced",
+    "description": "Learn to analyze data, build machine learning models, and extract insights using Python and modern tools.",
+    "skills": [
+      "Python",
+      "Pandas",
+      "NumPy",
+      "Machine Learning",
+      "SQL",
+      "Statistics",
+      "Visualization"
+    ],
+    "steps": [
+      {
+        "phase": 1,
+        "title": "Python Fundamentals",
+        "duration": "3 weeks",
+        "resources": ["Python.org", "Codecademy"]
+      },
+      {
+        "phase": 2,
+        "title": "Statistics & Math",
+        "duration": "4 weeks",
+        "resources": ["Khan Academy", "MIT OpenCourseWare"]
+      },
+      {
+        "phase": 3,
+        "title": "Data Analysis with Pandas",
+        "duration": "3 weeks",
+        "resources": ["Pandas Docs", "Kaggle"]
+      },
+      {
+        "phase": 4,
+        "title": "Data Visualization",
+        "duration": "2 weeks",
+        "resources": ["Matplotlib", "Seaborn"]
+      },
+      {
+        "phase": 5,
+        "title": "Machine Learning",
+        "duration": "6 weeks",
+        "resources": ["Scikit-learn", "Andrew Ng Course"]
+      },
+      {
+        "phase": 6,
+        "title": "Deep Learning",
+        "duration": "4 weeks",
+        "resources": ["TensorFlow", "PyTorch"]
+      },
+      {
+        "phase": 7,
+        "title": "Projects & Portfolio",
+        "duration": "6 weeks",
+        "resources": ["Kaggle Competitions"]
+      }
+    ],
+    "category": "Technology"
+  },
+  {
+    "id": 3,
+    "title": "Mobile App Developer",
+    "slug": "mobile-developer",
+    "icon": "📱",
+    "duration": "5-10 months",
+    "difficulty": "Intermediate",
+    "description": "Build native and cross-platform mobile applications for iOS and Android.",
+    "skills": ["React Native", "Flutter", "JavaScript", "Dart", "Firebase", "REST APIs"],
+    "steps": [
+      {
+        "phase": 1,
+        "title": "JavaScript/Dart Basics",
+        "duration": "3 weeks",
+        "resources": ["JavaScript.info", "Dart.dev"]
+      },
+      {
+        "phase": 2,
+        "title": "Choose Framework",
+        "duration": "1 week",
+        "resources": ["React Native vs Flutter comparison"]
+      },
+      {
+        "phase": 3,
+        "title": "Core Concepts",
+        "duration": "4 weeks",
+        "resources": ["Official Docs", "Udemy Courses"]
+      },
+      {
+        "phase": 4,
+        "title": "State Management",
+        "duration": "2 weeks",
+        "resources": ["Redux", "Provider/Riverpod"]
+      },
+      {
+        "phase": 5,
+        "title": "Backend Integration",
+        "duration": "3 weeks",
+        "resources": ["Firebase", "REST APIs"]
+      },
+      {
+        "phase": 6,
+        "title": "Publish Apps",
+        "duration": "2 weeks",
+        "resources": ["App Store", "Google Play"]
+      }
+    ],
+    "category": "Technology"
+  },
+  {
+    "id": 4,
+    "title": "Cloud Engineer",
+    "slug": "cloud-engineer",
+    "icon": "☁️",
+    "duration": "6-12 months",
+    "difficulty": "Advanced",
+    "description": "Master cloud platforms, DevOps practices, and infrastructure management.",
+    "skills": ["AWS", "Azure", "Docker", "Kubernetes", "Terraform", "CI/CD", "Linux"],
+    "steps": [
+      {
+        "phase": 1,
+        "title": "Linux Fundamentals",
+        "duration": "2 weeks",
+        "resources": ["Linux Foundation"]
+      },
+      {
+        "phase": 2,
+        "title": "Networking Basics",
+        "duration": "2 weeks",
+        "resources": ["CompTIA Network+"]
+      },
+      {
+        "phase": 3,
+        "title": "AWS/Azure Fundamentals",
+        "duration": "4 weeks",
+        "resources": ["AWS Free Tier", "Azure Learn"]
+      },
+      {
+        "phase": 4,
+        "title": "Docker & Containers",
+        "duration": "3 weeks",
+        "resources": ["Docker Docs"]
+      },
+      {
+        "phase": 5,
+        "title": "Kubernetes",
+        "duration": "4 weeks",
+        "resources": ["Kubernetes.io"]
+      },
+      {
+        "phase": 6,
+        "title": "Infrastructure as Code",
+        "duration": "3 weeks",
+        "resources": ["Terraform", "Ansible"]
+      },
+      {
+        "phase": 7,
+        "title": "Get Certified",
+        "duration": "4 weeks",
+        "resources": ["AWS Certified", "Azure Certified"]
+      }
+    ],
+    "category": "Technology"
+  },
+  {
+    "id": 5,
+    "title": "UI/UX Designer",
+    "slug": "uiux-designer",
+    "icon": "🎨",
+    "duration": "4-8 months",
+    "difficulty": "Beginner",
+    "description": "Create beautiful, user-centered designs for websites and mobile applications.",
+    "skills": [
+      "Figma",
+      "Adobe XD",
+      "User Research",
+      "Prototyping",
+      "Design Systems",
+      "Accessibility"
+    ],
+    "steps": [
+      {
+        "phase": 1,
+        "title": "Design Principles",
+        "duration": "2 weeks",
+        "resources": ["Don Norman Books", "Dribbble"]
+      },
+      {
+        "phase": 2,
+        "title": "Learn Figma",
+        "duration": "3 weeks",
+        "resources": ["Figma Academy", "YouTube"]
+      },
+      {
+        "phase": 3,
+        "title": "User Research",
+        "duration": "2 weeks",
+        "resources": ["Nielsen Norman Group"]
+      },
+      {
+        "phase": 4,
+        "title": "Wireframing",
+        "duration": "2 weeks",
+        "resources": ["Balsamiq", "Figma"]
+      },
+      {
+        "phase": 5,
+        "title": "Prototyping",
+        "duration": "3 weeks",
+        "resources": ["Figma Prototyping"]
+      },
+      {
+        "phase": 6,
+        "title": "Build Portfolio",
+        "duration": "4 weeks",
+        "resources": ["Behance", "Dribbble"]
+      }
+    ],
+    "category": "Design"
+  },
+  {
+    "id": 6,
+    "title": "Cybersecurity Specialist",
+    "slug": "cybersecurity",
+    "icon": "🔐",
+    "duration": "8-15 months",
+    "difficulty": "Advanced",
+    "description": "Protect systems and networks from cyber threats through ethical hacking and security practices.",
+    "skills": [
+      "Network Security",
+      "Ethical Hacking",
+      "Penetration Testing",
+      "SIEM",
+      "Firewalls",
+      "Cryptography"
+    ],
+    "steps": [
+      {
+        "phase": 1,
+        "title": "IT Fundamentals",
+        "duration": "3 weeks",
+        "resources": ["CompTIA A+"]
+      },
+      {
+        "phase": 2,
+        "title": "Networking",
+        "duration": "4 weeks",
+        "resources": ["CompTIA Network+"]
+      },
+      {
+        "phase": 3,
+        "title": "Security Basics",
+        "duration": "4 weeks",
+        "resources": ["CompTIA Security+"]
+      },
+      {
+        "phase": 4,
+        "title": "Linux & Scripting",
+        "duration": "3 weeks",
+        "resources": ["Bash", "Python"]
+      },
+      {
+        "phase": 5,
+        "title": "Ethical Hacking",
+        "duration": "6 weeks",
+        "resources": ["CEH", "TryHackMe"]
+      },
+      {
+        "phase": 6,
+        "title": "Advanced Security",
+        "duration": "4 weeks",
+        "resources": ["OSCP Prep", "HackTheBox"]
+      }
+    ],
+    "category": "Technology"
+  },
+  {
+    "id": 7,
+    "title": "Product Manager",
+    "slug": "product-manager",
+    "icon": "🚀",
+    "duration": "4-8 months",
+    "difficulty": "Intermediate",
+    "description": "Lead product development from ideation to launch, working with engineering and design teams.",
+    "skills": [
+      "Product Strategy",
+      "Agile",
+      "User Stories",
+      "Roadmapping",
+      "Analytics",
+      "Stakeholder Management"
+    ],
+    "steps": [
+      {
+        "phase": 1,
+        "title": "PM Fundamentals",
+        "duration": "2 weeks",
+        "resources": ["Cracking the PM Interview"]
+      },
+      {
+        "phase": 2,
+        "title": "Agile & Scrum",
+        "duration": "2 weeks",
+        "resources": ["Scrum Guide", "Atlassian"]
+      },
+      {
+        "phase": 3,
+        "title": "User Research",
+        "duration": "3 weeks",
+        "resources": ["IDEO Design Thinking"]
+      },
+      {
+        "phase": 4,
+        "title": "Product Analytics",
+        "duration": "3 weeks",
+        "resources": ["Mixpanel", "Amplitude"]
+      },
+      {
+        "phase": 5,
+        "title": "Roadmapping",
+        "duration": "2 weeks",
+        "resources": ["ProductPlan", "Aha!"]
+      },
+      {
+        "phase": 6,
+        "title": "Case Studies",
+        "duration": "4 weeks",
+        "resources": ["Practice PM cases"]
+      }
+    ],
+    "category": "Business"
+  },
+  {
+    "id": 8,
+    "title": "Digital Marketing Specialist",
+    "slug": "digital-marketing",
+    "icon": "📈",
+    "duration": "3-6 months",
+    "difficulty": "Beginner",
+    "description": "Master online marketing channels including SEO, social media, content, and paid advertising.",
+    "skills": [
+      "SEO",
+      "Google Ads",
+      "Social Media",
+      "Content Marketing",
+      "Email Marketing",
+      "Analytics"
+    ],
+    "steps": [
+      {
+        "phase": 1,
+        "title": "Marketing Basics",
+        "duration": "2 weeks",
+        "resources": ["HubSpot Academy"]
+      },
+      {
+        "phase": 2,
+        "title": "SEO Fundamentals",
+        "duration": "3 weeks",
+        "resources": ["Moz", "Ahrefs"]
+      },
+      {
+        "phase": 3,
+        "title": "Google Ads",
+        "duration": "3 weeks",
+        "resources": ["Google Skillshop"]
+      },
+      {
+        "phase": 4,
+        "title": "Social Media Marketing",
+        "duration": "2 weeks",
+        "resources": ["Hootsuite Academy"]
+      },
+      {
+        "phase": 5,
+        "title": "Content Strategy",
+        "duration": "2 weeks",
+        "resources": ["Content Marketing Institute"]
+      },
+      {
+        "phase": 6,
+        "title": "Analytics",
+        "duration": "2 weeks",
+        "resources": ["Google Analytics"]
+      }
+    ],
+    "category": "Business"
+  },
+  {
+    "id": 9,
+    "title": "Machine Learning Engineer",
+    "slug": "ml-engineer",
+    "icon": "🤖",
+    "duration": "10-18 months",
+    "difficulty": "Advanced",
+    "description": "Build and deploy production-ready machine learning systems at scale.",
+    "skills": [
+      "Python",
+      "TensorFlow",
+      "PyTorch",
+      "MLOps",
+      "Cloud ML",
+      "Feature Engineering",
+      "Model Optimization"
+    ],
+    "steps": [
+      {
+        "phase": 1,
+        "title": "Python & Math",
+        "duration": "4 weeks",
+        "resources": ["Linear Algebra", "Calculus"]
+      },
+      {
+        "phase": 2,
+        "title": "Machine Learning Basics",
+        "duration": "6 weeks",
+        "resources": ["Coursera ML Course"]
+      },
+      {
+        "phase": 3,
+        "title": "Deep Learning",
+        "duration": "6 weeks",
+        "resources": ["Deep Learning Specialization"]
+      },
+      {
+        "phase": 4,
+        "title": "MLOps",
+        "duration": "4 weeks",
+        "resources": ["MLflow", "Kubeflow"]
+      },
+      {
+        "phase": 5,
+        "title": "Cloud ML Platforms",
+        "duration": "3 weeks",
+        "resources": ["AWS SageMaker", "GCP Vertex AI"]
+      },
+      {
+        "phase": 6,
+        "title": "Production Systems",
+        "duration": "4 weeks",
+        "resources": ["Build end-to-end pipelines"]
+      }
+    ],
+    "category": "Technology"
+  },
+  {
+    "id": 10,
+    "title": "DevOps Engineer",
+    "slug": "devops-engineer",
+    "icon": "🔄",
+    "duration": "6-12 months",
+    "difficulty": "Intermediate",
+    "description": "Bridge development and operations with automation, CI/CD, and infrastructure management.",
+    "skills": ["Git", "CI/CD", "Docker", "Jenkins", "Ansible", "Monitoring", "Scripting"],
+    "steps": [
+      {
+        "phase": 1,
+        "title": "Linux & Scripting",
+        "duration": "3 weeks",
+        "resources": ["Bash", "Python"]
+      },
+      {
+        "phase": 2,
+        "title": "Version Control",
+        "duration": "2 weeks",
+        "resources": ["Git", "GitHub"]
+      },
+      {
+        "phase": 3,
+        "title": "CI/CD Pipelines",
+        "duration": "4 weeks",
+        "resources": ["Jenkins", "GitHub Actions"]
+      },
+      {
+        "phase": 4,
+        "title": "Containerization",
+        "duration": "3 weeks",
+        "resources": ["Docker", "Podman"]
+      },
+      {
+        "phase": 5,
+        "title": "Configuration Management",
+        "duration": "3 weeks",
+        "resources": ["Ansible", "Chef"]
+      },
+      {
+        "phase": 6,
+        "title": "Monitoring",
+        "duration": "2 weeks",
+        "resources": ["Prometheus", "Grafana"]
+      }
+    ],
+    "category": "Technology"
+  },
+  {
+    "id": 11,
+    "title": "Blockchain Developer",
+    "slug": "blockchain-developer",
+    "icon": "⛓️",
+    "duration": "6-12 months",
+    "difficulty": "Advanced",
+    "description": "Build decentralized applications and smart contracts on blockchain platforms.",
+    "skills": ["Solidity", "Web3.js", "Smart Contracts", "Ethereum", "DeFi", "NFTs"],
+    "steps": [
+      {
+        "phase": 1,
+        "title": "Blockchain Fundamentals",
+        "duration": "2 weeks",
+        "resources": ["Blockchain Basics"]
+      },
+      {
+        "phase": 2,
+        "title": "Ethereum & Solidity",
+        "duration": "5 weeks",
+        "resources": ["CryptoZombies", "Solidity Docs"]
+      },
+      {
+        "phase": 3,
+        "title": "Smart Contract Security",
+        "duration": "3 weeks",
+        "resources": ["OpenZeppelin"]
+      },
+      {
+        "phase": 4,
+        "title": "Web3 Frontend",
+        "duration": "3 weeks",
+        "resources": ["Web3.js", "Ethers.js"]
+      },
+      {
+        "phase": 5,
+        "title": "DeFi & NFTs",
+        "duration": "3 weeks",
+        "resources": ["Uniswap", "OpenSea"]
+      },
+      {
+        "phase": 6,
+        "title": "Build dApps",
+        "duration": "4 weeks",
+        "resources": ["Launch your project"]
+      }
+    ],
+    "category": "Technology"
+  },
+  {
+    "id": 12,
+    "title": "Game Developer",
+    "slug": "game-developer",
+    "icon": "🎮",
+    "duration": "8-14 months",
+    "difficulty": "Intermediate",
+    "description": "Create immersive games using modern game engines and programming.",
+    "skills": ["Unity", "Unreal Engine", "C#", "C++", "Game Design", "3D Modeling"],
+    "steps": [
+      {
+        "phase": 1,
+        "title": "Programming Basics",
+        "duration": "4 weeks",
+        "resources": ["C# or C++"]
+      },
+      {
+        "phase": 2,
+        "title": "Choose Game Engine",
+        "duration": "1 week",
+        "resources": ["Unity vs Unreal"]
+      },
+      {
+        "phase": 3,
+        "title": "Engine Fundamentals",
+        "duration": "6 weeks",
+        "resources": ["Unity Learn", "Unreal Docs"]
+      },
+      {
+        "phase": 4,
+        "title": "Game Design",
+        "duration": "3 weeks",
+        "resources": ["GDC Talks", "Game Design Books"]
+      },
+      {
+        "phase": 5,
+        "title": "Build Small Games",
+        "duration": "6 weeks",
+        "resources": ["Game Jams"]
+      },
+      {
+        "phase": 6,
+        "title": "Publish Games",
+        "duration": "3 weeks",
+        "resources": ["Steam", "itch.io"]
+      }
+    ],
+    "category": "Creative"
+  },
+  {
+    "id": 13,
+    "title": "Pre-Med Student",
+    "slug": "pre-med",
+    "icon": "⚕️",
+    "duration": "4 years",
+    "difficulty": "Advanced",
+    "description": "Complete requirements for medical school admission including courses, MCAT, and clinical experience.",
+    "skills": ["Biology", "Chemistry", "Physics", "MCAT", "Clinical Experience", "Research"],
+    "steps": [
+      {
+        "phase": 1,
+        "title": "Core Sciences",
+        "duration": "2 years",
+        "resources": ["Biology", "Chemistry", "Physics"]
+      },
+      {
+        "phase": 2,
+        "title": "Organic & Biochem",
+        "duration": "1 year",
+        "resources": ["Organic Chemistry", "Biochemistry"]
+      },
+      {
+        "phase": 3,
+        "title": "Clinical Volunteering",
+        "duration": "Ongoing",
+        "resources": ["Hospitals", "Clinics"]
+      },
+      {
+        "phase": 4,
+        "title": "Research Experience",
+        "duration": "1-2 years",
+        "resources": ["Lab positions"]
+      },
+      {
+        "phase": 5,
+        "title": "MCAT Prep",
+        "duration": "3-6 months",
+        "resources": ["AAMC", "Kaplan"]
+      },
+      {
+        "phase": 6,
+        "title": "Applications",
+        "duration": "6 months",
+        "resources": ["AMCAS", "Personal statement"]
+      }
+    ],
+    "category": "Healthcare"
+  },
+  {
+    "id": 14,
+    "title": "Business Analyst",
+    "slug": "business-analyst",
+    "icon": "💼",
+    "duration": "4-8 months",
+    "difficulty": "Intermediate",
+    "description": "Bridge business needs and technology solutions through requirements gathering and analysis.",
+    "skills": [
+      "Requirements Analysis",
+      "SQL",
+      "Excel",
+      "Process Modeling",
+      "Stakeholder Management",
+      "Documentation"
+    ],
+    "steps": [
+      {
+        "phase": 1,
+        "title": "BA Fundamentals",
+        "duration": "2 weeks",
+        "resources": ["BABOK Guide"]
+      },
+      {
+        "phase": 2,
+        "title": "Requirements Techniques",
+        "duration": "3 weeks",
+        "resources": ["Use Cases", "User Stories"]
+      },
+      {
+        "phase": 3,
+        "title": "SQL & Data Analysis",
+        "duration": "3 weeks",
+        "resources": ["Mode Analytics", "DataCamp"]
+      },
+      {
+        "phase": 4,
+        "title": "Process Modeling",
+        "duration": "2 weeks",
+        "resources": ["BPMN", "Visio"]
+      },
+      {
+        "phase": 5,
+        "title": "Agile Methodologies",
+        "duration": "2 weeks",
+        "resources": ["Scrum", "Kanban"]
+      },
+      {
+        "phase": 6,
+        "title": "Get Certified",
+        "duration": "4 weeks",
+        "resources": ["CBAP", "PMI-PBA"]
+      }
+    ],
+    "category": "Business"
+  },
+  {
+    "id": 15,
+    "title": "Data Engineer",
+    "slug": "data-engineer",
+    "icon": "🔧",
+    "duration": "8-14 months",
+    "difficulty": "Advanced",
+    "description": "Build and maintain data pipelines, warehouses, and infrastructure for analytics.",
+    "skills": ["Python", "SQL", "Apache Spark", "Airflow", "ETL", "Data Warehousing", "Cloud Data"],
+    "steps": [
+      {
+        "phase": 1,
+        "title": "SQL Mastery",
+        "duration": "4 weeks",
+        "resources": ["PostgreSQL", "Advanced SQL"]
+      },
+      {
+        "phase": 2,
+        "title": "Python for Data",
+        "duration": "3 weeks",
+        "resources": ["Pandas", "PySpark"]
+      },
+      {
+        "phase": 3,
+        "title": "Data Warehousing",
+        "duration": "3 weeks",
+        "resources": ["Snowflake", "Redshift"]
+      },
+      {
+        "phase": 4,
+        "title": "ETL & Pipelines",
+        "duration": "4 weeks",
+        "resources": ["Airflow", "dbt"]
+      },
+      {
+        "phase": 5,
+        "title": "Big Data Tools",
+        "duration": "4 weeks",
+        "resources": ["Spark", "Kafka"]
+      },
+      {
+        "phase": 6,
+        "title": "Cloud Platforms",
+        "duration": "3 weeks",
+        "resources": ["AWS", "GCP Data Services"]
+      }
+    ],
+    "category": "Technology"
+  }
+]

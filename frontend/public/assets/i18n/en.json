@@ -1,0 +1,86 @@
+{
+  "common": {
+    "welcome": "Welcome to BraineX",
+    "login": "Log In",
+    "signup": "Sign Up",
+    "logout": "Logout",
+    "search": "Search",
+    "filter": "Filter",
+    "apply": "Apply",
+    "cancel": "Cancel",
+    "save": "Save",
+    "delete": "Delete",
+    "edit": "Edit",
+    "loading": "Loading...",
+    "error": "An error occurred",
+    "success": "Success!"
+  },
+  "navigation": {
+    "home": "Home",
+    "fields": "Fields",
+    "scholarships": "Scholarships",
+    "mentors": "Mentors",
+    "projects": "Projects",
+    "events": "Events",
+    "about": "About",
+    "admin": "Admin"
+  },
+  "hero": {
+    "title": "Your Gateway to Scholarships & Global Opportunities",
+    "subtitle": "Connect with mentors, discover funding, and unlock your potential",
+    "cta": "Explore Opportunities"
+  },
+  "auth": {
+    "email": "Email",
+    "password": "Password",
+    "firstName": "First Name",
+    "lastName": "Last Name",
+    "confirmPassword": "Confirm Password",
+    "field": "Field of Interest",
+    "loginTitle": "Welcome Back",
+    "signupTitle": "Create Account",
+    "forgotPassword": "Forgot Password?",
+    "noAccount": "Don't have an account?",
+    "haveAccount": "Already have an account?",
+    "registerSuccess": "Registration successful!",
+    "loginSuccess": "Login successful!",
+    "invalidCredentials": "Invalid email or password"
+  },
+  "scholarships": {
+    "title": "Scholarships",
+    "amount": "Amount",
+    "deadline": "Deadline",
+    "organization": "Organization",
+    "category": "Category",
+    "learnMore": "Learn More",
+    "noResults": "No scholarships found",
+    "categories": {
+      "undergraduate": "Undergraduate",
+      "graduate": "Graduate",
+      "international": "International",
+      "research": "Research"
+    }
+  },
+  "mentors": {
+    "title": "Mentors",
+    "experience": "Experience",
+    "rating": "Rating",
+    "mentees": "{count} mentees",
+    "bookSession": "Book Session",
+    "noResults": "No mentors found"
+  },
+  "fields": {
+    "title": "Explore Fields",
+    "salary": "Average Salary",
+    "growth": "Growth Rate",
+    "demand": "Demand Level",
+    "careers": "Career Paths"
+  },
+  "footer": {
+    "about": "About BraineX",
+    "contact": "Contact",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Service",
+    "copyright": "© 2024 BraineX. All rights reserved."
+  }
+}

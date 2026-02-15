@@ -1,0 +1,353 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Design System - BraineX</title>
+    <link rel="stylesheet" href="/assets/css/design-system.css" />
+    <link rel="stylesheet" href="/assets/css/skeleton.css" />
+    <link rel="stylesheet" href="/assets/css/animations.css" />
+    <style>
+      body {
+        padding-bottom: 5rem;
+      }
+
+      .design-section {
+        padding: 4rem 0;
+        border-bottom: 1px solid var(--border-color);
+      }
+
+      .design-section h2 {
+        margin-bottom: 2rem;
+        font-size: var(--text-3xl);
+        color: var(--text-primary);
+      }
+
+      .design-card {
+        padding: 2rem;
+        border-radius: var(--border-radius-lg);
+        background: var(--surface-card);
+        border: 1px solid var(--border-color);
+        margin-bottom: 2rem;
+      }
+
+      .color-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+        gap: 1.5rem;
+      }
+
+      .color-swatch {
+        height: 100px;
+        border-radius: var(--border-radius-md);
+        margin-bottom: 0.5rem;
+        box-shadow: var(--shadow-sm);
+      }
+
+      .color-item p {
+        font-size: var(--text-sm);
+        font-weight: var(--font-medium);
+        margin-bottom: 0.25rem;
+      }
+
+      .color-item code {
+        font-size: var(--text-xs);
+        color: var(--text-muted);
+        background: var(--bg-secondary);
+        padding: 0.25rem 0.5rem;
+        border-radius: 4px;
+      }
+
+      .typography-sample {
+        margin-bottom: 2rem;
+        padding-bottom: 2rem;
+        border-bottom: 1px dashed var(--border-color);
+      }
+
+      .typography-sample:last-child {
+        border-bottom: none;
+      }
+
+      .component-demo {
+        padding: 2rem;
+        background: var(--bg-secondary);
+        border-radius: var(--border-radius-md);
+        margin-bottom: 1rem;
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        flex-wrap: wrap;
+      }
+    </style>
+    <script src="/assets/js/theme.js"></script>
+    <script src="/assets/js/performance.js"></script>
+  </head>
+
+  <body>
+    <header>
+      <div class="ds-container">
+        <nav
+          style="
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 0;
+          "
+        >
+          <div class="logo">
+            <span style="font-weight: 800; font-size: 1.5rem">🎨 BraineX Design System</span>
+          </div>
+          <div>
+            <a href="/" class="ds-btn ds-btn-ghost">Back to App</a>
+            <button
+              class="theme-toggle ds-btn ds-btn-secondary"
+              type="button"
+              aria-label="Toggle color theme"
+            >
+              Switch Theme
+            </button>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <main class="ds-container">
+      <!-- COLORS -->
+      <section class="design-section" id="colors">
+        <h2>Color Palette</h2>
+
+        <div class="design-card">
+          <h3>Brand Colors</h3>
+          <div class="color-grid">
+            <div class="color-item">
+              <div class="color-swatch" style="background: var(--color-brand-primary)"></div>
+              <p>Brand Primary</p>
+              <code>--color-brand-primary</code>
+            </div>
+            <div class="color-item">
+              <div class="color-swatch" style="background: var(--color-brand-secondary)"></div>
+              <p>Brand Secondary</p>
+              <code>--color-brand-secondary</code>
+            </div>
+            <div class="color-item">
+              <div class="color-swatch" style="background: var(--color-brand-gradient)"></div>
+              <p>Brand Gradient</p>
+              <code>--color-brand-gradient</code>
+            </div>
+          </div>
+        </div>
+
+        <div class="design-card">
+          <h3>Semantic Colors</h3>
+          <div class="color-grid">
+            <div class="color-item">
+              <div class="color-swatch" style="background: var(--color-success)"></div>
+              <p>Success</p>
+              <code>--color-success</code>
+            </div>
+            <div class="color-item">
+              <div class="color-swatch" style="background: var(--color-warning)"></div>
+              <p>Warning</p>
+              <code>--color-warning</code>
+            </div>
+            <div class="color-item">
+              <div class="color-swatch" style="background: var(--color-error)"></div>
+              <p>Error</p>
+              <code>--color-error</code>
+            </div>
+            <div class="color-item">
+              <div class="color-swatch" style="background: var(--color-info)"></div>
+              <p>Info</p>
+              <code>--color-info</code>
+            </div>
+          </div>
+        </div>
+
+        <div class="design-card">
+          <h3>Neutrals</h3>
+          <div class="color-grid">
+            <div class="color-item">
+              <div class="color-swatch" style="background: var(--color-gray-50)"></div>
+              <p>Gray 50</p>
+              <code>--color-gray-50</code>
+            </div>
+            <div class="color-item">
+              <div class="color-swatch" style="background: var(--color-gray-200)"></div>
+              <p>Gray 200</p>
+              <code>--color-gray-200</code>
+            </div>
+            <div class="color-item">
+              <div class="color-swatch" style="background: var(--color-gray-500)"></div>
+              <p>Gray 500</p>
+              <code>--color-gray-500</code>
+            </div>
+            <div class="color-item">
+              <div class="color-swatch" style="background: var(--color-gray-900)"></div>
+              <p>Gray 900</p>
+              <code>--color-gray-900</code>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- TYPOGRAPHY -->
+      <section class="design-section" id="typography">
+        <h2>Typography</h2>
+        <div class="design-card">
+          <div class="typography-sample">
+            <h1 class="text-5xl font-bold">Heading 1 (5xl)</h1>
+            <code>--text-5xl</code>
+          </div>
+          <div class="typography-sample">
+            <h2 class="text-4xl font-bold">Heading 2 (4xl)</h2>
+            <code>--text-4xl</code>
+          </div>
+          <div class="typography-sample">
+            <h3 class="text-3xl font-bold">Heading 3 (3xl)</h3>
+            <code>--text-3xl</code>
+          </div>
+          <div class="typography-sample">
+            <h4 class="text-2xl font-bold">Heading 4 (2xl)</h4>
+            <code>--text-2xl</code>
+          </div>
+          <div class="typography-sample">
+            <p class="text-base">
+              Body Text (Base): Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+              quis nostrud exercitation ullamco.
+            </p>
+            <code>--text-base</code>
+          </div>
+          <div class="typography-sample">
+            <p class="text-sm text-muted">Micro Copy / Muted Text (Small)</p>
+            <code>--text-sm + .text-muted</code>
+          </div>
+        </div>
+      </section>
+
+      <!-- BUTTONS -->
+      <section class="design-section" id="buttons">
+        <h2>Buttons & Interactions</h2>
+        <div class="design-card">
+          <h3>Variants</h3>
+          <div class="component-demo">
+            <button class="ds-btn ds-btn-primary">Primary Button</button>
+            <button class="ds-btn ds-btn-secondary">Secondary Button</button>
+            <button class="ds-btn ds-btn-ghost">Ghost Button</button>
+          </div>
+          <code>.ds-btn .ds-btn-primary | .ds-btn-secondary | .ds-btn-ghost</code>
+
+          <h3 style="margin-top: 2rem">Micro-interactions</h3>
+          <p class="text-sm text-muted mb-2">
+            Hover to see lift effect. Click to see ripple effect.
+          </p>
+          <div class="component-demo">
+            <button class="ds-btn ds-btn-primary ripple-btn">Click Me (Ripple)</button>
+            <button class="ds-btn ds-btn-secondary">Hover Me (Lift)</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- COMPONENTS -->
+      <section class="design-section" id="components">
+        <h2>Components</h2>
+
+        <div class="ds-grid ds-grid-2">
+          <!-- Cards -->
+          <div class="design-card">
+            <h3>Cards</h3>
+            <div class="ds-card p-6 reveal-on-scroll">
+              <div class="flex items-center justify-between mb-4">
+                <span class="ds-badge ds-badge-success mb-2">Featured</span>
+              </div>
+              <h4 class="text-xl font-bold mb-2">Card Title</h4>
+              <p class="text-muted mb-4">
+                This is a standard card component with hover elevation and border styling.
+              </p>
+              <button class="ds-btn ds-btn-primary w-full">Action</button>
+            </div>
+          </div>
+
+          <!-- Forms -->
+          <div class="design-card">
+            <h3>Form Inputs</h3>
+            <div class="space-y-4">
+              <div class="form-group mb-4">
+                <label class="text-sm font-medium mb-1 block">Email Address</label>
+                <input type="email" class="ds-input" placeholder="john@example.com" />
+              </div>
+              <div class="form-group mb-4">
+                <label class="text-sm font-medium mb-1 block">Select Option</label>
+                <select class="ds-input">
+                  <option>Option 1</option>
+                  <option>Option 2</option>
+                </select>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Badges -->
+        <div class="design-card mt-6">
+          <h3>Badges</h3>
+          <div class="component-demo">
+            <span class="ds-badge">Default</span>
+            <span class="ds-badge ds-badge-success">Success</span>
+            <span class="ds-badge ds-badge-warning">Warning</span>
+            <span class="ds-badge ds-badge-error">Error</span>
+          </div>
+        </div>
+
+        <!-- Toasts -->
+        <div class="design-card mt-6">
+          <h3>Toast Notifications</h3>
+          <div class="component-demo">
+            <button
+              class="ds-btn ds-btn-secondary"
+              onclick="Toast.show('Info Notification', 'info')"
+            >
+              Show Info
+            </button>
+            <button
+              class="ds-btn ds-btn-secondary"
+              onclick="Toast.show('Success! Action completed.', 'success')"
+            >
+              Show Success
+            </button>
+            <button
+              class="ds-btn ds-btn-secondary"
+              onclick="Toast.show('Error! Something went wrong.', 'error')"
+            >
+              Show Error
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- ANIMATIONS -->
+      <section class="design-section" id="animations">
+        <h2>Animations</h2>
+        <div class="design-card">
+          <div class="ds-grid ds-grid-4">
+            <div class="p-4 bg-secondary rounded-md text-center animate-fade-in">Fade In</div>
+            <div class="p-4 bg-secondary rounded-md text-center animate-fade-in-up">Fade Up</div>
+            <div class="p-4 bg-secondary rounded-md text-center animate-fade-in-down">
+              Fade Down
+            </div>
+            <div class="p-4 bg-secondary rounded-md text-center animate-pulse">Pulse</div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer
+      style="background: var(--bg-secondary); padding: 4rem 0; margin-top: 4rem; text-align: center"
+    >
+      <p class="text-muted">BraineX Design System v1.0</p>
+    </footer>
+
+    <script src="/assets/js/global.js"></script>
+    <script src="/assets/js/interactions.js"></script>
+  </body>
+</html>
+

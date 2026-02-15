@@ -1,0 +1,50 @@
+[
+  {
+    "id": 1,
+    "name": "Dr. Sarah Chen",
+    "title": "Senior Data Scientist",
+    "company": "Google",
+    "field": "Computer Science",
+    "experience": "8 Years",
+    "bio": "PhD in Machine Learning from Stanford. Passionate about helping students break into AI/ML.",
+    "mentees": 12,
+    "rating": 4.9,
+    "status": "verified"
+  },
+  {
+    "id": 2,
+    "name": "James Wilson",
+    "title": "Investment Banker",
+    "company": "Goldman Sachs",
+    "field": "Finance",
+    "experience": "6 Years",
+    "bio": "MBA from Wharton. Expert in financial modeling and career planning for finance roles.",
+    "mentees": 8,
+    "rating": 5.0,
+    "status": "verified"
+  },
+  {
+    "id": 3,
+    "name": "Elena Rodriguez",
+    "title": "UX Research Lead",
+    "company": "Airbnb",
+    "field": "Design",
+    "experience": "10 Years",
+    "bio": "Leading user research at Airbnb. Helping designers build portfolios that stand out.",
+    "mentees": 15,
+    "rating": 4.8,
+    "status": "verified"
+  },
+  {
+    "id": 4,
+    "name": "Michael Chang",
+    "title": "Product Manage",
+    "company": "Stripe",
+    "field": "Business",
+    "experience": "5 Years",
+    "bio": "Transitioned from engineering to PM. Happy to guide technical folks into product management.",
+    "mentees": 5,
+    "rating": 5.0,
+    "status": "verified"
+  }
+]

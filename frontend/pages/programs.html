@@ -1,0 +1,578 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Summer Programs - BraineX</title>
+    <link rel="stylesheet" href="/assets/css/design-system.css" />
+    <link rel="stylesheet" href="/assets/css/skeleton.css" />
+    <link rel="stylesheet" href="/assets/css/animations.css" />
+    <script src="/assets/js/theme.js"></script>
+    <style id="critical-css">
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        font-family:
+          -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell,
+          sans-serif;
+        line-height: 1.6;
+        color: #333;
+      }
+
+      header {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: #fff;
+        padding: 1rem 0;
+        position: fixed;
+        width: 100%;
+        top: 0;
+        z-index: 1000;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      }
+
+      .container {
+        max-width: 1400px;
+        margin: 0 auto;
+        padding: 0 2rem;
+      }
+
+      nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 1rem;
+      }
+
+      .logo {
+        font-size: 1.5rem;
+        font-weight: 700;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+      }
+
+      .nav-menu {
+        display: flex;
+        list-style: none;
+        gap: 2rem;
+      }
+
+      .nav-menu a {
+        color: #fff;
+        text-decoration: none;
+      }
+
+      .mobile-menu-btn {
+        display: none;
+      }
+
+      @media (max-width: 768px) {
+        .mobile-menu-btn {
+          display: block;
+        }
+
+        .nav-menu {
+          display: none;
+          position: absolute;
+          top: 100%;
+          left: 0;
+          right: 0;
+          background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+          flex-direction: column;
+          padding: 2rem;
+          gap: 1rem;
+        }
+      }
+
+      .hero {
+        margin-top: 80px;
+      }
+    </style>
+    <link rel="stylesheet" href="/assets/css/main.css" />
+    <link rel="stylesheet" href="/assets/css/fields.css" />
+    <link rel="stylesheet" href="/assets/css/programs-page.css" />
+    <link rel="stylesheet" href="/assets/css/unified-cards.css" />
+    <meta
+      name="description"
+      content="Discover top summer programs for high school students. MIT MOSTEC, Stanford SIMR, Harvard SSP and more."
+    />
+    <meta
+      name="keywords"
+      content="summer programs, high school, STEM, research, internships, pre-college"
+    />
+    <meta property="og:title" content="Summer Programs - BraineX" />
+    <meta
+      property="og:description"
+      content="Find the perfect summer program to boost your college applications."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://BraineX.example/programs.html" />
+    <meta property="og:image" content="https://BraineX.example/og-image.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Summer Programs - BraineX" />
+    <meta
+      name="twitter:description"
+      content="Discover elite summer programs for high school students."
+    />
+    <meta name="twitter:image" content="https://BraineX.example/og-image.png" />
+    <link rel="preload" as="style" href="/assets/css/main.css" />
+  </head>
+
+  <body>
+    <header>
+      <div class="container">
+        <nav role="navigation" aria-label="Primary navigation">
+          <div class="logo" style="display: flex; align-items: center; gap: 0.5rem">
+            <img src="/assets/images/logo.png" alt="BraineX Logo" class="logo-img" />
+            <span>BraineX</span>
+          </div>
+          <button
+            class="mobile-menu-btn"
+            type="button"
+            aria-label="Toggle navigation menu"
+            aria-controls="navMenu"
+            aria-expanded="false"
+          >
+            ☰
+          </button>
+          <ul class="nav-menu" id="navMenu">
+            <li><a href="/">Home</a></li>
+            <li><a href="/fields">Fields</a></li>
+            <li><a href="/universities">Universities</a></li>
+            <li><a href="/programs" class="active">Programs</a></li>
+            <li><a href="/scholarships">Scholarships</a></li>
+            <li><a href="/projects">Projects</a></li>
+            <li><a href="/roadmaps">Roadmaps</a></li>
+            <li><a href="/mentors">Mentors</a></li>
+            <li><a href="/events">Events</a></li>
+            <li><a href="/notion">My Goals</a></li>
+            <li><a href="/about">About</a></li>
+          </ul>
+          <div class="auth-buttons">
+            <a href="#login" class="btn btn-outline">Log In</a>
+            <a href="#signup" class="btn btn-primary">Sign Up</a>
+          </div>
+          <button
+            class="theme-toggle"
+            type="button"
+            aria-label="Toggle color theme"
+            aria-pressed="false"
+          >
+            🌙 Dark
+          </button>
+        </nav>
+      </div>
+    </header>
+    <main id="mainContent" role="main">
+      <!-- Hero Section -->
+      <section class="fields-hero programs-hero">
+        <div class="container">
+          <h1>🌟 Programs</h1>
+          <p>
+            Discover life-changing summer programs that boost your skills and college applications
+          </p>
+
+          <div class="field-search">
+            <input
+              type="text"
+              id="programSearch"
+              placeholder="Search programs by name, organization, or field..."
+              class="search-input"
+            />
+            <button class="btn-search" id="searchBtn">🔍 Search</button>
+          </div>
+
+          <div class="quick-stats">
+            <div class="stat-item">
+              <span class="stat-number">20</span>
+              <span class="stat-label">Elite Programs</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number">10+</span>
+              <span class="stat-label">Free Options</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number">2-8</span>
+              <span class="stat-label">Week Duration</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Featured Programs Carousel -->
+      <section class="featured-section">
+        <div class="container">
+          <h2>⭐ Featured Programs</h2>
+          <p class="section-subtitle">
+            Top competitive programs with application deadlines approaching
+          </p>
+
+          <div class="carousel-container">
+            <button class="carousel-btn carousel-prev" id="carouselPrev">‹</button>
+            <div class="carousel-track" id="carouselTrack">
+              <!-- Featured cards inserted by JS -->
+              <div class="carousel-loading">Loading featured programs...</div>
+            </div>
+            <button class="carousel-btn carousel-next" id="carouselNext">›</button>
+          </div>
+          <div class="carousel-dots" id="carouselDots"></div>
+        </div>
+      </section>
+
+      <!-- Filter and Programs Section -->
+      <section class="programs-section">
+        <div class="container">
+          <div class="programs-layout">
+            <!-- Filter Sidebar -->
+            <aside class="filter-sidebar" id="filterSidebar">
+              <div class="filter-header">
+                <h3>🔍 Filter Programs</h3>
+                <button class="btn-clear-filters" id="clearFilters">Clear All</button>
+              </div>
+
+              <!-- Category Filter -->
+              <div class="filter-group">
+                <h4 class="filter-title" data-toggle="category">
+                  📚 Category
+                  <span class="toggle-icon">▼</span>
+                </h4>
+                <div class="filter-options" id="categoryFilters">
+                  <label class="filter-checkbox">
+                    <input type="checkbox" value="STEM" checked /> STEM
+                  </label>
+                  <label class="filter-checkbox">
+                    <input type="checkbox" value="Research" checked /> Research
+                  </label>
+                  <label class="filter-checkbox">
+                    <input type="checkbox" value="Medicine" checked /> Medicine
+                  </label>
+                  <label class="filter-checkbox">
+                    <input type="checkbox" value="Technology" checked /> Technology
+                  </label>
+                  <label class="filter-checkbox">
+                    <input type="checkbox" value="Business" checked /> Business
+                  </label>
+                  <label class="filter-checkbox">
+                    <input type="checkbox" value="Leadership" checked /> Leadership
+                  </label>
+                  <label class="filter-checkbox">
+                    <input type="checkbox" value="Arts" checked /> Arts
+                  </label>
+                  <label class="filter-checkbox">
+                    <input type="checkbox" value="Academic" checked /> Academic
+                  </label>
+                  <label class="filter-checkbox">
+                    <input type="checkbox" value="Humanities" checked /> Humanities
+                  </label>
+                  <label class="filter-checkbox">
+                    <input type="checkbox" value="Entrepreneurship" checked /> Entrepreneurship
+                  </label>
+                </div>
+              </div>
+
+              <!-- Age Filter -->
+              <div class="filter-group">
+                <h4 class="filter-title" data-toggle="age">
+                  👤 Age Range
+                  <span class="toggle-icon">▼</span>
+                </h4>
+                <div class="filter-options" id="ageFilters">
+                  <label class="filter-radio">
+                    <input type="radio" name="age" value="all" checked /> All Ages
+                  </label>
+                  <label class="filter-radio">
+                    <input type="radio" name="age" value="14" /> 14+
+                  </label>
+                  <label class="filter-radio">
+                    <input type="radio" name="age" value="15" /> 15+
+                  </label>
+                  <label class="filter-radio">
+                    <input type="radio" name="age" value="16" /> 16+
+                  </label>
+                  <label class="filter-radio">
+                    <input type="radio" name="age" value="17" /> 17+
+                  </label>
+                </div>
+              </div>
+
+              <!-- Location Filter -->
+              <div class="filter-group">
+                <h4 class="filter-title" data-toggle="location">
+                  📍 Location Type
+                  <span class="toggle-icon">▼</span>
+                </h4>
+                <div class="filter-options" id="locationFilters">
+                  <label class="filter-checkbox">
+                    <input type="checkbox" value="In-Person" checked /> In-Person
+                  </label>
+                  <label class="filter-checkbox">
+                    <input type="checkbox" value="Virtual" checked /> Virtual/Online
+                  </label>
+                </div>
+              </div>
+
+              <!-- Cost Filter -->
+              <div class="filter-group">
+                <h4 class="filter-title" data-toggle="cost">
+                  💰 Cost
+                  <span class="toggle-icon">▼</span>
+                </h4>
+                <div class="filter-options" id="costFilters">
+                  <label class="filter-radio">
+                    <input type="radio" name="cost" value="all" checked /> All Costs
+                  </label>
+                  <label class="filter-radio">
+                    <input type="radio" name="cost" value="free" /> Free Only
+                  </label>
+                  <label class="filter-radio">
+                    <input type="radio" name="cost" value="under5k" /> Under $5,000
+                  </label>
+                  <label class="filter-radio">
+                    <input type="radio" name="cost" value="under10k" /> Under $10,000
+                  </label>
+                  <label class="filter-radio">
+                    <input type="radio" name="cost" value="paid" /> Paid Programs
+                  </label>
+                </div>
+              </div>
+
+              <!-- Competitiveness Filter -->
+              <div class="filter-group">
+                <h4 class="filter-title" data-toggle="competitive">
+                  🏆 Competitiveness
+                  <span class="toggle-icon">▼</span>
+                </h4>
+                <div class="filter-options" id="competitiveFilters">
+                  <label class="filter-checkbox">
+                    <input type="checkbox" value="true" checked /> Highly Competitive
+                  </label>
+                  <label class="filter-checkbox">
+                    <input type="checkbox" value="false" checked /> Less Competitive
+                  </label>
+                </div>
+              </div>
+            </aside>
+
+            <!-- Main Content -->
+            <div class="programs-content">
+              <!-- Sort and View Controls -->
+              <div class="content-controls">
+                <div class="results-count"><span id="resultsCount">20</span> programs found</div>
+                <div class="sort-controls">
+                  <label for="sortSelect">Sort by:</label>
+                  <select id="sortSelect" class="sort-select">
+                    <option value="deadline">📅 Deadline (Soonest)</option>
+                    <option value="name">📝 Name (A-Z)</option>
+                    <option value="acceptance">📊 Acceptance Rate</option>
+                    <option value="cost-low">💰 Cost (Low to High)</option>
+                    <option value="cost-high">💰 Cost (High to Low)</option>
+                  </select>
+                </div>
+                <button class="btn-toggle-filter mobile-only" id="toggleFilter">🔍 Filters</button>
+              </div>
+
+              <!-- Programs Grid -->
+              <div class="programs-grid" id="programsGrid">
+                <!-- Cards will be dynamically inserted here -->
+                <div class="loading-state">
+                  <div class="spinner"></div>
+                  <p>Loading programs...</p>
+                </div>
+              </div>
+
+              <!-- No Results State -->
+              <div class="no-results" id="noResults" style="display: none">
+                <div class="no-results-icon">🔍</div>
+                <h3>No programs found</h3>
+                <p>Try adjusting your filters or search terms</p>
+                <button class="btn-reset" id="resetFilters">Reset All Filters</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Application Assistant Modal -->
+      <div class="modal application-modal" id="applicationModal">
+        <div class="modal-content application-content">
+          <div class="modal-header">
+            <h2>📋 Application Guide</h2>
+            <button class="close-modal" id="closeApplication">&times;</button>
+          </div>
+          <div class="application-body" id="applicationBody">
+            <!-- Steps inserted by JS -->
+          </div>
+          <div class="modal-footer">
+            <button class="btn-prev-step" id="prevStep">← Previous</button>
+            <span class="step-indicator" id="stepIndicator">Step 1 of 5</span>
+            <button class="btn-next-step" id="nextStep">Next →</button>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-section">
+            <h4>Programs</h4>
+            <a href="#stem">STEM Programs</a>
+            <a href="#research">Research Programs</a>
+            <a href="#free">Free Programs</a>
+            <a href="#leadership">Leadership</a>
+          </div>
+          <div class="footer-section">
+            <h4>Resources</h4>
+            <a href="#guides">Application Guides</a>
+            <a href="#deadlines">Deadline Calendar</a>
+            <a href="#essays">Essay Tips</a>
+            <a href="#interviews">Interview Prep</a>
+          </div>
+          <div class="footer-section">
+            <h4>Support</h4>
+            <a href="#help">Help Center</a>
+            <a href="#contact">Contact</a>
+            <a href="#faq">FAQ</a>
+            <a href="#feedback">Feedback</a>
+          </div>
+          <div class="footer-section">
+            <h4>Connect</h4>
+            <a href="#">Twitter</a>
+            <a href="#">LinkedIn</a>
+            <a href="#">Newsletter</a>
+            <a href="#">Blog</a>
+          </div>
+        </div>
+        <p>&copy; 2025 BraineX. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <!-- Login/Signup Modals -->
+    <div id="loginModal" class="modal">
+      <div class="modal-content">
+        <button class="close-modal">&times;</button>
+        <h2>Welcome Back</h2>
+        <p>Sign in to access your personalized dashboard</p>
+        <div id="loginSuccess" class="success-message">
+          <strong>Success!</strong> You have been logged in successfully.
+        </div>
+        <form id="loginForm" class="auth-form">
+          <div class="form-group">
+            <label for="loginEmail">Email Address</label>
+            <input type="email" id="loginEmail" name="email" required />
+            <div class="error-message" id="emailError">Please enter a valid email address</div>
+          </div>
+          <div class="form-group">
+            <label for="loginPassword">Password</label>
+            <div class="password-toggle">
+              <input type="password" id="loginPassword" name="password" required />
+              <button type="button" class="btn-toggle-password" data-target="loginPassword">
+                👁️
+              </button>
+            </div>
+            <div class="error-message" id="passwordError">
+              Password must be at least 6 characters
+            </div>
+          </div>
+          <div class="checkbox-group">
+            <input type="checkbox" id="rememberMe" name="remember" />
+            <label for="rememberMe">Remember me</label>
+          </div>
+          <button type="submit" class="btn-submit">Sign In</button>
+        </form>
+        <div class="divider"><span>or</span></div>
+        <div class="social-login">
+          <button class="btn-social" data-provider="google">🔍</button>
+          <button class="btn-social" data-provider="facebook">📘</button>
+          <button class="btn-social" data-provider="linkedin">💼</button>
+        </div>
+        <div class="form-footer">
+          <p>Don't have an account? <a href="#signup" class="js-switch-signup">Sign up here</a></p>
+          <p><a href="#forgot" class="js-forgot-password">Forgot your password?</a></p>
+        </div>
+      </div>
+    </div>
+
+    <div id="signupModal" class="modal">
+      <div class="modal-content">
+        <button class="close-modal">&times;</button>
+        <h2>Join BraineX</h2>
+        <p>Create your account and unlock endless opportunities</p>
+        <div id="signupSuccess" class="success-message">
+          <strong>Success!</strong> Your account has been created successfully.
+        </div>
+        <form id="signupForm" class="auth-form">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="firstName">First Name</label>
+              <input type="text" id="firstName" name="firstName" required />
+              <div class="error-message" id="firstNameError">First name is required</div>
+            </div>
+            <div class="form-group">
+              <label for="lastName">Last Name</label>
+              <input type="text" id="lastName" name="lastName" required />
+              <div class="error-message" id="lastNameError">Last name is required</div>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="signupEmail">Email Address</label>
+            <input type="email" id="signupEmail" name="email" required />
+            <div class="error-message" id="signupEmailError">
+              Please enter a valid email address
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="signupPassword">Password</label>
+            <div class="password-toggle">
+              <input type="password" id="signupPassword" name="password" required />
+              <button type="button" class="btn-toggle-password" data-target="signupPassword">
+                👁️
+              </button>
+            </div>
+            <div class="error-message" id="signupPasswordError">
+              Password must be at least 6 characters
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="confirmPassword">Confirm Password</label>
+            <div class="password-toggle">
+              <input type="password" id="confirmPassword" name="confirmPassword" required />
+              <button type="button" class="btn-toggle-password" data-target="confirmPassword">
+                👁️
+              </button>
+            </div>
+            <div class="error-message" id="confirmPasswordError">Passwords do not match</div>
+          </div>
+          <div class="checkbox-group">
+            <input type="checkbox" id="agreeTerms" name="terms" required />
+            <label for="agreeTerms"
+              >I agree to the <a href="#terms">Terms of Service</a> and
+              <a href="#privacy">Privacy Policy</a></label
+            >
+          </div>
+          <button type="submit" class="btn-submit">Create Account</button>
+        </form>
+        <div class="divider"><span>or</span></div>
+        <div class="social-login">
+          <button class="btn-social" data-provider="google">🔍</button>
+          <button class="btn-social" data-provider="facebook">📘</button>
+          <button class="btn-social" data-provider="linkedin">💼</button>
+        </div>
+        <div class="form-footer">
+          <p>Already have an account? <a href="#login" class="js-switch-login">Sign in here</a></p>
+        </div>
+      </div>
+    </div>
+
+    <script defer src="/assets/js/auth-api.js"></script>
+    <script defer src="/assets/js/global.js"></script>
+    <script defer src="/assets/js/main.js"></script>
+    <script defer src="/assets/js/performance.js"></script>
+    <script defer src="/assets/js/interactions.js"></script>
+    <script defer src="/assets/js/programs-page.js"></script>
+  </body>
+</html>
+

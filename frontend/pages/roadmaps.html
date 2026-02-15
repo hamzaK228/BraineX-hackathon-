@@ -1,0 +1,347 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Educational Roadmaps - BraineX</title>
+    <link rel="stylesheet" href="/assets/css/design-system.css" />
+    <link rel="stylesheet" href="/assets/css/skeleton.css" />
+    <link rel="stylesheet" href="/assets/css/animations.css" />
+    <script src="/assets/js/theme.js"></script>
+    <style id="critical-css">
+      body {
+        background: var(--bg-primary);
+        color: var(--text-primary);
+      }
+
+      header {
+        background: var(--header-bg);
+      }
+    </style>
+    <link rel="stylesheet" href="/assets/css/main.css" />
+    <link rel="stylesheet" href="/assets/css/roadmaps.css" />
+    <link rel="stylesheet" href="/assets/css/unified-cards.css" />
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+  </head>
+
+  <body>
+    <header>
+      <div class="container">
+        <nav role="navigation" aria-label="Primary navigation">
+          <div class="logo">
+            <img src="/assets/images/logo.png" alt="BraineX Logo" class="logo-img" />
+            <span>BraineX</span>
+          </div>
+          <button
+            class="mobile-menu-btn"
+            type="button"
+            aria-label="Toggle navigation menu"
+            aria-controls="navMenu"
+            aria-expanded="false"
+          >
+            ☰
+          </button>
+          <ul class="nav-menu" id="navMenu">
+            <li><a href="/">Home</a></li>
+            <li><a href="/fields">Fields</a></li>
+            <li><a href="/universities">Universities</a></li>
+            <li><a href="/programs">Programs</a></li>
+            <li><a href="/scholarships">Scholarships</a></li>
+            <li><a href="/projects">Projects</a></li>
+            <li><a href="/roadmaps" class="active">Roadmaps</a></li>
+            <li><a href="/mentors">Mentors</a></li>
+            <li><a href="/events">Events</a></li>
+            <li><a href="/notion">My Goals</a></li>
+            <li><a href="/about">About</a></li>
+          </ul>
+          <div class="auth-buttons">
+            <a href="#login" class="btn btn-outline">Log In</a>
+            <a href="#signup" class="btn btn-primary">Sign Up</a>
+          </div>
+          <button class="theme-toggle" type="button" aria-label="Toggle color theme">
+            🌙 Dark
+          </button>
+        </nav>
+      </div>
+    </header>
+    <main id="mainContent" role="main">
+      <!-- Hero Section -->
+      <section class="roadmaps-hero">
+        <div class="container">
+          <h1>🗺️ Your Educational Journey</h1>
+          <p>
+            Follow step-by-step roadmaps designed by experts to achieve your academic and career
+            goals
+          </p>
+
+          <div class="roadmap-finder">
+            <select class="roadmap-select" id="goalSelect">
+              <option value="">What's your goal?</option>
+              <option value="undergraduate">Get into Top University</option>
+              <option value="graduate">Graduate School Success</option>
+              <option value="career">Career Transition</option>
+              <option value="research">Research Excellence</option>
+              <option value="startup">Start a Company</option>
+            </select>
+            <button class="btn-find-roadmap">Find My Roadmap</button>
+          </div>
+
+          <div class="roadmap-stats">
+            <div class="stat">
+              <span class="stat-number">50+</span>
+              <span class="stat-label">Expert Roadmaps</span>
+            </div>
+            <div class="stat">
+              <span class="stat-number">25,000+</span>
+              <span class="stat-label">Students Following</span>
+            </div>
+            <div class="stat">
+              <span class="stat-number">89%</span>
+              <span class="stat-label">Success Rate</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Popular Roadmaps -->
+      <section class="popular-roadmaps">
+        <div class="container">
+          <h2>🔥 Most Popular Roadmaps</h2>
+          <div class="roadmaps-grid">
+            <div class="roadmap-card featured">
+              <div class="roadmap-badge">🏆 Most Popular</div>
+              <div class="roadmap-icon">🎓</div>
+              <h3>Undergraduate Admission Success</h3>
+              <p>Complete guide to getting into your dream university</p>
+
+              <div class="roadmap-details">
+                <div class="detail">
+                  <span class="detail-icon">⏱️</span>
+                  <span>12-18 months</span>
+                </div>
+                <div class="detail">
+                  <span class="detail-icon">📊</span>
+                  <span>15 milestones</span>
+                </div>
+                <div class="detail">
+                  <span class="detail-icon">👥</span>
+                  <span>12,847 followers</span>
+                </div>
+              </div>
+
+              <div class="roadmap-preview">
+                <div class="milestone-preview">
+                  <span>1️⃣ Academic Planning</span>
+                  <span>2️⃣ Test Preparation</span>
+                  <span>3️⃣ Application Strategy</span>
+                </div>
+              </div>
+
+              <a href="#" class="btn-roadmap" style="text-decoration: none; text-align: center"
+                >Start Roadmap</a
+              >
+            </div>
+
+            <div class="roadmap-card">
+              <div class="roadmap-icon">🔬</div>
+              <h3>PhD Research Path</h3>
+              <p>Navigate the PhD journey from application to graduation</p>
+
+              <div class="roadmap-details">
+                <div class="detail">
+                  <span class="detail-icon">⏱️</span>
+                  <span>4-6 years</span>
+                </div>
+                <div class="detail">
+                  <span class="detail-icon">📊</span>
+                  <span>24 milestones</span>
+                </div>
+                <div class="detail">
+                  <span class="detail-icon">👥</span>
+                  <span>8,456 followers</span>
+                </div>
+              </div>
+
+              <div class="roadmap-preview">
+                <div class="milestone-preview">
+                  <span>1️⃣ Research Topic</span>
+                  <span>2️⃣ Methodology</span>
+                  <span>3️⃣ Dissertation</span>
+                </div>
+              </div>
+
+              <a href="#" class="btn-roadmap" style="text-decoration: none; text-align: center"
+                >Start Roadmap</a
+              >
+            </div>
+
+            <div class="roadmap-card">
+              <div class="roadmap-icon">💼</div>
+              <h3>Tech Career Switch</h3>
+              <p>Transition into a technology career from any background</p>
+
+              <div class="roadmap-details">
+                <div class="detail">
+                  <span class="detail-icon">⏱️</span>
+                  <span>6-12 months</span>
+                </div>
+                <div class="detail">
+                  <span class="detail-icon">📊</span>
+                  <span>18 milestones</span>
+                </div>
+                <div class="detail">
+                  <span class="detail-icon">👥</span>
+                  <span>15,632 followers</span>
+                </div>
+              </div>
+
+              <div class="roadmap-preview">
+                <div class="milestone-preview">
+                  <span>1️⃣ Skill Assessment</span>
+                  <span>2️⃣ Learning Plan</span>
+                  <span>3️⃣ Job Search</span>
+                </div>
+              </div>
+
+              <a href="#" class="btn-roadmap" style="text-decoration: none; text-align: center"
+                >Start Roadmap</a
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Roadmap Categories -->
+      <section class="roadmap-categories">
+        <div class="container">
+          <h2>📚 Browse by Category</h2>
+          <div class="category-tabs">
+            <button class="category-tab active" data-category="all">All Roadmaps</button>
+            <button class="category-tab" data-category="academic">Academic</button>
+            <button class="category-tab" data-category="career">Career</button>
+            <button class="category-tab" data-category="skills">Skills</button>
+            <button class="category-tab" data-category="research">Research</button>
+            <button class="category-tab" data-category="business">Business</button>
+          </div>
+
+          <div class="roadmaps-list" id="roadmapsList">
+            <!-- Roadmaps will be populated by JavaScript -->
+          </div>
+        </div>
+      </section>
+
+      <!-- Interactive Roadmap -->
+      <section class="interactive-roadmap">
+        <div class="container">
+          <h2>🎯 Interactive Roadmap Example</h2>
+          <p>See how our roadmaps work with this interactive example</p>
+
+          <div class="roadmap-timeline">
+            <div class="timeline-step completed" data-step="1">
+              <div class="step-marker">✓</div>
+              <div class="step-content">
+                <h4>Self Assessment</h4>
+                <p>Evaluate your current skills and set clear goals</p>
+                <div class="step-duration">Week 1-2</div>
+              </div>
+            </div>
+
+            <div class="timeline-step active" data-step="2">
+              <div class="step-marker">2</div>
+              <div class="step-content">
+                <h4>Research & Planning</h4>
+                <p>Research requirements and create detailed plan</p>
+                <div class="step-duration">Week 3-4</div>
+              </div>
+            </div>
+
+            <div class="timeline-step" data-step="3">
+              <div class="step-marker">3</div>
+              <div class="step-content">
+                <h4>Skill Development</h4>
+                <p>Build essential skills through courses and practice</p>
+                <div class="step-duration">Month 2-6</div>
+              </div>
+            </div>
+
+            <div class="timeline-step" data-step="4">
+              <div class="step-marker">4</div>
+              <div class="step-content">
+                <h4>Application/Implementation</h4>
+                <p>Apply knowledge through projects or applications</p>
+                <div class="step-duration">Month 7-10</div>
+              </div>
+            </div>
+
+            <div class="timeline-step" data-step="5">
+              <div class="step-marker">5</div>
+              <div class="step-content">
+                <h4>Achievement & Next Steps</h4>
+                <p>Reach your goal and plan continued growth</p>
+                <div class="step-duration">Month 11-12</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Roadmap Detail Modal -->
+      <div id="roadmapModal" class="modal">
+        <div class="modal-content" style="max-width: 800px">
+          <button class="close-modal">&times;</button>
+
+          <div id="roadmapModalContent">
+            <!-- Content injected by JS -->
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-section">
+            <h4>Popular Roadmaps</h4>
+            <a href="#undergraduate">University Admission</a>
+            <a href="#graduate">Graduate School</a>
+            <a href="#career">Career Change</a>
+            <a href="#research">Research Path</a>
+          </div>
+          <div class="footer-section">
+            <h4>Resources</h4>
+            <a href="#templates">Roadmap Templates</a>
+            <a href="#tracking">Progress Tracking</a>
+            <a href="#community">Community</a>
+            <a href="#success">Success Stories</a>
+          </div>
+          <div class="footer-section">
+            <h4>Support</h4>
+            <a href="#help">Help Center</a>
+            <a href="#guides">User Guides</a>
+            <a href="#contact">Contact</a>
+            <a href="#feedback">Feedback</a>
+          </div>
+          <div class="footer-section">
+            <h4>Connect</h4>
+            <a href="#">Community Forum</a>
+            <a href="#">Study Groups</a>
+            <a href="#">Social Media</a>
+            <a href="#">Newsletter</a>
+          </div>
+        </div>
+        <p>&copy; 2025 BraineX. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script defer src="/assets/js/auth-api.js"></script>
+    <script defer src="/assets/js/global.js"></script>
+    <script defer src="/assets/js/main.js"></script>
+    <script defer src="/assets/js/performance.js"></script>
+    <script defer src="/assets/js/interactions.js"></script>
+    <script defer src="/assets/js/roadmaps.js"></script>
+  </body>
+</html>
+

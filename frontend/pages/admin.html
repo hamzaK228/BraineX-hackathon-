@@ -1,0 +1,691 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin Dashboard - BraineX</title>
+    <link rel="stylesheet" href="/assets/css/design-system.css" />
+    <link rel="stylesheet" href="/assets/css/skeleton.css" />
+    <link rel="stylesheet" href="/assets/css/animations.css" />
+    <script src="/assets/js/theme.js"></script>
+    <style id="critical-css">
+      body {
+        background: var(--bg-primary);
+        color: var(--text-primary);
+      }
+
+      header {
+        background: var(--header-bg);
+      }
+    </style>
+    <link rel="stylesheet" href="/assets/css/main.css" />
+    <link rel="stylesheet" href="/assets/css/admin.css" />
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+  </head>
+
+  <body>
+    <header>
+      <div class="container">
+        <nav role="navigation" aria-label="Admin navigation">
+          <div class="logo">
+            <img src="/assets/images/logo.png" alt="BraineX Logo" class="logo-img" />
+            <span>BraineX Admin</span>
+          </div>
+          <div class="admin-user">
+            <a
+              href="/dashboard"
+              style="color: var(--text-secondary); text-decoration: none; margin-right: 1.5rem"
+              >User Dashboard</a
+            >
+            <button class="btn btn-outline js-logout">Logout</button>
+          </div>
+          <button class="theme-toggle" type="button" aria-label="Toggle color theme">
+            🌙 Dark
+          </button>
+        </nav>
+      </div>
+    </header>
+    <main id="mainContent" role="main">
+      <!-- Admin Sidebar -->
+      <aside class="admin-sidebar">
+        <div class="sidebar-menu">
+          <div class="menu-section">
+            <h4>📊 Dashboard</h4>
+            <ul>
+              <li>
+                <a href="#overview" class="menu-link active" data-section="overview">📈 Overview</a>
+              </li>
+              <li>
+                <a href="#analytics" class="menu-link" data-section="analytics">📊 Analytics</a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="menu-section">
+            <h4>👥 User Management</h4>
+            <ul>
+              <li><a href="#users" class="menu-link" data-section="users">👤 All Users</a></li>
+              <li><a href="#mentors" class="menu-link" data-section="mentors">👨‍🏫 Mentors</a></li>
+              <li><a href="#students" class="menu-link" data-section="students">🎓 Students</a></li>
+            </ul>
+          </div>
+
+          <div class="menu-section">
+            <h4>📚 Content Management</h4>
+            <ul>
+              <li>
+                <a href="#scholarships" class="menu-link" data-section="scholarships"
+                  >💰 Scholarships</a
+                >
+              </li>
+              <li>
+                <a href="#universities" class="menu-link" data-section="universities"
+                  >🏛️ Universities</a
+                >
+              </li>
+              <li><a href="#programs" class="menu-link" data-section="programs">🌟 Programs</a></li>
+              <li><a href="#fields" class="menu-link" data-section="fields">🌍 Fields</a></li>
+              <li><a href="#projects" class="menu-link" data-section="projects">🚀 Projects</a></li>
+              <li><a href="#roadmaps" class="menu-link" data-section="roadmaps">🗺️ Roadmaps</a></li>
+              <li><a href="#events" class="menu-link" data-section="events">🎪 Events</a></li>
+            </ul>
+          </div>
+
+          <div class="menu-section">
+            <h4>⚙️ Settings</h4>
+            <ul>
+              <li>
+                <a href="#settings" class="menu-link" data-section="settings"
+                  >🔧 Platform Settings</a
+                >
+              </li>
+              <li><a href="#reports" class="menu-link" data-section="reports">📋 Reports</a></li>
+            </ul>
+          </div>
+        </div>
+      </aside>
+
+      <!-- Admin Main Content -->
+      <main class="admin-main">
+        <!-- Overview Section -->
+        <section class="admin-section active" id="overview">
+          <div class="section-header">
+            <h1>📈 Dashboard Overview</h1>
+            <p>Welcome to BraineX Admin Panel</p>
+          </div>
+
+          <div class="stats-grid">
+            <div class="stat-card users">
+              <div class="stat-icon">👥</div>
+              <div class="stat-content">
+                <h3 id="totalUsers">0</h3>
+                <p>Total Users</p>
+                <span class="stat-change positive">+12% this month</span>
+              </div>
+            </div>
+
+            <div class="stat-card scholarships">
+              <div class="stat-icon">💰</div>
+              <div class="stat-content">
+                <h3 id="totalScholarships">0</h3>
+                <p>Active Scholarships</p>
+                <span class="stat-change positive">+8% this week</span>
+              </div>
+            </div>
+
+            <div class="stat-card mentors">
+              <div class="stat-icon">👨‍🏫</div>
+              <div class="stat-content">
+                <h3 id="totalMentors">0</h3>
+                <p>Verified Mentors</p>
+                <span class="stat-change positive">+15% this month</span>
+              </div>
+            </div>
+
+            <div class="stat-card revenue">
+              <div class="stat-icon">💵</div>
+              <div class="stat-content">
+                <h3 id="monthlyRevenue">$0</h3>
+                <p>Monthly Revenue</p>
+                <span class="stat-change positive">+22% this month</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="overview-grid">
+            <div class="overview-card">
+              <h3>📊 Recent Activity</h3>
+              <div class="activity-list" id="recentActivity">
+                <!-- Activity items will be populated -->
+              </div>
+            </div>
+
+            <div class="overview-card">
+              <h3>🎯 Quick Actions</h3>
+              <div class="quick-actions">
+                <button class="btn-action js-add-scholarship">💰 Add Scholarship</button>
+                <button class="btn-action js-add-mentor">👨‍🏫 Add Mentor</button>
+                <button class="btn-action js-add-field">🌍 Add Field</button>
+                <button class="btn-action js-add-event">🎪 Add Event</button>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Scholarships Management -->
+        <section class="admin-section" id="scholarships">
+          <div class="section-header">
+            <h1>💰 Scholarship Management</h1>
+            <button class="btn-primary js-add-scholarship">+ Add New Scholarship</button>
+          </div>
+
+          <div class="table-container">
+            <div class="table-filters">
+              <input
+                type="text"
+                placeholder="Search scholarships..."
+                class="search-input"
+                id="scholarshipSearch"
+              />
+              <select class="filter-select" id="scholarshipStatus">
+                <option value="">All Status</option>
+                <option value="active">Active</option>
+                <option value="pending">Pending</option>
+                <option value="expired">Expired</option>
+              </select>
+              <select class="filter-select" id="scholarshipCategory">
+                <option value="">All Categories</option>
+                <option value="undergraduate">Undergraduate</option>
+                <option value="graduate">Graduate</option>
+                <option value="research">Research</option>
+              </select>
+            </div>
+
+            <table class="admin-table">
+              <thead>
+                <tr>
+                  <th>Scholarship Name</th>
+                  <th>Organization</th>
+                  <th>Amount</th>
+                  <th>Deadline</th>
+                  <th>Status</th>
+                  <th>Actions</th>
+                </tr>
+              </thead>
+              <tbody id="scholarshipsTable">
+                <!-- Scholarship entries will be populated -->
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <!-- Mentors Management -->
+        <section class="admin-section" id="mentors">
+          <div class="section-header">
+            <h1>👨‍🏫 Mentor Management</h1>
+            <button class="btn-primary js-add-mentor">+ Add New Mentor</button>
+          </div>
+
+          <div class="table-container">
+            <div class="table-filters">
+              <input
+                type="text"
+                placeholder="Search mentors..."
+                class="search-input"
+                id="mentorSearch"
+              />
+              <select class="filter-select" id="mentorStatus">
+                <option value="">All Status</option>
+                <option value="verified">Verified</option>
+                <option value="pending">Pending</option>
+                <option value="inactive">Inactive</option>
+              </select>
+              <select class="filter-select" id="mentorField">
+                <option value="">All Fields</option>
+                <option value="technology">Technology</option>
+                <option value="business">Business</option>
+                <option value="medicine">Medicine</option>
+                <option value="engineering">Engineering</option>
+              </select>
+            </div>
+
+            <table class="admin-table">
+              <thead>
+                <tr>
+                  <th>Name</th>
+                  <th>Field</th>
+                  <th>Company</th>
+                  <th>Rating</th>
+                  <th>Mentees</th>
+                  <th>Status</th>
+                  <th>Actions</th>
+                </tr>
+              </thead>
+              <tbody id="mentorsTable">
+                <!-- Mentor entries will be populated -->
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <!-- Fields Management -->
+        <section class="admin-section" id="fields">
+          <div class="section-header">
+            <h1>🌍 Academic Fields Management</h1>
+            <button class="btn-primary js-add-field">+ Add New Field</button>
+          </div>
+
+          <div class="fields-grid" id="fieldsGrid">
+            <!-- Field cards will be populated -->
+          </div>
+        </section>
+
+        <!-- Universities Management -->
+        <section class="admin-section" id="universities">
+          <div class="section-header">
+            <h1>🏛️ University Management</h1>
+            <button class="btn-primary js-add-university">+ Add New University</button>
+          </div>
+          <div class="table-container">
+            <input
+              type="text"
+              placeholder="Search universities..."
+              class="search-input"
+              id="universitySearch"
+            />
+            <table class="admin-table">
+              <thead>
+                <tr>
+                  <th>Name</th>
+                  <th>Location</th>
+                  <th>Rank</th>
+                  <th>Students</th>
+                  <th>Actions</th>
+                </tr>
+              </thead>
+              <tbody id="universitiesTable"></tbody>
+            </table>
+          </div>
+        </section>
+
+        <!-- Programs Management -->
+        <section class="admin-section" id="programs">
+          <div class="section-header">
+            <h1>🌟 Program Management</h1>
+            <button class="btn-primary js-add-program">+ Add New Program</button>
+          </div>
+          <div class="table-container">
+            <input
+              type="text"
+              placeholder="Search programs..."
+              class="search-input"
+              id="programSearch"
+            />
+            <table class="admin-table">
+              <thead>
+                <tr>
+                  <th>Program Name</th>
+                  <th>Organization</th>
+                  <th>Deadline</th>
+                  <th>Type</th>
+                  <th>Actions</th>
+                </tr>
+              </thead>
+              <tbody id="programsTable"></tbody>
+            </table>
+          </div>
+        </section>
+
+        <!-- Projects Management -->
+        <section class="admin-section" id="projects">
+          <div class="section-header">
+            <h1>🚀 Project Management</h1>
+            <button class="btn-primary js-add-project">+ Add New Project</button>
+          </div>
+          <div class="table-container">
+            <input
+              type="text"
+              placeholder="Search projects..."
+              class="search-input"
+              id="projectSearch"
+            />
+            <table class="admin-table">
+              <thead>
+                <tr>
+                  <th>Title</th>
+                  <th>Category</th>
+                  <th>Difficulty</th>
+                  <th>Est. Time</th>
+                  <th>Actions</th>
+                </tr>
+              </thead>
+              <tbody id="projectsTable"></tbody>
+            </table>
+          </div>
+        </section>
+
+        <!-- Roadmaps Management -->
+        <section class="admin-section" id="roadmaps">
+          <div class="section-header">
+            <h1>🗺️ Roadmap Management</h1>
+            <button class="btn-primary js-add-roadmap">+ Add New Roadmap</button>
+          </div>
+          <div class="table-container">
+            <input
+              type="text"
+              placeholder="Search roadmaps..."
+              class="search-input"
+              id="roadmapSearch"
+            />
+            <table class="admin-table">
+              <thead>
+                <tr>
+                  <th>Title</th>
+                  <th>Category</th>
+                  <th>Steps</th>
+                  <th>Duration</th>
+                  <th>Actions</th>
+                </tr>
+              </thead>
+              <tbody id="roadmapsTable"></tbody>
+            </table>
+          </div>
+        </section>
+
+        <!-- Events Management -->
+        <section class="admin-section" id="events">
+          <div class="section-header">
+            <h1>🎪 Event Management</h1>
+            <button class="btn-primary js-add-event">+ Add New Event</button>
+          </div>
+          <div class="table-container">
+            <input
+              type="text"
+              placeholder="Search events..."
+              class="search-input"
+              id="eventSearch"
+            />
+            <table class="admin-table">
+              <thead>
+                <tr>
+                  <th>Event Name</th>
+                  <th>Type</th>
+                  <th>Date</th>
+                  <th>Format</th>
+                  <th>Actions</th>
+                </tr>
+              </thead>
+              <tbody id="eventsTable"></tbody>
+            </table>
+          </div>
+        </section>
+      </main>
+
+      <!-- Add Scholarship Modal -->
+      <div class="modal" id="addScholarshipModal">
+        <div class="modal-content admin-modal">
+          <div class="modal-header">
+            <h2>💰 Add New Scholarship</h2>
+            <button class="close-modal js-close-admin-modal">&times;</button>
+          </div>
+
+          <form id="addScholarshipForm" class="admin-form">
+            <div class="form-row">
+              <div class="form-group">
+                <label>Scholarship Name *</label>
+                <input type="text" name="name" required />
+              </div>
+              <div class="form-group">
+                <label>Organization *</label>
+                <input type="text" name="organization" required />
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label>Amount *</label>
+                <input
+                  type="text"
+                  name="amount"
+                  placeholder="e.g., $50,000 or Full Funding"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <label>Category *</label>
+                <select name="category" required>
+                  <option value="">Select Category</option>
+                  <option value="undergraduate">Undergraduate</option>
+                  <option value="graduate">Graduate</option>
+                  <option value="research">Research</option>
+                  <option value="international">International</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label>Deadline *</label>
+                <input type="date" name="deadline" required />
+              </div>
+              <div class="form-group">
+                <label>Country/Region</label>
+                <input type="text" name="country" placeholder="e.g., USA, Global, Europe" />
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label>Description *</label>
+              <textarea
+                name="description"
+                rows="4"
+                required
+                placeholder="Describe the scholarship, eligibility, and requirements..."
+              ></textarea>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label>Website URL</label>
+                <input type="url" name="website" placeholder="https://..." />
+              </div>
+              <div class="form-group">
+                <label>Status</label>
+                <select name="status">
+                  <option value="active">Active</option>
+                  <option value="pending">Pending Review</option>
+                  <option value="draft">Draft</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-actions">
+              <button type="button" class="btn-secondary js-close-admin-modal">Cancel</button>
+              <button type="submit" class="btn-primary">Add Scholarship</button>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <!-- Add Mentor Modal -->
+      <div class="modal" id="addMentorModal">
+        <div class="modal-content admin-modal">
+          <div class="modal-header">
+            <h2>👨‍🏫 Add New Mentor</h2>
+            <button class="close-modal js-close-admin-modal">&times;</button>
+          </div>
+
+          <form id="addMentorForm" class="admin-form">
+            <div class="form-row">
+              <div class="form-group">
+                <label>Full Name *</label>
+                <input type="text" name="name" required />
+              </div>
+              <div class="form-group">
+                <label>Email *</label>
+                <input type="email" name="email" required />
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label>Job Title *</label>
+                <input
+                  type="text"
+                  name="title"
+                  required
+                  placeholder="e.g., Senior Software Engineer"
+                />
+              </div>
+              <div class="form-group">
+                <label>Company *</label>
+                <input type="text" name="company" required />
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label>Field/Industry *</label>
+                <select name="field" required>
+                  <option value="">Select Field</option>
+                  <option value="technology">Technology</option>
+                  <option value="business">Business</option>
+                  <option value="medicine">Medicine</option>
+                  <option value="engineering">Engineering</option>
+                  <option value="arts">Arts & Design</option>
+                  <option value="law">Law</option>
+                  <option value="science">Science</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label>Experience Level</label>
+                <select name="experience">
+                  <option value="entry">Entry (0-5 years)</option>
+                  <option value="mid">Mid (5-10 years)</option>
+                  <option value="senior">Senior (10+ years)</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label>Bio/Description *</label>
+              <textarea
+                name="bio"
+                rows="4"
+                required
+                placeholder="Brief description of expertise and background..."
+              ></textarea>
+            </div>
+
+            <div class="form-group">
+              <label>Expertise Areas</label>
+              <input
+                type="text"
+                name="expertise"
+                placeholder="e.g., Machine Learning, Career Development, Interview Prep"
+              />
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label>Hourly Rate ($)</label>
+                <input type="number" name="rate" placeholder="150" />
+              </div>
+              <div class="form-group">
+                <label>Status</label>
+                <select name="status">
+                  <option value="pending">Pending Review</option>
+                  <option value="verified">Verified</option>
+                  <option value="active">Active</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-actions">
+              <button type="button" class="btn-secondary js-close-admin-modal">Cancel</button>
+              <button type="submit" class="btn-primary">Add Mentor</button>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <!-- Add Field Modal -->
+      <div class="modal" id="addFieldModal">
+        <div class="modal-content admin-modal">
+          <div class="modal-header">
+            <h2>🌍 Add Academic Field</h2>
+            <button class="close-modal js-close-admin-modal">&times;</button>
+          </div>
+
+          <form id="addFieldForm" class="admin-form">
+            <div class="form-row">
+              <div class="form-group">
+                <label>Field Name *</label>
+                <input type="text" name="name" required placeholder="e.g., Computer Science" />
+              </div>
+              <div class="form-group">
+                <label>Category *</label>
+                <select name="category" required>
+                  <option value="">Select Category</option>
+                  <option value="stem">STEM</option>
+                  <option value="business">Business</option>
+                  <option value="humanities">Humanities</option>
+                  <option value="health">Health</option>
+                  <option value="social">Social Sciences</option>
+                  <option value="creative">Creative</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label>Description *</label>
+              <textarea
+                name="description"
+                rows="3"
+                required
+                placeholder="Brief description of the field..."
+              ></textarea>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label>Icon/Emoji</label>
+                <input type="text" name="icon" placeholder="🖥️" maxlength="2" />
+              </div>
+              <div class="form-group">
+                <label>Avg Salary Range</label>
+                <input type="text" name="salary" placeholder="$70K - $150K" />
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label>Common Career Paths</label>
+              <input
+                type="text"
+                name="careers"
+                placeholder="e.g., Software Engineer, Data Scientist, Product Manager"
+              />
+            </div>
+
+            <div class="form-actions">
+              <button type="button" class="btn-secondary js-close-admin-modal">Cancel</button>
+              <button type="submit" class="btn-primary">Add Field</button>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <script defer src="/assets/js/auth-api.js"></script>
+      <script defer src="/assets/js/global.js"></script>
+      <script defer src="/assets/js/main.js"></script>
+      <script defer src="/assets/js/performance.js"></script>
+      <script defer src="/assets/js/interactions.js"></script>
+      <script defer src="/assets/js/admin.js"></script>
+    </main>
+  </body>
+</html>
+

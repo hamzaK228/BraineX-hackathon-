@@ -1,0 +1,802 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scholarships - BraineX</title>
+    <link rel="stylesheet" href="/assets/css/design-system.css">
+    <link rel="stylesheet" href="/assets/css/skeleton.css">
+    <link rel="stylesheet" href="/assets/css/animations.css">
+    <script src="/assets/js/theme.js"></script>
+    <style id="critical-css">
+        /* Standard design-system overrides */
+        body {
+            background: var(--bg-primary);
+            color: var(--text-primary);
+        }
+
+        header {
+            background: var(--header-bg);
+        }
+    </style>
+    <link rel="stylesheet" href="/assets/css/main.css">
+    <link rel="stylesheet" href="/assets/css/fields.css">
+    <link rel="stylesheet" href="/assets/css/scholarships.css">
+    <link rel="stylesheet" href="/assets/css/unified-cards.css">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <nav role="navigation" aria-label="Primary navigation">
+                <div class="logo">
+                    <img src="/assets/images/logo.png" alt="BraineX Logo" class="logo-img">
+                    <span>BraineX</span>
+                </div>
+                <button class="mobile-menu-btn" type="button" aria-label="Toggle navigation menu"
+                    aria-controls="navMenu" aria-expanded="false">☰</button>
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/fields">Fields</a></li>
+                    <li><a href="/universities">Universities</a></li>
+                    <li><a href="/programs">Programs</a></li>
+                    <li><a href="/scholarships" class="active">Scholarships</a></li>
+                    <li><a href="/projects">Projects</a></li>
+                    <li><a href="/roadmaps">Roadmaps</a></li>
+                    <li><a href="/mentors">Mentors</a></li>
+                    <li><a href="/events">Events</a></li>
+                    <li><a href="/notion">My Goals</a></li>
+                    <li><a href="/about">About</a></li>
+                </ul>
+                <div class="auth-buttons">
+                    <a href="#login" class="btn btn-outline">Log In</a>
+                    <a href="#signup" class="btn btn-primary">Sign Up</a>
+                </div>
+                <button class="theme-toggle" type="button" aria-label="Toggle color theme">🌙 Dark</button>
+            </nav>
+        </div>
+    </header>
+    <main id="mainContent" role="main">
+
+        <!-- Hero Section -->
+        <section class="fields-hero">
+            <div class="container">
+                <h1>🎓 Scholarship Opportunities</h1>
+                <p>Discover thousands of scholarship opportunities from universities and organizations worldwide</p>
+
+                <div class="field-search">
+                    <input type="text" placeholder="Search scholarships by field, amount, deadline..."
+                        class="search-input">
+                    <button class="btn-search">🔍 Search</button>
+                </div>
+
+                <div class="quick-stats">
+                    <div class="stat-item">
+                        <span class="stat-number">2,847</span>
+                        <span class="stat-label">Active Scholarships</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">$2.3B</span>
+                        <span class="stat-label">Total Funding</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">156</span>
+                        <span class="stat-label">Countries</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Scholarship Categories -->
+        <section class="field-categories">
+            <div class="container">
+                <h2>🎨 Scholarship Categories</h2>
+                <div class="categories-grid">
+                    <div class="category-card stem-card" data-category="stem" style="cursor: pointer;">
+                        <div class="category-header">
+                            <div class="category-icon">🧬</div>
+                            <h3>STEM Scholarships</h3>
+                            <span class="field-count">450+ Scholarships</span>
+                        </div>
+                        <p>Science, Technology, Engineering, and Mathematics funding opportunities</p>
+                        <div class="sample-fields">
+                            <span class="field-tag">Computer Science</span>
+                            <span class="field-tag">Engineering</span>
+                            <span class="field-tag">Data Science</span>
+                            <span class="field-tag">Research</span>
+                        </div>
+                        <button class="btn-explore">Explore STEM
+                            →</button>
+                    </div>
+
+                    <div class="category-card business-card" data-category="business" style="cursor: pointer;">
+                        <div class="category-header">
+                            <div class="category-icon">📊</div>
+                            <h3>Business & Economics</h3>
+                            <span class="field-count">320+ Scholarships</span>
+                        </div>
+                        <p>Business, finance, economics, and entrepreneurship funding</p>
+                        <div class="sample-fields">
+                            <span class="field-tag">MBA Programs</span>
+                            <span class="field-tag">Finance</span>
+                            <span class="field-tag">Entrepreneurship</span>
+                            <span class="field-tag">Economics</span>
+                        </div>
+                        <button class="btn-explore">Explore Business
+                            →</button>
+                    </div>
+
+                    <div class="category-card social-card" data-category="social" style="cursor: pointer;">
+                        <div class="category-header">
+                            <div class="category-icon">🌍</div>
+                            <h3>Social Sciences</h3>
+                            <span class="field-count">280+ Scholarships</span>
+                        </div>
+                        <p>Psychology, law, education, and social impact funding</p>
+                        <div class="sample-fields">
+                            <span class="field-tag">Psychology</span>
+                            <span class="field-tag">Law</span>
+                            <span class="field-tag">Education</span>
+                            <span class="field-tag">Public Health</span>
+                        </div>
+                        <button class="btn-explore">Explore Social
+                            Sciences →</button>
+                    </div>
+
+                    <div class="category-card creative-card" data-category="creative" style="cursor: pointer;">
+                        <div class="category-header">
+                            <div class="category-icon">🎨</div>
+                            <h3>Arts & Creative</h3>
+                            <span class="field-count">190+ Scholarships</span>
+                        </div>
+                        <p>Design, media, arts, and creative industry funding</p>
+                        <div class="sample-fields">
+                            <span class="field-tag">Graphic Design</span>
+                            <span class="field-tag">Film Studies</span>
+                            <span class="field-tag">Music</span>
+                            <span class="field-tag">Architecture</span>
+                        </div>
+                        <button class="btn-explore">Explore Creative
+                            →</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Advanced Search -->
+        <section class="detailed-fields">
+            <div class="container">
+                <div class="section-header">
+                    <h2><i class="fas fa-graduation-cap"></i> Smart Scholarship Discovery</h2>
+                    <p class="section-subtitle">
+                        Find scholarships that match your profile with our AI-powered search and get personalized
+                        recommendations
+                    </p>
+                </div>
+
+                <div class="search-interface">
+                    <div class="search-tabs">
+                        <button class="search-tab active" data-tab="basic">
+                            <i class="fas fa-filter"></i> Basic Filters
+                        </button>
+                        <button class="search-tab" data-tab="advanced">
+                            <i class="fas fa-cogs"></i> Advanced Options
+                        </button>
+                        <button class="search-tab" data-tab="profile">
+                            <i class="fas fa-user-graduate"></i> Profile Match
+                        </button>
+                    </div>
+
+                    <div class="search-content active" id="basic-search">
+                        <div class="filter-grid">
+                            <div class="filter-group">
+                                <label><i class="fas fa-graduation-cap"></i> Field of Study</label>
+                                <select id="fieldSelect" class="modern-select">
+                                    <option value="">All Academic Fields</option>
+                                    <option value="stem">STEM & Technology</option>
+                                    <option value="business">Business & Finance</option>
+                                    <option value="arts">Arts & Humanities</option>
+                                    <option value="medicine">Medicine & Health</option>
+                                    <option value="law">Law & Legal Studies</option>
+                                    <option value="social">Social Sciences</option>
+                                    <option value="education">Education</option>
+                                </select>
+                            </div>
+                            <div class="filter-group">
+                                <label><i class="fas fa-layer-group"></i> Study Level</label>
+                                <select id="levelSelect" class="modern-select">
+                                    <option value="">All Academic Levels</option>
+                                    <option value="undergraduate">Undergraduate (Bachelor's)</option>
+                                    <option value="graduate">Graduate (Master's)</option>
+                                    <option value="phd">Doctoral (PhD)</option>
+                                    <option value="postdoc">Postdoctoral Research</option>
+                                    <option value="professional">Professional Programs</option>
+                                </select>
+                            </div>
+                            <div class="filter-group">
+                                <label><i class="fas fa-globe-americas"></i> Study Destination</label>
+                                <select id="countrySelect" class="modern-select">
+                                    <option value="">All Countries & Regions</option>
+                                    <option value="usa">🇺🇸 United States</option>
+                                    <option value="uk">🇬🇧 United Kingdom</option>
+                                    <option value="canada">🇨🇦 Canada</option>
+                                    <option value="australia">🇦🇺 Australia</option>
+                                    <option value="germany">🇩🇪 Germany</option>
+                                    <option value="netherlands">🇳🇱 Netherlands</option>
+                                    <option value="singapore">🇸🇬 Singapore</option>
+                                    <option value="sweden">🇸🇪 Sweden</option>
+                                </select>
+                            </div>
+                            <div class="filter-group">
+                                <label><i class="fas fa-dollar-sign"></i> Funding Coverage</label>
+                                <select id="fundingSelect" class="modern-select">
+                                    <option value="">All Funding Types</option>
+                                    <option value="full-tuition">Full Tuition Coverage</option>
+                                    <option value="partial-tuition">Partial Tuition Support</option>
+                                    <option value="living-allowance">Living Allowance Included</option>
+                                    <option value="research-funding">Research Funding</option>
+                                    <option value="travel-grants">Travel & Conference Grants</option>
+                                </select>
+                            </div>
+                            <div class="filter-group">
+                                <label><i class="fas fa-calendar-alt"></i> Application Timeline</label>
+                                <select id="deadlineSelect" class="modern-select">
+                                    <option value="">Any Deadline</option>
+                                    <option value="urgent">Due Soon (30 days)</option>
+                                    <option value="this-quarter">This Quarter</option>
+                                    <option value="next-quarter">Next Quarter</option>
+                                    <option value="this-year">This Year</option>
+                                    <option value="open">Always Open</option>
+                                </select>
+                            </div>
+                            <div class="filter-group">
+                                <label><i class="fas fa-users"></i> Student Eligibility</label>
+                                <select id="eligibilitySelect" class="modern-select">
+                                    <option value="">All Students Welcome</option>
+                                    <option value="international">International Students</option>
+                                    <option value="domestic">Domestic Students Only</option>
+                                    <option value="underrepresented">Underrepresented Groups</option>
+                                    <option value="women-stem">Women in STEM</option>
+                                    <option value="first-generation">First-Generation College</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="filter-actions">
+                            <button id="search-btn" class="btn-primary btn-search-advanced">
+                                <i class="fas fa-search"></i> Find Scholarships
+                            </button>
+                            <button class="btn-outline btn-reset-filters">
+                                <i class="fas fa-refresh"></i> Reset Filters
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Advanced Search Tab Content -->
+                    <div class="search-content" id="advanced-search">
+                        <div class="filter-grid">
+                            <div class="filter-group">
+                                <label><i class="fas fa-chart-line"></i> GPA Requirement</label>
+                                <select class="modern-select">
+                                    <option value="">Any GPA</option>
+                                    <option value="2.0">2.0 and above</option>
+                                    <option value="2.5">2.5 and above</option>
+                                    <option value="3.0">3.0 and above</option>
+                                    <option value="3.5">3.5 and above</option>
+                                    <option value="3.8">3.8 and above</option>
+                                </select>
+                            </div>
+                            <div class="filter-group">
+                                <label><i class="fas fa-money-bill-wave"></i> Financial Need</label>
+                                <select class="modern-select">
+                                    <option value="">Any Financial Status</option>
+                                    <option value="need-based">Need-Based Only</option>
+                                    <option value="merit-based">Merit-Based Only</option>
+                                    <option value="mixed">Need & Merit Combined</option>
+                                </select>
+                            </div>
+                            <div class="filter-group">
+                                <label><i class="fas fa-trophy"></i> Essay Required</label>
+                                <select class="modern-select">
+                                    <option value="">Any Application Type</option>
+                                    <option value="essay-required">Essay Required</option>
+                                    <option value="no-essay">No Essay Needed</option>
+                                    <option value="portfolio">Portfolio Required</option>
+                                </select>
+                            </div>
+                            <div class="filter-group">
+                                <label><i class="fas fa-university"></i> Institution Type</label>
+                                <select class="modern-select">
+                                    <option value="">All Institutions</option>
+                                    <option value="public">Public Universities</option>
+                                    <option value="private">Private Universities</option>
+                                    <option value="community">Community Colleges</option>
+                                    <option value="online">Online Programs</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="filter-actions">
+                            <button class="btn-primary">
+                                <i class="fas fa-search"></i> Advanced Search
+                            </button>
+                            <button class="btn-outline">
+                                <i class="fas fa-save"></i> Save Search
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Profile Match Tab Content -->
+                    <div class="search-content" id="profile-search">
+                        <div class="profile-match-intro">
+                            <h3>🎯 Get Personalized Matches</h3>
+                            <p>Answer a few questions to receive scholarship recommendations tailored specifically to
+                                your profile and achievements.</p>
+                        </div>
+
+                        <div class="filter-grid">
+                            <div class="filter-group">
+                                <label><i class="fas fa-user"></i> Academic Standing</label>
+                                <select class="modern-select">
+                                    <option value="">Select Your Level</option>
+                                    <option value="freshman">College Freshman</option>
+                                    <option value="sophomore">College Sophomore</option>
+                                    <option value="junior">College Junior</option>
+                                    <option value="senior">College Senior</option>
+                                    <option value="grad">Graduate Student</option>
+                                </select>
+                            </div>
+                            <div class="filter-group">
+                                <label><i class="fas fa-star"></i> Current GPA</label>
+                                <select class="modern-select">
+                                    <option value="">Select GPA Range</option>
+                                    <option value="4.0">4.0 (Perfect)</option>
+                                    <option value="3.7-3.9">3.7 - 3.9 (High Honors)</option>
+                                    <option value="3.3-3.6">3.3 - 3.6 (Honors)</option>
+                                    <option value="3.0-3.2">3.0 - 3.2 (Good Standing)</option>
+                                    <option value="below-3.0">Below 3.0</option>
+                                </select>
+                            </div>
+                            <div class="filter-group">
+                                <label><i class="fas fa-home"></i> Residency Status</label>
+                                <select class="modern-select">
+                                    <option value="">Select Status</option>
+                                    <option value="us-citizen">U.S. Citizen</option>
+                                    <option value="permanent-resident">Permanent Resident</option>
+                                    <option value="international">International Student</option>
+                                    <option value="refugee">Refugee/Asylum</option>
+                                </select>
+                            </div>
+                            <div class="filter-group">
+                                <label><i class="fas fa-heart"></i> Special Circumstances</label>
+                                <select class="modern-select">
+                                    <option value="">Select if Applicable</option>
+                                    <option value="first-gen">First-Generation College</option>
+                                    <option value="military">Military Family</option>
+                                    <option value="single-parent">Single Parent</option>
+                                    <option value="disability">Student with Disability</option>
+                                    <option value="minority">Ethnic Minority</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="filter-actions">
+                            <button class="btn-primary">
+                                <i class="fas fa-magic"></i> Find My Matches
+                            </button>
+                            <button class="btn-outline">
+                                <i class="fas fa-user-cog"></i> Build Profile
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Scholarship Results -->
+        <section class="detailed-fields">
+            <div class="container">
+                <div style="text-align: center; margin-bottom: 30px;">
+                    <h2>📋 All Scholarship Opportunities</h2>
+                    <p style="color: #4a5568; font-size: 16px; margin-top: 10px;">
+                        Browse comprehensive scholarship information including funding amounts, deadlines, and
+                        eligibility requirements
+                    </p>
+                </div>
+
+                <div class="filter-tabs">
+                    <button class="filter-tab active" data-filter="all">All Scholarships</button>
+                    <button class="filter-tab" data-filter="stem">🧬 STEM</button>
+                    <button class="filter-tab" data-filter="business">📊 Business</button>
+                    <button class="filter-tab" data-filter="social">🌍 Social Sciences</button>
+                    <button class="filter-tab" data-filter="creative">🎨 Creative</button>
+                </div>
+
+                <!-- Sort Controls -->
+                <div class="sort-controls">
+                    <span class="sort-label">Sort by:</span>
+                    <select id="sortDropdown" class="sort-select">
+                        <option value="deadline">📅 Deadline (Earliest First)</option>
+                        <option value="amount">💰 Funding Amount (High to Low)</option>
+                        <option value="name">📝 Name (A-Z)</option>
+                        <option value="popularity">⭐ Popularity</option>
+                        <option value="category">🏷️ Category</option>
+                    </select>
+                    <button class="btn-reset btn-reset-sort">Reset</button>
+                </div>
+
+                <div class="results-header">
+
+                    <div class="saved-scholarships-section" style="display: none;" id="savedScholarshipsSection">
+                        <h3>📚 Your Saved Scholarships</h3>
+                        <div class="saved-scholarships-grid" id="savedScholarshipsGrid">
+                            <!-- Saved scholarships will appear here -->
+                        </div>
+                        <button class="btn-back-to-all">← Back to All
+                            Scholarships</button>
+                    </div>
+
+                    <div class="scholarship-grid" id="scholarshipGrid">
+                        <!-- Static Fallback Content -->
+                        <div class="scholarship-card" data-category="general" data-level="Graduate">
+                            <div class="scholarship-header">
+                                <h3>Gates Cambridge Scholarship</h3>
+                                <span class="scholarship-amount">Full Funding</span>
+                            </div>
+                            <div class="scholarship-details">
+                                <p><strong>Organization:</strong> University of Cambridge</p>
+                                <p><strong>Field:</strong> All Fields</p>
+                                <p><strong>Deadline:</strong> 2025-10-15</p>
+                                <p><strong>Level:</strong> Graduate</p>
+                            </div>
+                            <p class="scholarship-description">Prestigious scholarship for outstanding applicants from
+                                outside the UK to pursue graduate study at Cambridge.</p>
+                            <div class="scholarship-tags">
+                                <span class="tag">Full Funding</span><span class="tag">International</span><span
+                                    class="tag">Graduate</span>
+                            </div>
+                            <a href="https://www.gatescambridge.org/" target="_blank" class="btn-apply"
+                                style="text-decoration: none; text-align: center;">View Details</a>
+                        </div>
+                        <div class="scholarship-card" data-category="stem" data-level="Graduate">
+                            <div class="scholarship-header">
+                                <h3>NSF Graduate Research Fellowship</h3>
+                                <span class="scholarship-amount">$37,000/year</span>
+                            </div>
+                            <div class="scholarship-details">
+                                <p><strong>Organization:</strong> National Science Foundation</p>
+                                <p><strong>Field:</strong> STEM</p>
+                                <p><strong>Deadline:</strong> 2025-10-25</p>
+                                <p><strong>Level:</strong> Graduate</p>
+                            </div>
+                            <p class="scholarship-description">Support for graduate research in science, technology,
+                                engineering, and mathematics.</p>
+                            <div class="scholarship-tags">
+                                <span class="tag">STEM</span><span class="tag">Research</span><span
+                                    class="tag">USA</span>
+                            </div>
+                            <a href="https://www.nsfgrfp.org/" target="_blank" class="btn-apply"
+                                style="text-decoration: none; text-align: center;">View Details</a>
+                        </div>
+                    </div>
+
+                    <div class="pagination">
+                        <button class="page-btn">Previous</button>
+                        <span class="page-numbers">
+                            <button class="page-num active">1</button>
+                            <button class="page-num">2</button>
+                            <button class="page-num">3</button>
+                            <span>...</span>
+                            <button class="page-num">15</button>
+                        </span>
+                        <button class="page-btn">Next</button>
+                    </div>
+                </div>
+        </section>
+
+        <!-- Career Pathways -->
+        <section class="career-pathways">
+            <div class="container">
+                <h2>⭐ Featured Scholarships</h2>
+                <div class="pathways-grid">
+                    <div class="pathway-card">
+                        <div class="pathway-icon">🏆</div>
+                        <h3>Fulbright Program</h3>
+                        <div class="pathway-info">
+                            <span class="growth-rate">🔥 Most Popular</span>
+                            <span class="avg-salary">💰 Full Funding</span>
+                        </div>
+                        <p>Educational exchange program for international students, scholars, and professionals</p>
+                        <div class="required-skills">
+                            <span class="skill">USA</span>
+                            <span class="skill">Graduate</span>
+                            <span class="skill">Oct 15</span>
+                        </div>
+                        <a href="https://us.fulbrightonline.org/" target="_blank" class="btn-pathway"
+                            style="text-decoration: none;">Learn More</a>
+                    </div>
+
+                    <div class="pathway-card">
+                        <div class="pathway-icon">⭐</div>
+                        <h3>DAAD Scholarships</h3>
+                        <div class="pathway-info">
+                            <span class="growth-rate">🔥 High Success</span>
+                            <span class="avg-salary">💰 €850-1,200/mo</span>
+                        </div>
+                        <p>German Academic Exchange Service scholarships for international students</p>
+                        <div class="required-skills">
+                            <span class="skill">Germany</span>
+                            <span class="skill">Graduate</span>
+                            <span class="skill">Nov 30</span>
+                        </div>
+                        <a href="https://www.daad.de/en/" target="_blank" class="btn-pathway"
+                            style="text-decoration: none;">Learn More</a>
+                    </div>
+
+                    <div class="pathway-card">
+                        <div class="pathway-icon">🚀</div>
+                        <h3>Google AI Scholarship</h3>
+                        <div class="pathway-info">
+                            <span class="growth-rate">🔥 New Opportunity</span>
+                            <span class="avg-salary">💰 $15,000</span>
+                        </div>
+                        <p>Supporting underrepresented groups in artificial intelligence and machine learning</p>
+                        <div class="required-skills">
+                            <span class="skill">Global</span>
+                            <span class="skill">AI/ML</span>
+                            <span class="skill">Dec 1</span>
+                        </div>
+                        <a href="https://buildyourfuture.withgoogle.com/scholarships" target="_blank"
+                            class="btn-pathway" style="text-decoration: none;">Learn More</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Resources Section -->
+        <section class="field-resources">
+            <div class="container">
+                <h2>💡 Application Tips & Resources</h2>
+                <p style="text-align: center; color: #4a5568; margin-bottom: 30px;">Access real resources to help you
+                    write winning scholarship applications</p>
+                <div class="resources-grid">
+                    <div class="resource-card" style="cursor: pointer;" data-type="essays">
+                        <div class="resource-icon">📝</div>
+                        <h3>Essay Writing Guides</h3>
+                        <p>Expert guides and templates for writing compelling scholarship essays</p>
+                        <span style="color: #667eea; font-size: 12px; display: block; margin-top: 10px;">🔗
+                            collegeboard.org</span>
+                        <a href="https://bigfuture.collegeboard.org/pay-for-college/scholarship-search/how-to-write-a-scholarship-essay"
+                            target="_blank" class="btn-resource"
+                            style="text-decoration: none; text-align: center; display: block; margin-top: auto;">Writing
+                            Guides →</a>
+                    </div>
+
+                    <div class="resource-card" style="cursor: pointer;" data-type="deadlines">
+                        <div class="resource-icon">📅</div>
+                        <h3>Deadline Trackers</h3>
+                        <p>Keep track of important scholarship application deadlines and requirements</p>
+                        <span style="color: #667eea; font-size: 12px; display: block; margin-top: 10px;">🔗
+                            scholarships.com</span>
+                        <a href="https://www.scholarships.com/financial-aid/college-scholarships/scholarship-application-strategies/scholarship-application-calendar/"
+                            target="_blank" class="btn-resource"
+                            style="text-decoration: none; text-align: center; display: block; margin-top: auto;">Track
+                            Deadlines →</a>
+                    </div>
+
+                    <div class="resource-card" style="cursor: pointer;" data-type="tips">
+                        <div class="resource-icon">🌟</div>
+                        <h3>Application Tips</h3>
+                        <p>Professional advice from scholarship winners and committee members</p>
+                        <span style="color: #667eea; font-size: 12px; display: block; margin-top: 10px;">🔗
+                            fastweb.com</span>
+                        <a href="https://www.fastweb.com/college-scholarships/articles/top-12-tips-for-winning-scholarships"
+                            target="_blank" class="btn-resource"
+                            style="text-decoration: none; text-align: center; display: block; margin-top: auto;">Get
+                            Tips →</a>
+                    </div>
+
+                    <div class="resource-card" style="cursor: pointer;" data-type="search">
+                        <div class="resource-icon">🔍</div>
+                        <h3>Scholarship Search</h3>
+                        <p>Discover thousands of scholarships using advanced search tools</p>
+                        <span style="color: #667eea; font-size: 12px; display: block; margin-top: 10px;">🔗
+                            scholarship360.org</span>
+                        <a href="https://scholarships360.org/" target="_blank" class="btn-resource"
+                            style="text-decoration: none; text-align: center; display: block; margin-top: auto;">Search
+                            Now →</a>
+                    </div>
+
+                    <div class="resource-card" style="cursor: pointer;" data-type="interviews">
+                        <div class="resource-icon">💬</div>
+                        <h3>Interview Prep</h3>
+                        <p>Prepare for scholarship interviews with practice questions and tips</p>
+                        <span style="color: #667eea; font-size: 12px; display: block; margin-top: 10px;">🔗
+                            youtube.com</span>
+                        <a href="https://www.youtube.com/results?search_query=scholarship+interview+questions"
+                            target="_blank" class="btn-resource"
+                            style="text-decoration: none; text-align: center; display: block; margin-top: auto;">Practice
+                            Interview →</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+    </main>
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Scholarships</h4>
+                    <a href="#undergraduate">Undergraduate</a>
+                    <a href="#graduate">Graduate</a>
+                    <a href="#phd">PhD Programs</a>
+                    <a href="#international">International</a>
+                </div>
+                <div class="footer-section">
+                    <h4>Resources</h4>
+                    <a href="#tips">Application Tips</a>
+                    <a href="#deadlines">Deadline Calendar</a>
+                    <a href="#essays">Essay Examples</a>
+                    <a href="#interviews">Interview Prep</a>
+                </div>
+                <div class="footer-section">
+                    <h4>Support</h4>
+                    <a href="#faq">FAQ</a>
+                    <a href="#contact">Contact Us</a>
+                    <a href="#help">Help Center</a>
+                    <a href="#feedback">Feedback</a>
+                </div>
+                <div class="footer-section">
+                    <h4>Connect</h4>
+                    <a href="#">Newsletter</a>
+                    <a href="#">Twitter</a>
+                    <a href="#">LinkedIn</a>
+                    <a href="#">Blog</a>
+                </div>
+            </div>
+            <p>&copy; 2025 BraineX. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Scholarship Detail Modal -->
+    <div id="scholarshipModal" class="modal">
+        <div class="modal-content" style="max-width: 700px;">
+            <button class="close-modal" id="closeScholarshipModal">&times;</button>
+            <div id="scholarshipModalContent">
+                <!-- Content injected by JS -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Login/Signup Modals -->
+    <div id="loginModal" class="modal">
+        <div class="modal-content">
+            <button class="close-modal">&times;</button>
+            <h2>Welcome Back</h2>
+            <p>Sign in to access your personalized dashboard</p>
+            <div id="loginSuccess" class="success-message">
+                <strong>Success!</strong> You have been logged in successfully.
+            </div>
+            <form id="loginForm" class="auth-form">
+                <div class="form-group">
+                    <label for="loginEmail">Email Address</label>
+                    <input type="email" id="loginEmail" name="email" required>
+                    <div class="error-message" id="emailError">Please enter a valid email address</div>
+                </div>
+                <div class="form-group">
+                    <label for="loginPassword">Password</label>
+                    <div class="password-toggle">
+                        <input type="password" id="loginPassword" name="password" required>
+                        <button type="button" class="btn-toggle-password" data-target="loginPassword">👁️</button>
+                    </div>
+                    <div class="error-message" id="passwordError">Password must be at least 6 characters</div>
+                </div>
+                <div class="checkbox-group">
+                    <input type="checkbox" id="rememberMe" name="remember">
+                    <label for="rememberMe">Remember me</label>
+                </div>
+                <button type="submit" class="btn-submit">Sign In</button>
+            </form>
+            <div class="divider"><span>or</span></div>
+            <div class="social-login">
+                <button class="btn-social" data-provider="google">ðŸ” </button>
+                <button class="btn-social" data-provider="facebook">ðŸ“˜</button>
+                <button class="btn-social" data-provider="linkedin">ðŸ’¼</button>
+            </div>
+            <div class="form-footer">
+                <p>Don't have an account? <a href="#signup">Sign up here</a></p>
+                <p><a href="#forgot" class="js-forgot-password">Forgot your password?</a></p>
+            </div>
+        </div>
+    </div>
+
+    <div id="signupModal" class="modal">
+        <div class="modal-content">
+            <button class="close-modal">&times;</button>
+            <h2>Join BraineX</h2>
+            <p>Create your account and unlock endless opportunities</p>
+            <div id="signupSuccess" class="success-message">
+                <strong>Success!</strong> Your account has been created successfully.
+            </div>
+            <form id="signupForm" class="auth-form">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="firstName">First Name</label>
+                        <input type="text" id="firstName" name="firstName" required>
+                        <div class="error-message" id="firstNameError">First name is required</div>
+                    </div>
+                    <div class="form-group">
+                        <label for="lastName">Last Name</label>
+                        <input type="text" id="lastName" name="lastName" required>
+                        <div class="error-message" id="lastNameError">Last name is required</div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="signupEmail">Email Address</label>
+                    <input type="email" id="signupEmail" name="email" required>
+                    <div class="error-message" id="signupEmailError">Please enter a valid email address</div>
+                </div>
+                <div class="form-group">
+                    <label for="signupPassword">Password</label>
+                    <div class="password-toggle">
+                        <input type="password" id="signupPassword" name="password" required>
+                        <button type="button" class="btn-toggle-password" data-target="signupPassword">👁️</button>
+                    </div>
+                    <div class="error-message" id="signupPasswordError">Password must be at least 6 characters</div>
+                </div>
+                <div class="form-group">
+                    <label for="confirmPassword">Confirm Password</label>
+                    <div class="password-toggle">
+                        <input type="password" id="confirmPassword" name="confirmPassword" required>
+                        <button type="button" class="btn-toggle-password" data-target="confirmPassword">👁️</button>
+                    </div>
+                    <div class="error-message" id="confirmPasswordError">Passwords do not match</div>
+                </div>
+                <div class="form-group">
+                    <label for="fieldOfInterest">Field of Interest</label>
+                    <select id="fieldOfInterest" name="field" required>
+                        <option value="">Select your field</option>
+                        <option value="ai">Artificial Intelligence</option>
+                        <option value="biotech">Biotech & Health Sciences</option>
+                        <option value="climate">Climate Tech</option>
+                        <option value="engineering">Engineering</option>
+                        <option value="entrepreneurship">Entrepreneurship</option>
+                        <option value="social">Social Impact</option>
+                        <option value="media">Digital Media</option>
+                        <option value="economics">Economics & Finance</option>
+                    </select>
+                    <div class="error-message" id="fieldError">Please select your field of interest</div>
+                </div>
+                <div class="checkbox-group">
+                    <input type="checkbox" id="agreeTerms" name="terms" required>
+                    <label for="agreeTerms">I agree to the <a href="#terms">Terms of Service</a> and <a
+                            href="#privacy">Privacy Policy</a></label>
+                </div>
+                <button type="submit" class="btn-submit">Create Account</button>
+            </form>
+            <div class="divider"><span>or</span></div>
+            <div class="social-login">
+                <button class="btn-social" data-provider="google">ðŸ” </button>
+                <button class="btn-social" data-provider="facebook">ðŸ“˜</button>
+                <button class="btn-social" data-provider="linkedin">ðŸ’¼</button>
+            </div>
+            <div class="form-footer">
+                <p>Already have an account? <a href="#login">Sign in here</a></p>
+            </div>
+        </div>
+    </div>
+
+    <script defer src="/assets/js/auth-api.js"></script>
+    <script defer src="/assets/js/global.js"></script>
+    <script defer src="/assets/js/main.js"></script>
+    <script defer src="/assets/js/performance.js"></script>
+    <script defer src="/assets/js/interactions.js"></script>
+    <script defer src="/assets/js/scholarships.js"></script>
+</body>
+
+</html>

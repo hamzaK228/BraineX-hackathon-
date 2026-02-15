@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Career Pathways - BraineX</title>
+    <link rel="stylesheet" href="/assets/css/design-system.css" />
+    <link rel="stylesheet" href="/assets/css/skeleton.css" />
+    <link rel="stylesheet" href="/assets/css/animations.css" />
+    <script src="/assets/js/theme.js"></script>
+    <style id="critical-css">
+      body {
+        background: var(--bg-primary);
+        color: var(--text-primary);
+      }
+
+      header {
+        background: var(--header-bg);
+      }
+
+      .pathway-hero {
+        padding: 4rem 0;
+        text-align: center;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+        border-radius: 0 0 2rem 2rem;
+        margin-bottom: 2rem;
+      }
+
+      .pathway-hero h1 {
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+        color: white;
+      }
+
+      .pathway-content {
+        padding: 2rem 0;
+      }
+
+      .pathway-detail {
+        background: var(--surface-card);
+        padding: 2rem;
+        border-radius: 12px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        margin-bottom: 2rem;
+      }
+
+      .stage-card {
+        border-left: 4px solid var(--primary-color);
+        padding: 1.5rem;
+        background: var(--surface-hover);
+        margin: 1rem 0;
+        border-radius: 4px;
+      }
+    </style>
+    <link rel="stylesheet" href="/assets/css/main.css" />
+    <link rel="stylesheet" href="/assets/css/unified-cards.css" />
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+  </head>
+
+  <body>
+    <header>
+      <div class="container">
+        <nav role="navigation" aria-label="Primary navigation">
+          <div class="logo">
+            <img src="/assets/images/logo.png" alt="BraineX Logo" class="logo-img" />
+            <span>BraineX</span>
+          </div>
+          <button
+            class="mobile-menu-btn"
+            type="button"
+            aria-label="Toggle navigation menu"
+            aria-controls="navMenu"
+            aria-expanded="false"
+          >
+            ☰
+          </button>
+          <ul class="nav-menu" id="navMenu">
+            <li><a href="/">Home</a></li>
+            <li><a href="/fields">Fields</a></li>
+            <li><a href="/universities">Universities</a></li>
+            <li><a href="/programs">Programs</a></li>
+            <li><a href="/scholarships">Scholarships</a></li>
+            <li><a href="/projects">Projects</a></li>
+            <li><a href="/roadmaps">Roadmaps</a></li>
+            <li><a href="/mentors">Mentors</a></li>
+            <li><a href="/events">Events</a></li>
+            <li><a href="/notion">My Goals</a></li>
+            <li><a href="/about">About</a></li>
+          </ul>
+          <div class="auth-buttons">
+            <a href="#login" class="btn btn-outline">Log In</a>
+            <a href="#signup" class="btn btn-primary">Sign Up</a>
+          </div>
+          <button class="theme-toggle" type="button" aria-label="Toggle color theme">
+            🌙 Dark
+          </button>
+        </nav>
+      </div>
+    </header>
+
+    <main id="mainContent">
+      <section class="pathway-hero">
+        <div class="container">
+          <h1 id="pathwayTitle">Loading Pathway...</h1>
+          <p id="pathwayDesc">Your guide to this career path</p>
+        </div>
+      </section>
+
+      <section class="pathway-content">
+        <div class="container" id="pathwayDetails">
+          <div class="loading">Loading details...</div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="container">
+        <p>&copy; 2025 BraineX. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script defer src="/assets/js/global.js"></script>
+    <script defer src="/assets/js/pathways.js"></script>
+  </body>
+</html>
+

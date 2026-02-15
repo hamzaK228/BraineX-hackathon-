@@ -1,0 +1,203 @@
+/* Universities Engine Styles */
+
+:root {
+  --uni-card-bg: #ffffff;
+  --uni-card-border: #e2e8f0;
+  --uni-primary: #4f46e5;
+  --uni-text-muted: #64748b;
+}
+
+[data-theme='dark'] {
+  --uni-card-bg: #1e293b;
+  --uni-card-border: #334155;
+  --uni-text-muted: #94a3b8;
+}
+
+/* Layout Grid */
+.universities-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2rem;
+  padding: 2rem 0;
+}
+
+/* Filters Sidebar */
+.filters-sidebar {
+  background: var(--uni-card-bg);
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  border: 1px solid var(--uni-card-border);
+  height: fit-content;
+}
+
+.filter-group {
+  margin-bottom: 1.5rem;
+}
+
+.filter-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+/* University Card */
+.uni-card {
+  background: var(--uni-card-bg);
+  border: 1px solid var(--uni-card-border);
+  border-radius: 0.75rem;
+  overflow: hidden;
+  transition:
+    transform 0.2s,
+    box-shadow 0.2s;
+  display: flex;
+  flex-direction: column;
+}
+
+.uni-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+.uni-header {
+  padding: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  border-bottom: 1px solid var(--uni-card-border);
+}
+
+.uni-logo {
+  width: 64px;
+  height: 64px;
+  object-fit: contain;
+  background: #fff;
+  border-radius: 8px;
+  padding: 4px;
+  border: 1px solid #f1f5f9;
+}
+
+.uni-title h3 {
+  font-size: 1.125rem;
+  font-weight: 700;
+  margin: 0;
+  line-height: 1.2;
+}
+
+.uni-location {
+  font-size: 0.875rem;
+  color: var(--uni-text-muted);
+}
+
+.uni-body {
+  padding: 1.5rem;
+  flex: 1;
+}
+
+.uni-stats {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.stat-item {
+  text-align: center;
+  background: rgba(79, 70, 229, 0.1);
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+}
+
+.stat-value {
+  display: block;
+  font-weight: 700;
+  color: var(--uni-primary);
+}
+
+.stat-label {
+  font-size: 0.75rem;
+  color: var(--uni-text-muted);
+}
+
+.uni-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.uni-tag {
+  font-size: 0.75rem;
+  padding: 0.25rem 0.5rem;
+  background: #f1f5f9;
+  color: #475569;
+  border-radius: 9999px;
+}
+
+[data-theme='dark'] .uni-tag {
+  background: #334155;
+  color: #e2e8f0;
+}
+
+.uni-footer {
+  padding: 1rem 1.5rem;
+  background: rgba(0, 0, 0, 0.02);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Comparison Floating Bar */
+.comparison-bar {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%) translateY(100px);
+  background: var(--uni-card-bg);
+  padding: 1rem 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: 100;
+  border: 1px solid var(--uni-card-border);
+}
+
+.comparison-bar.active {
+  transform: translateX(-50%) translateY(0);
+}
+
+.compare-avatars {
+  display: flex;
+  margin-left: -10px;
+}
+
+.compare-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 2px solid var(--uni-card-bg);
+  margin-left: -10px;
+  background: #fff;
+  object-fit: cover;
+}
+
+/* Comparison Table */
+.comparison-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.comparison-table th,
+.comparison-table td {
+  padding: 1rem;
+  text-align: left;
+  border-bottom: 1px solid var(--uni-card-border);
+}
+
+.comparison-table th {
+  background: rgba(0, 0, 0, 0.02);
+  font-weight: 600;
+  width: 200px;
+}

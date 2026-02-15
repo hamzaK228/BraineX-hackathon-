@@ -1,0 +1,594 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dark Mode & Roadmaps Test - Standalone</title>
+    <link rel="stylesheet" href="/assets/css/design-system.css" />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        background: #f8fafc;
+        color: #333;
+        transition:
+          background 0.3s,
+          color 0.3s;
+      }
+
+      html[data-theme='dark'] body {
+        background: #0f172a;
+        color: #e2e8f0;
+      }
+
+      header {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+        padding: 1rem 0;
+        position: fixed;
+        width: 100%;
+        top: 0;
+        z-index: 1000;
+      }
+
+      html[data-theme='dark'] header {
+        background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+      }
+
+      nav {
+        max-width: 1400px;
+        margin: 0 auto;
+        padding: 0 2rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .theme-toggle {
+        padding: 0.5rem 1rem;
+        border-radius: 999px;
+        border: 2px solid rgba(255, 255, 255, 0.8);
+        background: transparent;
+        color: white;
+        cursor: pointer;
+        font-weight: 600;
+      }
+
+      .theme-toggle:hover {
+        background: rgba(255, 255, 255, 0.15);
+      }
+
+      main {
+        margin-top: 80px;
+        padding: 2rem;
+      }
+
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+
+      h1 {
+        text-align: center;
+        margin-bottom: 2rem;
+        font-size: 2.5rem;
+      }
+
+      /* Roadmaps Section */
+      .roadmaps {
+        padding: 4rem 0;
+        background: #f8fafc;
+      }
+
+      html[data-theme='dark'] .roadmaps {
+        background: #0f172a;
+      }
+
+      .roadmaps h2 {
+        text-align: center;
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+        color: #1e293b;
+      }
+
+      html[data-theme='dark'] .roadmaps h2 {
+        color: #f1f5f9;
+      }
+
+      .section-subtitle {
+        text-align: center;
+        font-size: 1.1rem;
+        color: #64748b;
+        margin-bottom: 2.5rem;
+      }
+
+      html[data-theme='dark'] .section-subtitle {
+        color: #94a3b8;
+      }
+
+      .roadmap-tabs {
+        display: flex;
+        gap: 1rem;
+        justify-content: center;
+        margin-bottom: 3rem;
+        flex-wrap: wrap;
+      }
+
+      .roadmap-tab {
+        padding: 1rem 2rem;
+        border: 2px solid #e2e8f0;
+        background: white;
+        border-radius: 12px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        font-weight: 600;
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+        font-size: 1rem;
+        color: #475569;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+      }
+
+      html[data-theme='dark'] .roadmap-tab {
+        border-color: #334155;
+        color: #cbd5e1;
+        background: #1e293b;
+      }
+
+      .roadmap-tab:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        border-color: #cbd5e1;
+        color: #1e293b;
+      }
+
+      html[data-theme='dark'] .roadmap-tab:hover {
+        border-color: #475569;
+        background: #334155;
+        color: #e2e8f0;
+      }
+
+      .roadmap-tab.active {
+        background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+        color: white;
+        border-color: #3b82f6;
+        box-shadow: 0 4px 15px rgba(59, 130, 246, 0.4);
+      }
+
+      html[data-theme='dark'] .roadmap-tab.active {
+        background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+        border-color: #3b82f6;
+        color: #fff;
+      }
+
+      .tab-icon {
+        font-size: 1.3rem;
+      }
+
+      .roadmap-content {
+        display: none;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+      }
+
+      .roadmap-content.active {
+        display: block;
+        opacity: 1;
+      }
+
+      .roadmap-timeline {
+        position: relative;
+        padding-left: 60px;
+      }
+
+      .roadmap-timeline::before {
+        content: '';
+        position: absolute;
+        left: 30px;
+        top: 0;
+        bottom: 0;
+        width: 3px;
+        background: linear-gradient(180deg, #3b82f6 0%, #2563eb 100%);
+        border-radius: 2px;
+      }
+
+      .timeline-item {
+        position: relative;
+        margin-bottom: 2rem;
+      }
+
+      .timeline-marker {
+        position: absolute;
+        left: -45px;
+        top: 0;
+        width: 30px;
+        height: 30px;
+        background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        font-weight: bold;
+        z-index: 2;
+        box-shadow:
+          0 0 0 3px white,
+          0 0 0 5px #dbeafe;
+      }
+
+      html[data-theme='dark'] .timeline-marker {
+        box-shadow:
+          0 0 0 3px #0f172a,
+          0 0 0 5px #1e3a5f;
+      }
+
+      .timeline-content {
+        background: white;
+        padding: 2rem;
+        border-radius: 12px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+        border: 1px solid #e2e8f0;
+        position: relative;
+      }
+
+      html[data-theme='dark'] .timeline-content {
+        background: #1e293b;
+        border-color: #334155;
+      }
+
+      .timeline-content::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 4px;
+        height: 100%;
+        background: linear-gradient(180deg, #3b82f6 0%, #2563eb 100%);
+        border-radius: 0 4px 4px 0;
+      }
+
+      .timeline-content h3 {
+        color: #1e293b;
+        margin-bottom: 1rem;
+        font-size: 1.3rem;
+        font-weight: 700;
+      }
+
+      html[data-theme='dark'] .timeline-content h3 {
+        color: #f1f5f9;
+      }
+
+      .timeline-content ul {
+        list-style: none;
+      }
+
+      .timeline-content li {
+        margin-bottom: 0.75rem;
+        padding-left: 1.75rem;
+        position: relative;
+        color: #64748b;
+        line-height: 1.6;
+      }
+
+      html[data-theme='dark'] .timeline-content li {
+        color: #94a3b8;
+      }
+
+      .timeline-content li::before {
+        content: '✓';
+        position: absolute;
+        left: 0;
+        color: #3b82f6;
+        font-weight: bold;
+        font-size: 1.1rem;
+      }
+
+      html[data-theme='dark'] .timeline-content li::before {
+        color: #60a5fa;
+      }
+
+      .roadmap-stats {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        gap: 1.5rem;
+        margin-top: 2.5rem;
+        padding: 2rem;
+        background: #f1f5f9;
+        border-radius: 12px;
+        border: 1px solid #e2e8f0;
+      }
+
+      html[data-theme='dark'] .roadmap-stats {
+        background: #1e293b;
+        border-color: #334155;
+      }
+
+      .stat-card {
+        text-align: center;
+        padding: 1.5rem;
+        background: white;
+        border-radius: 10px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+        border: 1px solid #e2e8f0;
+      }
+
+      html[data-theme='dark'] .stat-card {
+        background: #0f172a;
+        border-color: #334155;
+      }
+
+      .stat-number {
+        font-size: 2.5rem;
+        font-weight: 700;
+        color: #3b82f6;
+        margin-bottom: 0.5rem;
+      }
+
+      html[data-theme='dark'] .stat-number {
+        color: #60a5fa;
+      }
+
+      .stat-label {
+        font-size: 0.875rem;
+        color: #64748b;
+        font-weight: 600;
+      }
+
+      html[data-theme='dark'] .stat-label {
+        color: #94a3b8;
+      }
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <nav>
+        <div style="font-size: 1.5rem; font-weight: bold">BraineX</div>
+        <button class="theme-toggle" aria-label="Toggle dark mode">🌙 Dark</button>
+      </nav>
+    </header>
+
+    <main>
+      <div class="container">
+        <h1>Dark Mode & Roadmaps Test</h1>
+        <p style="text-align: center; margin-bottom: 3rem; color: #64748b">
+          Click the "Dark" button above to toggle themes. Click tabs below to switch roadmaps.
+        </p>
+
+        <section class="roadmaps">
+          <div class="container">
+            <h2>🗺️ Step-by-Step Roadmaps</h2>
+            <p class="section-subtitle">Follow proven pathways to achieve your goals</p>
+
+            <div class="roadmap-tabs">
+              <button class="roadmap-tab active" data-tab="undergrad">
+                <span class="tab-icon">🎓</span>
+                <span>Undergraduate</span>
+              </button>
+              <button class="roadmap-tab" data-tab="graduate">
+                <span class="tab-icon">🎯</span>
+                <span>Graduate School</span>
+              </button>
+              <button class="roadmap-tab" data-tab="career">
+                <span class="tab-icon">💼</span>
+                <span>Career Switch</span>
+              </button>
+            </div>
+
+            <div class="roadmap-content active" id="undergrad-roadmap">
+              <div class="roadmap-timeline">
+                <div class="timeline-item">
+                  <div class="timeline-marker">1</div>
+                  <div class="timeline-content">
+                    <h3>High School Preparation (9th-12th Grade)</h3>
+                    <ul>
+                      <li>Maintain strong GPA (3.7+)</li>
+                      <li>Take challenging courses (AP/IB)</li>
+                      <li>Participate in extracurricular activities</li>
+                      <li>Build leadership experience</li>
+                      <li>Prepare for standardized tests (SAT/ACT)</li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="timeline-item">
+                  <div class="timeline-marker">2</div>
+                  <div class="timeline-content">
+                    <h3>College Application Process (11th-12th Grade)</h3>
+                    <ul>
+                      <li>Research and visit colleges</li>
+                      <li>Write compelling personal statements</li>
+                      <li>Secure strong recommendation letters</li>
+                      <li>Apply for scholarships and financial aid</li>
+                      <li>Submit applications by deadlines</li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="timeline-item">
+                  <div class="timeline-marker">3</div>
+                  <div class="timeline-content">
+                    <h3>College Success (Freshman-Senior Year)</h3>
+                    <ul>
+                      <li>Excel academically (3.5+ GPA)</li>
+                      <li>Build relationships with professors</li>
+                      <li>Gain research or internship experience</li>
+                      <li>Develop professional network</li>
+                      <li>Prepare for post-graduation plans</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="roadmap-stats">
+                <div class="stat-card">
+                  <div class="stat-number">3</div>
+                  <div class="stat-label">Key Phases</div>
+                </div>
+                <div class="stat-card">
+                  <div class="stat-number">8-10</div>
+                  <div class="stat-label">Years</div>
+                </div>
+                <div class="stat-card">
+                  <div class="stat-number">85%</div>
+                  <div class="stat-label">Success Rate</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="roadmap-content" id="graduate-roadmap">
+              <div class="roadmap-timeline">
+                <div class="timeline-item">
+                  <div class="timeline-marker">1</div>
+                  <div class="timeline-content">
+                    <h3>Preparation Phase (1-2 years before)</h3>
+                    <ul>
+                      <li>Research programs and requirements</li>
+                      <li>Build strong academic record</li>
+                      <li>Gain relevant experience</li>
+                      <li>Prepare for entrance exams (GRE/GMAT)</li>
+                      <li>Connect with potential advisors</li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="timeline-item">
+                  <div class="timeline-marker">2</div>
+                  <div class="timeline-content">
+                    <h3>Application Process (6-12 months)</h3>
+                    <ul>
+                      <li>Draft statement of purpose</li>
+                      <li>Request recommendation letters</li>
+                      <li>Submit applications strategically</li>
+                      <li>Apply for funding opportunities</li>
+                      <li>Prepare for interviews</li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="timeline-item">
+                  <div class="timeline-marker">3</div>
+                  <div class="timeline-content">
+                    <h3>Graduate School Success</h3>
+                    <ul>
+                      <li>Excel in coursework and research</li>
+                      <li>Publish research findings</li>
+                      <li>Attend conferences and network</li>
+                      <li>Develop teaching skills</li>
+                      <li>Plan career after graduation</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="roadmap-stats">
+                <div class="stat-card">
+                  <div class="stat-number">3</div>
+                  <div class="stat-label">Key Phases</div>
+                </div>
+                <div class="stat-card">
+                  <div class="stat-number">2-6</div>
+                  <div class="stat-label">Years</div>
+                </div>
+                <div class="stat-card">
+                  <div class="stat-number">92%</div>
+                  <div class="stat-label">Completion</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="roadmap-content" id="career-roadmap">
+              <div class="roadmap-timeline">
+                <div class="timeline-item">
+                  <div class="timeline-marker">1</div>
+                  <div class="timeline-content">
+                    <h3>Self-Assessment (Months 1-3)</h3>
+                    <ul>
+                      <li>Identify transferable skills</li>
+                      <li>Research target industries</li>
+                      <li>Set clear career goals</li>
+                      <li>Assess skill gaps</li>
+                      <li>Create action plan</li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="timeline-item">
+                  <div class="timeline-marker">2</div>
+                  <div class="timeline-content">
+                    <h3>Skill Development (Months 3-12)</h3>
+                    <ul>
+                      <li>Take relevant courses</li>
+                      <li>Gain practical experience</li>
+                      <li>Build portfolio projects</li>
+                      <li>Network with professionals</li>
+                      <li>Obtain certifications</li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="timeline-item">
+                  <div class="timeline-marker">3</div>
+                  <div class="timeline-content">
+                    <h3>Job Search (Months 9-18)</h3>
+                    <ul>
+                      <li>Update resume and portfolio</li>
+                      <li>Apply strategically</li>
+                      <li>Prepare for interviews</li>
+                      <li>Negotiate offers</li>
+                      <li>Continue learning</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="roadmap-stats">
+                <div class="stat-card">
+                  <div class="stat-number">3</div>
+                  <div class="stat-label">Key Phases</div>
+                </div>
+                <div class="stat-card">
+                  <div class="stat-number">12-18</div>
+                  <div class="stat-label">Months</div>
+                </div>
+                <div class="stat-card">
+                  <div class="stat-number">78%</div>
+                  <div class="stat-label">Success</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <script>
+      // Roadmap tabs
+      document.addEventListener('DOMContentLoaded', function () {
+        const tabs = document.querySelectorAll('.roadmap-tab');
+        const contents = document.querySelectorAll('.roadmap-content');
+
+        tabs.forEach((tab) => {
+          tab.addEventListener('click', function () {
+            const targetTab = this.getAttribute('data-tab');
+
+            // Update tabs
+            tabs.forEach((t) => t.classList.remove('active'));
+            this.classList.add('active');
+
+            // Update content
+            contents.forEach((content) => {
+              if (content.id === targetTab + '-roadmap') {
+                content.style.opacity = '0';
+                content.classList.add('active');
+                setTimeout(() => {
+                  content.style.opacity = '1';
+                }, 50);
+              } else {
+                content.classList.remove('active');
+              }
+            });
+          });
+        });
+      });
+    </script>
+  </body>
+</html>
+
