@@ -1,0 +1,265 @@
+/* Universal Add Item Modal */
+.add-item-modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(4px);
+  z-index: 10000;
+  align-items: center;
+  justify-content: center;
+  animation: fadeIn 0.3s ease;
+}
+
+.add-item-modal.show {
+  display: flex;
+}
+
+.add-modal-content {
+  background: white;
+  border-radius: 16px;
+  padding: 2rem;
+  width: 90%;
+  max-width: 500px;
+  max-height: 85vh;
+  overflow-y: auto;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  animation: slideUp 0.3s ease;
+}
+
+.add-modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 2px solid #e2e8f0;
+}
+
+.add-modal-header h2 {
+  font-size: 1.5rem;
+  color: #2d3748;
+  margin: 0;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.add-modal-close {
+  background: transparent;
+  border: none;
+  font-size: 1.8rem;
+  color: #718096;
+  cursor: pointer;
+  padding: 0;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  transition: all 0.2s ease;
+}
+
+.add-modal-close:hover {
+  background: #f7fafc;
+  color: #2d3748;
+  transform: rotate(90deg);
+}
+
+.add-form-group {
+  margin-bottom: 1.25rem;
+}
+
+.add-form-group label {
+  display: block;
+  font-weight: 600;
+  color: #2d3748;
+  margin-bottom: 0.5rem;
+  font-size: 0.95rem;
+}
+
+.add-form-group input,
+.add-form-group textarea,
+.add-form-group select {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: 2px solid #e2e8f0;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  font-family: inherit;
+}
+
+.add-form-group input:focus,
+.add-form-group textarea:focus,
+.add-form-group select:focus {
+  outline: none;
+  border-color: #667eea;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+.add-form-group textarea {
+  resize: vertical;
+  min-height: 80px;
+}
+
+.add-form-group input::placeholder,
+.add-form-group textarea::placeholder {
+  color: #a0aec0;
+}
+
+.add-form-actions {
+  display: flex;
+  gap: 0.75rem;
+  margin-top: 2rem;
+  padding-top: 1rem;
+  border-top: 2px solid #e2e8f0;
+}
+
+.btn-add-submit {
+  flex: 1;
+  padding: 0.875rem 1.5rem;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-add-submit:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(102, 126, 234, 0.4);
+}
+
+.btn-add-submit:active {
+  transform: translateY(0);
+}
+
+.btn-add-cancel {
+  flex: 1;
+  padding: 0.875rem 1.5rem;
+  background: #f7fafc;
+  color: #4a5568;
+  border: 2px solid #e2e8f0;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-add-cancel:hover {
+  background: #edf2f7;
+  border-color: #cbd5e1;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Dark Mode for Add Modals */
+html[data-theme='dark'] .add-modal-content {
+  background: #1e293b !important;
+  border: 2px solid #334155;
+}
+
+html[data-theme='dark'] .add-modal-header {
+  border-color: #334155;
+}
+
+html[data-theme='dark'] .add-modal-header h2 {
+  color: #f1f5f9;
+}
+
+html[data-theme='dark'] .add-form-group label {
+  color: #e2e8f0 !important;
+}
+
+html[data-theme='dark'] .add-form-group input,
+html[data-theme='dark'] .add-form-group textarea,
+html[data-theme='dark'] .add-form-group select {
+  background: #0f172a !important;
+  border-color: #334155 !important;
+  color: #e2e8f0 !important;
+}
+
+html[data-theme='dark'] .add-form-group input:focus,
+html[data-theme='dark'] .add-form-group textarea:focus,
+html[data-theme='dark'] .add-form-group select:focus {
+  border-color: #667eea !important;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.2) !important;
+}
+
+html[data-theme='dark'] .add-form-actions {
+  border-color: #334155;
+}
+
+html[data-theme='dark'] .btn-add-cancel {
+  background: #0f172a !important;
+  border-color: #334155 !important;
+  color: #cbd5e1 !important;
+}
+
+html[data-theme='dark'] .btn-add-cancel:hover {
+  background: #1e293b !important;
+  border-color: #475569 !important;
+}
+
+/* Form Helper Text */
+.form-helper {
+  font-size: 0.85rem;
+  color: #718096;
+  margin-top: 0.25rem;
+}
+
+html[data-theme='dark'] .form-helper {
+  color: #94a3b8;
+}
+
+/* Required Field Indicator */
+.add-form-group label.required::after {
+  content: ' *';
+  color: #f56565;
+}
+
+/* Success Animation */
+@keyframes successPulse {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.05);
+  }
+}
+
+.success-added {
+  animation: successPulse 0.5s ease;
+}

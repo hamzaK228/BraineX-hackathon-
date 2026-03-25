@@ -1,0 +1,572 @@
+[
+  {
+    "id": "mit",
+    "name": "Massachusetts Institute of Technology",
+    "location": {
+      "city": "Cambridge",
+      "country": "USA"
+    },
+    "ranking": 1,
+    "tuition": 57590,
+    "acceptance_rate": 4,
+    "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/MIT_logo.svg/1024px-MIT_logo.svg.png",
+    "description": "A world-class research university known for engineering and physical sciences.",
+    "scores": {
+      "sat": "1510-1580",
+      "act": "34-36"
+    },
+    "programs": ["Computer Science", "Engineering", "Physics", "Mathematics"],
+    "type": "Private"
+  },
+  {
+    "id": "stanford",
+    "name": "Stanford University",
+    "location": {
+      "city": "Stanford",
+      "country": "USA"
+    },
+    "ranking": 3,
+    "tuition": 56169,
+    "acceptance_rate": 4,
+    "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/Stanford_University_seal_2003.svg/1024px-Stanford_University_seal_2003.svg.png",
+    "description": "Located in Silicon Valley, known for entrepreneurship and computer science.",
+    "scores": {
+      "sat": "1440-1570",
+      "act": "32-35"
+    },
+    "programs": ["Computer Science", "Economics", "Human Biology"],
+    "type": "Private"
+  },
+  {
+    "id": "harvard",
+    "name": "Harvard University",
+    "location": {
+      "city": "Cambridge",
+      "country": "USA"
+    },
+    "ranking": 5,
+    "tuition": 54002,
+    "acceptance_rate": 5,
+    "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/25/Harvard_University_shield.png/1024px-Harvard_University_shield.png",
+    "description": "The oldest institution of higher learning in the US, Ivy League.",
+    "scores": {
+      "sat": "1460-1580",
+      "act": "33-36"
+    },
+    "programs": ["Law", "Business", "Medicine", "Liberal Arts"],
+    "type": "Private"
+  },
+  {
+    "id": "oxford",
+    "name": "University of Oxford",
+    "location": {
+      "city": "Oxford",
+      "country": "UK"
+    },
+    "ranking": 2,
+    "tuition": 35000,
+    "acceptance_rate": 17,
+    "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/Oxford-University-Circlet.svg/1024px-Oxford-University-Circlet.svg.png",
+    "description": "Oldest university in the English-speaking world, collegiate system.",
+    "scores": {
+      "sat": "N/A",
+      "act": "N/A"
+    },
+    "programs": ["Humanities", "Sciences", "Philosophy"],
+    "type": "Public"
+  },
+  {
+    "id": "cambridge",
+    "name": "University of Cambridge",
+    "location": {
+      "city": "Cambridge",
+      "country": "UK"
+    },
+    "ranking": 4,
+    "tuition": 36000,
+    "acceptance_rate": 21,
+    "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/University_of_Cambridge_logo.svg/1024px-University_of_Cambridge_logo.svg.png",
+    "description": "Prestigious research university, rival to Oxford.",
+    "scores": {
+      "sat": "N/A",
+      "act": "N/A"
+    },
+    "programs": ["Mathematics", "Science", "Engineering"],
+    "type": "Public"
+  },
+  {
+    "id": "caltech",
+    "name": "California Institute of Technology",
+    "location": {
+      "city": "Pasadena",
+      "country": "USA"
+    },
+    "ranking": 6,
+    "tuition": 58680,
+    "acceptance_rate": 3,
+    "logo": "https://upload.wikimedia.org/wikipedia/en/thumb/a/a4/California_Institute_of_Technology_seal.svg/1024px-California_Institute_of_Technology_seal.svg.png",
+    "description": "Small, world-renowned science and engineering institute.",
+    "scores": {
+      "sat": "1530-1580",
+      "act": "35-36"
+    },
+    "programs": ["Physics", "Chemistry", "Engineering"],
+    "type": "Private"
+  },
+  {
+    "id": "eth_zurich",
+    "name": "ETH Zurich",
+    "location": {
+      "city": "Zurich",
+      "country": "Switzerland"
+    },
+    "ranking": 9,
+    "tuition": 1500,
+    "acceptance_rate": 27,
+    "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/ETH_Z%C3%BCrich_Logo_black.svg/1024px-ETH_Z%C3%BCrich_Logo_black.svg.png",
+    "description": "Leading university in science and technology in continental Europe.",
+    "scores": {
+      "sat": "N/A",
+      "act": "N/A"
+    },
+    "programs": ["Engineering", "Architecture", "Natural Sciences"],
+    "type": "Public"
+  },
+  {
+    "id": "imperial",
+    "name": "Imperial College London",
+    "location": {
+      "city": "London",
+      "country": "UK"
+    },
+    "ranking": 8,
+    "tuition": 34000,
+    "acceptance_rate": 14,
+    "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/Imperial_College_London_new_logo.svg/1024px-Imperial_College_London_new_logo.svg.png",
+    "description": "Focuses exclusively on science, engineering, medicine, and business.",
+    "scores": {
+      "sat": "N/A",
+      "act": "N/A"
+    },
+    "programs": ["Medicine", "Engineering", "Business"],
+    "type": "Public"
+  },
+  {
+    "id": "uchicago",
+    "name": "University of Chicago",
+    "location": {
+      "city": "Chicago",
+      "country": "USA"
+    },
+    "ranking": 10,
+    "tuition": 60552,
+    "acceptance_rate": 6,
+    "logo": "https://upload.wikimedia.org/wikipedia/en/thumb/7/79/University_of_Chicago_shield.svg/1024px-University_of_Chicago_shield.svg.png",
+    "description": "Private research university known for its influential economic school.",
+    "scores": {
+      "sat": "1500-1570",
+      "act": "33-35"
+    },
+    "programs": ["Economics", "Law", "Sociology"],
+    "type": "Private"
+  },
+  {
+    "id": "ucl",
+    "name": "UCL",
+    "location": {
+      "city": "London",
+      "country": "UK"
+    },
+    "ranking": 8,
+    "tuition": 32000,
+    "acceptance_rate": 12,
+    "logo": "https://upload.wikimedia.org/wikipedia/en/d/d1/University_College_London_logo.svg",
+    "description": "Multidisciplinary university in the heart of London.",
+    "scores": {
+      "sat": "N/A",
+      "act": "N/A"
+    },
+    "programs": ["Architecture", "Education", "Psychology"],
+    "type": "Public"
+  },
+  {
+    "id": "nus",
+    "name": "National University of Singapore",
+    "location": {
+      "city": "Singapore",
+      "country": "Singapore"
+    },
+    "ranking": 11,
+    "tuition": 30000,
+    "acceptance_rate": 5,
+    "logo": "https://upload.wikimedia.org/wikipedia/en/thumb/b/b9/NUS_coat_of_arms.svg/1024px-NUS_coat_of_arms.svg.png",
+    "description": "Leading global university centered in Asia.",
+    "scores": {
+      "sat": "N/A",
+      "act": "N/A"
+    },
+    "programs": ["Engineering", "Science", "Computing"],
+    "type": "Public"
+  },
+  {
+    "id": "princeton",
+    "name": "Princeton University",
+    "location": {
+      "city": "Princeton",
+      "country": "USA"
+    },
+    "ranking": 7,
+    "tuition": 53890,
+    "acceptance_rate": 4,
+    "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/Princeton_seal_color.svg/1024px-Princeton_seal_color.svg.png",
+    "description": "Ivy League institution known for strong undergraduate teaching.",
+    "scores": {
+      "sat": "1460-1570",
+      "act": "33-35"
+    },
+    "programs": ["Public Policy", "Humanities", "Mathematics"],
+    "type": "Private"
+  },
+  {
+    "id": "yale",
+    "name": "Yale University",
+    "location": {
+      "city": "New Haven",
+      "country": "USA"
+    },
+    "ranking": 14,
+    "tuition": 59950,
+    "acceptance_rate": 5,
+    "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/07/Yale_University_Shield_1.svg/1024px-Yale_University_Shield_1.svg.png",
+    "description": "Ivy League research university with strong drama and music programs.",
+    "scores": {
+      "sat": "1460-1570",
+      "act": "33-35"
+    },
+    "programs": ["Drama", "Law", "History"],
+    "type": "Private"
+  },
+  {
+    "id": "cornell",
+    "name": "Cornell University",
+    "location": {
+      "city": "Ithaca",
+      "country": "USA"
+    },
+    "ranking": 20,
+    "tuition": 61015,
+    "acceptance_rate": 8,
+    "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/Cornell_University_seal.svg/1024px-Cornell_University_seal.svg.png",
+    "description": "Ivy League university with a wide range of colleges.",
+    "scores": {
+      "sat": "1400-1540",
+      "act": "32-35"
+    },
+    "programs": ["Hotel Management", "Engineering", "Agriculture"],
+    "type": "Private"
+  },
+  {
+    "id": "columbia",
+    "name": "Columbia University",
+    "location": {
+      "city": "New York",
+      "country": "USA"
+    },
+    "ranking": 19,
+    "tuition": 63530,
+    "acceptance_rate": 4,
+    "logo": "https://upload.wikimedia.org/wikipedia/en/thumb/c/c5/Columbia_University_Shield.svg/1024px-Columbia_University_Shield.svg.png",
+    "description": "Ivy League university in Manhattan.",
+    "scores": {
+      "sat": "1470-1570",
+      "act": "33-35"
+    },
+    "programs": ["Journalism", "Law", "International Relations"],
+    "type": "Private"
+  },
+  {
+    "id": "epfl",
+    "name": "EPFL",
+    "location": {
+      "city": "Lausanne",
+      "country": "Switzerland"
+    },
+    "ranking": 14,
+    "tuition": 1600,
+    "acceptance_rate": 20,
+    "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ae/EPFL_Logo_Digital_RGB_Red.svg/1024px-EPFL_Logo_Digital_RGB_Red.svg.png",
+    "description": "Specializes in natural sciences and engineering.",
+    "scores": {
+      "sat": "N/A",
+      "act": "N/A"
+    },
+    "programs": ["Robotics", "Computer Science", "Life Sciences"],
+    "type": "Public"
+  },
+  {
+    "id": "edinburgh",
+    "name": "University of Edinburgh",
+    "location": {
+      "city": "Edinburgh",
+      "country": "UK"
+    },
+    "ranking": 15,
+    "tuition": 28000,
+    "acceptance_rate": 10,
+    "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e2/University_of_Edinburgh_ceremonial_roundel.svg/1024px-University_of_Edinburgh_ceremonial_roundel.svg.png",
+    "description": "One of Scotland's ancient universities.",
+    "scores": {
+      "sat": "N/A",
+      "act": "N/A"
+    },
+    "programs": ["Medicine", "Informatics", "Arts"],
+    "type": "Public"
+  },
+  {
+    "id": "tsinghua",
+    "name": "Tsinghua University",
+    "location": {
+      "city": "Beijing",
+      "country": "China"
+    },
+    "ranking": 17,
+    "tuition": 5000,
+    "acceptance_rate": 2,
+    "logo": "https://upload.wikimedia.org/wikipedia/en/thumb/d/d6/Tsinghua_University_Seal.svg/1024px-Tsinghua_University_Seal.svg.png",
+    "description": "Top ranked university in Asia.",
+    "scores": {
+      "sat": "N/A",
+      "act": "N/A"
+    },
+    "programs": ["Engineering", "Computer Science", "Materials Science"],
+    "type": "Public"
+  },
+  {
+    "id": "pku",
+    "name": "Peking University",
+    "location": {
+      "city": "Beijing",
+      "country": "China"
+    },
+    "ranking": 23,
+    "tuition": 5000,
+    "acceptance_rate": 1,
+    "logo": "https://upload.wikimedia.org/wikipedia/en/thumb/d/de/Peking_University_seal.svg/1024px-Peking_University_seal.svg.png",
+    "description": "Major Chinese research university.",
+    "scores": {
+      "sat": "N/A",
+      "act": "N/A"
+    },
+    "programs": ["Humanities", "Sciences", "Social Sciences"],
+    "type": "Public"
+  },
+  {
+    "id": "toronto",
+    "name": "University of Toronto",
+    "location": {
+      "city": "Toronto",
+      "country": "Canada"
+    },
+    "ranking": 21,
+    "tuition": 45000,
+    "acceptance_rate": 43,
+    "logo": "https://upload.wikimedia.org/wikipedia/en/thumb/0/04/University_of_Toronto_coat_of_arms.svg/1024px-University_of_Toronto_coat_of_arms.svg.png",
+    "description": "Leading Canadian research university.",
+    "scores": {
+      "sat": "N/A",
+      "act": "N/A"
+    },
+    "programs": ["Medicine", "Engineering", "Education"],
+    "type": "Public"
+  },
+  {
+    "id": "mcgill",
+    "name": "McGill University",
+    "location": {
+      "city": "Montreal",
+      "country": "Canada"
+    },
+    "ranking": 31,
+    "tuition": 32000,
+    "acceptance_rate": 46,
+    "logo": "https://upload.wikimedia.org/wikipedia/en/thumb/2/29/McGill_University_coat_of_arms.svg/1024px-McGill_University_coat_of_arms.svg.png",
+    "description": "Known as the Harvard of Canada.",
+    "scores": {
+      "sat": "N/A",
+      "act": "N/A"
+    },
+    "programs": ["Medicine", "Law", "Management"],
+    "type": "Public"
+  },
+  {
+    "id": "anu",
+    "name": "Australian National University",
+    "location": {
+      "city": "Canberra",
+      "country": "Australia"
+    },
+    "ranking": 30,
+    "tuition": 32000,
+    "acceptance_rate": 35,
+    "logo": "https://upload.wikimedia.org/wikipedia/en/thumb/f/f6/Australian_National_University_logo.svg/1024px-Australian_National_University_logo.svg.png",
+    "description": "Australia's national university.",
+    "scores": {
+      "sat": "N/A",
+      "act": "N/A"
+    },
+    "programs": ["International Relations", "Earth Sciences", "Asian Studies"],
+    "type": "Public"
+  },
+  {
+    "id": "melbourne",
+    "name": "University of Melbourne",
+    "location": {
+      "city": "Melbourne",
+      "country": "Australia"
+    },
+    "ranking": 33,
+    "tuition": 30000,
+    "acceptance_rate": 70,
+    "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/University_of_Melbourne_Coat_of_Arms.svg/1024px-University_of_Melbourne_Coat_of_Arms.svg.png",
+    "description": "Top ranked university in Australia.",
+    "scores": {
+      "sat": "N/A",
+      "act": "N/A"
+    },
+    "programs": ["Law", "Medicine", "Education"],
+    "type": "Public"
+  },
+  {
+    "id": "tokyo",
+    "name": "University of Tokyo",
+    "location": {
+      "city": "Tokyo",
+      "country": "Japan"
+    },
+    "ranking": 28,
+    "tuition": 5000,
+    "acceptance_rate": 10,
+    "logo": "https://upload.wikimedia.org/wikipedia/en/thumb/b/b5/University_of_Tokyo_Logo.svg/1024px-University_of_Tokyo_Logo.svg.png",
+    "description": "Japan's most prestigious university.",
+    "scores": {
+      "sat": "N/A",
+      "act": "N/A"
+    },
+    "programs": ["Science", "Tech", "Law"],
+    "type": "Public"
+  },
+  {
+    "id": "kyoto",
+    "name": "Kyoto University",
+    "location": {
+      "city": "Kyoto",
+      "country": "Japan"
+    },
+    "ranking": 46,
+    "tuition": 5000,
+    "acceptance_rate": 8,
+    "logo": "https://upload.wikimedia.org/wikipedia/en/thumb/e/e5/Kyoto_University_logo.svg/1024px-Kyoto_University_logo.svg.png",
+    "description": "Known for research-oriented approach.",
+    "scores": {
+      "sat": "N/A",
+      "act": "N/A"
+    },
+    "programs": ["Chemistry", "Physics", "Medicine"],
+    "type": "Public"
+  },
+  {
+    "id": "hku",
+    "name": "University of Hong Kong",
+    "location": {
+      "city": "Hong Kong",
+      "country": "Hong Kong"
+    },
+    "ranking": 21,
+    "tuition": 22000,
+    "acceptance_rate": 10,
+    "logo": "https://upload.wikimedia.org/wikipedia/en/thumb/6/62/University_of_Hong_Kong_coat_of_arms.svg/1024px-University_of_Hong_Kong_coat_of_arms.svg.png",
+    "description": "Oldest tertiary institution in Hong Kong.",
+    "scores": {
+      "sat": "N/A",
+      "act": "N/A"
+    },
+    "programs": ["Dentistry", "Education", "Biomedicine"],
+    "type": "Public"
+  },
+  {
+    "id": "seoul_national",
+    "name": "Seoul National University",
+    "location": {
+      "city": "Seoul",
+      "country": "South Korea"
+    },
+    "ranking": 29,
+    "tuition": 6000,
+    "acceptance_rate": 15,
+    "logo": "https://upload.wikimedia.org/wikipedia/en/thumb/1/1d/Seoul_National_University_Seal.svg/1024px-Seoul_National_University_Seal.svg.png",
+    "description": "Most prestigious university in South Korea.",
+    "scores": {
+      "sat": "N/A",
+      "act": "N/A"
+    },
+    "programs": ["Engineering", "Medicine", "Business"],
+    "type": "Public"
+  },
+  {
+    "id": "duke",
+    "name": "Duke University",
+    "location": {
+      "city": "Durham",
+      "country": "USA"
+    },
+    "ranking": 25,
+    "tuition": 60435,
+    "acceptance_rate": 6,
+    "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e6/Duke_University_Education_Shield.svg/1024px-Duke_University_Education_Shield.svg.png",
+    "description": "Private research university in North Carolina.",
+    "scores": {
+      "sat": "1480-1570",
+      "act": "33-35"
+    },
+    "programs": ["Medicine", "Law", "Public Policy"],
+    "type": "Private"
+  },
+  {
+    "id": "northwestern",
+    "name": "Northwestern University",
+    "location": {
+      "city": "Evanston",
+      "country": "USA"
+    },
+    "ranking": 26,
+    "tuition": 60984,
+    "acceptance_rate": 7,
+    "logo": "https://upload.wikimedia.org/wikipedia/en/thumb/7/7c/Northwestern_University_seal.svg/1024px-Northwestern_University_seal.svg.png",
+    "description": "Known for journalism, management, and engineering.",
+    "scores": {
+      "sat": "1430-1550",
+      "act": "33-35"
+    },
+    "programs": ["Journalism", "Communication", "Materials Science"],
+    "type": "Private"
+  },
+  {
+    "id": "jhu",
+    "name": "Johns Hopkins University",
+    "location": {
+      "city": "Baltimore",
+      "country": "USA"
+    },
+    "ranking": 27,
+    "tuition": 58720,
+    "acceptance_rate": 8,
+    "logo": "https://upload.wikimedia.org/wikipedia/en/thumb/0/07/Johns_Hopkins_University_seal.svg/1024px-Johns_Hopkins_University_seal.svg.png",
+    "description": "First research university in the United States.",
+    "scores": {
+      "sat": "1500-1570",
+      "act": "34-35"
+    },
+    "programs": ["Medicine", "Public Health", "International Studies"],
+    "type": "Private"
+  }
+]

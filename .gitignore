@@ -1,0 +1,78 @@
+# Node
+node_modules/
+.npm/
+package-lock.json
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Environment
+.env
+.env.*
+!.env.example
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# OS
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*~
+
+# Editor/IDE
+.vscode/
+.idea/
+*.sublime-*
+.project
+.classpath
+.settings/
+
+# Build artifacts
+/dist/
+/build/
+coverage/
+.tmp/
+.tmp*/
+.tmp_rovodev_*
+tmp_rovodev_*
+
+# Uploads
+uploads/
+!uploads/.gitkeep
+
+# Database
+*.sql.backup
+*.db
+
+# Docker
+.docker/
+
+# Testing
+.nyc_output/
+test-results/
+cypress/videos/
+cypress/screenshots/
+
+# Backups
+MentoraX_backup_*/
+*.backup
+*.bak
+
+# Cache
+.cache/
+.parcel-cache/
+.eslintcache
+
+# PM2
+.pm2/
+
+# Webpack
+.webpack/

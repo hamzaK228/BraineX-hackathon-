@@ -1,0 +1,145 @@
+/* Summer Programs Styles */
+
+:root {
+  --prog-danger: #ef4444;
+  --prog-success: #10b981;
+  --prog-warning: #f59e0b;
+}
+
+/* Card */
+.program-card {
+  background: var(--uni-card-bg);
+  border: 1px solid var(--uni-card-border);
+  border-radius: 1rem;
+  padding: 1.5rem;
+  position: relative;
+  transition:
+    transform 0.2s,
+    box-shadow 0.2s;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.program-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+.prog-badge {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 700;
+}
+
+.badge-free {
+  background: #dcfce7;
+  color: #166534;
+}
+
+.badge-paid {
+  background: #f1f5f9;
+  color: #475569;
+}
+
+.prog-header {
+  margin-bottom: 1rem;
+}
+
+.prog-provider {
+  font-size: 0.875rem;
+  color: var(--uni-text-muted);
+  font-weight: 500;
+}
+
+.prog-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin: 0.5rem 0;
+}
+
+/* Countdown Timer */
+.countdown-container {
+  background: rgba(0, 0, 0, 0.03);
+  padding: 0.75rem;
+  border-radius: 0.5rem;
+  margin: 1rem 0;
+  text-align: center;
+}
+
+.timer-label {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--uni-text-muted);
+  margin-bottom: 0.25rem;
+  display: block;
+}
+
+.timer-val {
+  font-family: monospace;
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: var(--prog-danger);
+}
+
+.prog-details {
+  flex: 1;
+  font-size: 0.9rem;
+  color: var(--uni-text-muted);
+  margin-bottom: 1.5rem;
+}
+
+.detail-row {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+  align-items: center;
+}
+
+/* Application Assistant Styles */
+.guide-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.guide-step {
+  display: none;
+}
+
+.guide-step.active {
+  display: block;
+  animation: slideIn 0.3s ease;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.progress-bar {
+  height: 6px;
+  background: #e2e8f0;
+  border-radius: 3px;
+  margin-bottom: 2rem;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  background: var(--uni-primary);
+  width: 0;
+  transition: width 0.3s ease;
+}

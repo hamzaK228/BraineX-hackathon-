@@ -1,0 +1,131 @@
+/* Component Syles - Modular & Accessible */
+
+/* --- Card Expansion --- */
+.expandable-card {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.expandable-card.expanded {
+  grid-row: span 2;
+  /* If in grid, allows growing */
+  box-shadow:
+    0 10px 25px -5px rgba(0, 0, 0, 0.1),
+    0 8px 10px -6px rgba(0, 0, 0, 0.1);
+  border-color: var(--primary-color, #667eea);
+  z-index: 10;
+}
+
+.expansion-panel {
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition:
+    max-height 0.4s ease-out,
+    opacity 0.3s ease-in;
+  background-color: var(--bg-secondary, #f8f9fa);
+  border-top: 1px solid var(--border-color, #e2e8f0);
+}
+
+.expandable-card.expanded .expansion-panel {
+  max-height: 800px;
+  /* Large enough to fit content */
+  opacity: 1;
+  transition:
+    max-height 0.5s ease-in,
+    opacity 0.3s ease-out 0.1s;
+  padding: 1.5rem;
+}
+
+/* --- Inline Details Layout --- */
+.detail-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.detail-item {
+  background: white;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.dark-mode .detail-item {
+  background: #2d3748;
+}
+
+.detail-label {
+  display: block;
+  font-size: 0.85rem;
+  color: var(--text-secondary, #718096);
+  margin-bottom: 0.25rem;
+  font-weight: 500;
+}
+
+.detail-value {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--text-primary, #2d3748);
+}
+
+/* --- Lists (Skills/Programs) --- */
+.inline-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.inline-item-tag {
+  background: var(--bg-tertiary, #edf2f7);
+  color: var(--text-primary, #4a5568);
+  padding: 0.25rem 0.75rem;
+  border-radius: 999px;
+  font-size: 0.9rem;
+  border: 1px solid transparent;
+}
+
+.dark-mode .inline-item-tag {
+  background: #4a5568;
+  color: #edf2f7;
+}
+
+/* --- Action Buttons Container --- */
+.expanded-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+  margin-top: 1rem;
+  border-top: 1px solid var(--border-color, #e2e8f0);
+  padding-top: 1rem;
+}
+
+/* --- Loading State --- */
+.expansion-loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  color: var(--text-secondary);
+}
+
+.spinner-small {
+  width: 20px;
+  height: 20px;
+  border: 2px solid #e2e8f0;
+  border-top-color: var(--primary-color);
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin-right: 0.5rem;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}

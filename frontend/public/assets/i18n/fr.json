@@ -1,0 +1,52 @@
+{
+  "common": {
+    "welcome": "Bienvenue sur BraineX",
+    "login": "Se Connecter",
+    "signup": "S'inscrire",
+    "logout": "Déconnexion",
+    "search": "Rechercher",
+    "filter": "Filtrer",
+    "apply": "Postuler",
+    "cancel": "Annuler",
+    "save": "Enregistrer",
+    "delete": "Supprimer",
+    "edit": "Modifier",
+    "loading": "Chargement...",
+    "error": "Une erreur s'est produite",
+    "success": "Succès!"
+  },
+  "navigation": {
+    "home": "Accueil",
+    "fields": "Domaines",
+    "scholarships": "Bourses",
+    "mentors": "Mentors",
+    "projects": "Projets",
+    "events": "Événements",
+    "about": "À Propos",
+    "admin": "Admin"
+  },
+  "hero": {
+    "title": "Votre Porte d'Entrée vers les Bourses et les Opportunités Mondiales",
+    "subtitle": "Connectez-vous avec des mentors, découvrez des financements et libérez votre potentiel",
+    "cta": "Explorer les Opportunités"
+  },
+  "auth": {
+    "email": "E-mail",
+    "password": "Mot de Passe",
+    "firstName": "Prénom",
+    "lastName": "Nom",
+    "confirmPassword": "Confirmer le Mot de Passe",
+    "field": "Domaine d'Intérêt",
+    "loginTitle": "Bon Retour",
+    "signupTitle": "Créer un Compte",
+    "forgotPassword": "Mot de passe oublié?",
+    "noAccount": "Vous n'avez pas de compte?",
+    "haveAccount": "Vous avez déjà un compte?",
+    "registerSuccess": "Inscription réussie!",
+    "loginSuccess": "Connexion réussie!",
+    "invalidCredentials": "E-mail ou mot de passe invalide"
+  },
+  "footer": {
+    "copyright": "© 2024 BraineX. Tous droits réservés."
+  }
+}

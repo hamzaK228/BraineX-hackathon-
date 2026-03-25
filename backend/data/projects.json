@@ -1,0 +1,35 @@
+[
+  {
+    "id": "1",
+    "title": "Build a Personal Portfolio Website",
+    "category": "Web Development",
+    "difficulty": "Beginner",
+    "estimatedTime": "10 hours",
+    "description": "Create a responsive personal portfolio website to showcase your skills and projects using HTML, CSS, and basic JavaScript.",
+    "skills": ["HTML", "CSS", "Responsive Design"],
+    "image": "portfolio-project.jpg",
+    "status": "active"
+  },
+  {
+    "id": "2",
+    "title": "Weather App with API Integration",
+    "category": "Frontend Development",
+    "difficulty": "Intermediate",
+    "estimatedTime": "15 hours",
+    "description": "Build a weather application that fetches real-time weather data from an API and displays it with a clean UI.",
+    "skills": ["JavaScript", "API Integration", "DOM Manipulation"],
+    "image": "weather-app.jpg",
+    "status": "active"
+  },
+  {
+    "id": "3",
+    "title": "Task Management Dashboard",
+    "category": "Full Stack",
+    "difficulty": "Advanced",
+    "estimatedTime": "25 hours",
+    "description": "Develop a full-featured task management dashboard with drag-and-drop functionality, authentication, and data persistence.",
+    "skills": ["React", "Node.js", "MongoDB", "Authentication"],
+    "image": "task-dashboard.jpg",
+    "status": "active"
+  }
+]

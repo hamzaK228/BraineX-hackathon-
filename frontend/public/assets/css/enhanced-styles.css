@@ -1,0 +1,764 @@
+/* Enhanced Styles for All Pages */
+
+/* Scholarship Page Enhancements */
+.scholarship-card {
+  position: relative;
+  overflow: hidden;
+  border-left: 4px solid var(--accent-primary);
+}
+
+.scholarship-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+  transition: left 0.5s;
+}
+
+.scholarship-card:hover::before {
+  left: 100%;
+}
+
+.scholarship-organization {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+  color: var(--accent-primary);
+  font-weight: 600;
+}
+
+.scholarship-details {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.8rem;
+  margin-bottom: 1.5rem;
+}
+
+.detail-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+
+.detail-item i {
+  color: var(--accent-primary);
+  width: 16px;
+}
+
+.scholarship-actions {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 0.8rem;
+  margin-top: 1rem;
+}
+
+.btn-apply,
+.btn-save,
+.btn-share {
+  padding: 0.7rem 1rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.btn-apply {
+  background: var(--accent-gradient);
+  color: white;
+}
+
+.btn-apply:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(102, 126, 234, 0.3);
+}
+
+.btn-save {
+  background: var(--bg-secondary);
+  color: var(--accent-primary);
+  border: 1px solid var(--card-border);
+}
+
+.btn-save:hover {
+  background: var(--accent-primary);
+  color: white;
+}
+
+.btn-share {
+  background: #28a745;
+  color: white;
+}
+
+.btn-share:hover {
+  background: #218838;
+  transform: translateY(-1px);
+}
+
+.scholarship-deadline-warning {
+  display: none;
+  background: var(--warning-bg);
+  color: var(--warning-text);
+  padding: 0.5rem;
+  border-radius: 6px;
+  margin-top: 1rem;
+  border: 1px solid var(--warning-border);
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+/* Application Modal Styles */
+.application-modal {
+  max-width: 600px;
+  max-height: 90vh;
+  overflow-y: auto;
+}
+
+.application-info {
+  margin-top: 1.5rem;
+}
+
+.scholarship-summary {
+  background: var(--bg-secondary);
+  padding: 1rem;
+  border-radius: 8px;
+  margin-bottom: 1.5rem;
+}
+
+.application-checklist ul,
+.application-tips ul {
+  padding-left: 1.5rem;
+}
+
+.application-checklist li,
+.application-tips li {
+  margin-bottom: 0.5rem;
+  line-height: 1.5;
+}
+
+.application-timeline {
+  margin: 1.5rem 0;
+}
+
+/* Already in main.css but ensuring consisteny if reused */
+.timeline-item {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 0.8rem;
+  padding: 0.8rem;
+  background: var(--bg-secondary);
+  border-radius: 6px;
+}
+
+.timeline-marker {
+  background: var(--accent-primary);
+  color: white;
+  padding: 0.3rem 0.8rem;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+/* Mentor Card Enhancements */
+.mentor-card.enhanced {
+  position: relative;
+  transition: all 0.3s ease;
+  border: 1px solid var(--card-border);
+}
+
+.mentor-card.enhanced:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+}
+
+.mentor-badge {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: var(--accent-gradient);
+  color: white;
+  padding: 0.4rem 0.8rem;
+  border-radius: 12px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  z-index: 2;
+}
+
+.mentor-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 1rem;
+}
+
+.mentor-avatar {
+  position: relative;
+}
+
+.avatar-circle {
+  width: 60px;
+  height: 60px;
+  background: var(--accent-gradient);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.status-indicator {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  border: 3px solid var(--card-bg);
+}
+
+.status-indicator.verified {
+  background: #28a745;
+}
+
+.mentor-rating {
+  text-align: right;
+}
+
+.rating-number {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: var(--accent-primary);
+}
+
+.stars {
+  color: #ffc107;
+  font-size: 0.9rem;
+}
+
+.reviews-count {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+.mentor-stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.5rem;
+  margin: 1rem 0;
+  padding: 1rem;
+  background: var(--bg-secondary);
+  border-radius: 8px;
+}
+
+.mentor-stats .stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+.stat-icon {
+  font-size: 1.1rem;
+  margin-bottom: 0.3rem;
+}
+
+.mentor-specializations {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin: 1rem 0;
+}
+
+.specialization-tag {
+  background: var(--tag-bg);
+  color: var(--tag-text);
+  padding: 0.3rem 0.6rem;
+  border-radius: 10px;
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+
+.mentor-pricing {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 1rem 0;
+  padding-top: 1rem;
+  border-top: 1px solid var(--divider-color);
+}
+
+.price {
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: var(--accent-primary);
+}
+
+.availability {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+.mentor-actions {
+  display: grid;
+  grid-template-columns: 1fr 1fr auto;
+  gap: 0.5rem;
+}
+
+.btn-mentor-primary,
+.btn-mentor-secondary,
+.btn-mentor-message {
+  padding: 0.7rem 1rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  text-align: center;
+}
+
+.btn-mentor-primary {
+  background: var(--accent-gradient);
+  color: white;
+}
+
+.btn-mentor-primary:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
+}
+
+.btn-mentor-secondary {
+  background: transparent;
+  color: var(--accent-primary);
+  border: 1px solid var(--accent-primary);
+}
+
+.btn-mentor-secondary:hover {
+  background: var(--accent-primary);
+  color: white;
+}
+
+.btn-mentor-message {
+  background: #28a745;
+  color: white;
+  padding: 0.7rem 0.8rem;
+}
+
+.btn-mentor-message:hover {
+  background: #218838;
+}
+
+/* Field Card Enhancements */
+.field-card {
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.field-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.field-card::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: var(--accent-gradient);
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+.field-card:hover::after {
+  transform: scaleX(1);
+}
+
+.field-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.field-icon {
+  font-size: 2.5rem;
+  background: var(--bg-secondary);
+  padding: 1rem;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.field-careers {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-top: 1rem;
+}
+
+.career-tag {
+  background: #fff3e0;
+  color: #f57c00;
+  padding: 0.3rem 0.6rem;
+  border-radius: 10px;
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+
+.btn-field-explore {
+  width: 100%;
+  margin-top: 1rem;
+  padding: 0.8rem;
+  background: var(--accent-gradient);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.btn-field-explore:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(102, 126, 234, 0.3);
+}
+
+/* Modal Enhancements */
+.field-details-modal,
+.mentor-profile-modal,
+.scholarship-details-modal {
+  max-width: 800px;
+  max-height: 90vh;
+  overflow-y: auto;
+}
+
+.field-details-header,
+.profile-header {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  margin-bottom: 2rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 2px solid var(--bg-secondary);
+}
+
+.field-icon-large {
+  font-size: 4rem;
+  background: var(--bg-secondary);
+  padding: 2rem;
+  border-radius: 20px;
+}
+
+.field-category-badge {
+  background: var(--accent-primary);
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 15px;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.details-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+  margin: 2rem 0;
+}
+
+.detail-section {
+  padding: 1.5rem;
+  background: var(--bg-secondary);
+  border-radius: 12px;
+  border-left: 4px solid var(--accent-primary);
+}
+
+.detail-section h4 {
+  margin: 0 0 0.8rem 0;
+  color: var(--text-primary);
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.career-paths,
+.skills-list,
+.universities-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.career-path-tag,
+.skill-tag,
+.university-tag {
+  background: var(--tag-bg);
+  color: var(--tag-text);
+  padding: 0.4rem 0.8rem;
+  border-radius: 12px;
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+/* Comparison Table */
+.comparison-table {
+  border: 1px solid var(--card-border);
+  border-radius: 8px;
+  overflow: hidden;
+  margin: 1.5rem 0;
+}
+
+.comparison-row {
+  display: grid;
+  grid-template-columns: 200px 1fr 1fr;
+  border-bottom: 1px solid var(--divider-color);
+}
+
+.comparison-row:last-child {
+  border-bottom: none;
+}
+
+.comparison-label {
+  background: var(--bg-secondary);
+  padding: 1rem;
+  font-weight: 600;
+  border-right: 1px solid var(--divider-color);
+  color: var(--text-secondary);
+}
+
+.comparison-value {
+  padding: 1rem;
+  border-right: 1px solid var(--divider-color);
+}
+
+.comparison-value:last-child {
+  border-right: none;
+}
+
+.comparison-actions {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1.5rem;
+  justify-content: center;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .scholarship-details {
+    grid-template-columns: 1fr;
+  }
+
+  .scholarship-actions {
+    grid-template-columns: 1fr;
+  }
+
+  .mentor-stats {
+    grid-template-columns: 1fr;
+  }
+
+  .mentor-actions {
+    grid-template-columns: 1fr;
+  }
+
+  .details-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .comparison-row {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .comparison-label {
+    background: var(--accent-primary);
+    color: white;
+    font-weight: 600;
+  }
+
+  .field-details-header,
+  .profile-header {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+/* Clean up old dark mode overrides since we use variables now */
+/* Keeping some specific overrides if necessary, but most should be handled by variables */
+
+.loading {
+  opacity: 0.7;
+  pointer-events: none;
+}
+
+.loading::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #f3f3f3;
+  border-top: 2px solid var(--accent-primary);
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  transform: translate(-50%, -50%);
+}
+
+@keyframes spin {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+/* Success States */
+.success-indicator {
+  background: var(--success-bg);
+  color: var(--success-text);
+  border: 1px solid var(--success-border);
+  padding: 0.75rem 1rem;
+  border-radius: 6px;
+  margin: 1rem 0;
+}
+
+.error-indicator {
+  background: var(--error-bg);
+  color: var(--error-text);
+  border: 1px solid var(--error-border);
+  padding: 0.75rem 1rem;
+  border-radius: 6px;
+  margin: 1rem 0;
+}
+
+/* Pathway Modal Styles */
+/* Reuse variables for these too */
+.pathway-modal {
+  max-width: 900px;
+  max-height: 90vh;
+  overflow-y: auto;
+}
+
+.pathway-header {
+  text-align: center;
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 2px solid var(--bg-secondary);
+}
+
+.pathway-description {
+  font-size: 1.2rem;
+  color: var(--text-muted);
+  margin: 1rem 0;
+}
+
+.overview-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.stat-box {
+  background: var(--accent-gradient);
+  color: white;
+  padding: 1.5rem;
+  border-radius: 12px;
+  text-align: center;
+}
+
+.stat-box h4 {
+  margin: 0 0 0.5rem 0;
+  font-size: 1rem;
+  opacity: 0.9;
+}
+
+.stat-box p {
+  margin: 0;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.pathway-steps {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.pathway-step {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  padding: 1rem;
+  background: var(--bg-secondary);
+  border-radius: 8px;
+  border-left: 4px solid var(--accent-primary);
+}
+
+.step-number {
+  background: var(--accent-primary);
+  color: white;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  flex-shrink: 0;
+}
+
+.step-content {
+  flex: 1;
+  line-height: 1.5;
+}
+
+.skills-tags,
+.certifications-tags,
+.companies-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+/* Reusing generic tag styles */
+
+.prerequisites-list {
+  list-style: none;
+  padding: 0;
+}
+
+.prerequisites-list li {
+  padding: 0.5rem 0;
+  border-bottom: 1px solid var(--divider-color);
+  position: relative;
+  padding-left: 2rem;
+}
+
+.prerequisites-list li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: #28a745;
+  font-weight: bold;
+}

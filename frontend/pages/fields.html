@@ -1,0 +1,543 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Academic Fields & Disciplines - BraineX</title>
+    <link rel="stylesheet" href="/assets/css/design-system.css" />
+    <link rel="stylesheet" href="/assets/css/skeleton.css" />
+    <link rel="stylesheet" href="/assets/css/animations.css" />
+    <script src="/assets/js/theme.js"></script>
+    <style id="critical-css">
+      body {
+        background: var(--bg-primary);
+        color: var(--text-primary);
+      }
+
+      header {
+        background: var(--header-bg);
+      }
+    </style>
+    <link rel="stylesheet" href="/assets/css/main.css" />
+    <link rel="stylesheet" href="/assets/css/fields.css" />
+    <link rel="stylesheet" href="/assets/css/unified-cards.css" />
+    <link rel="stylesheet" href="/assets/css/components.css" />
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+  </head>
+
+  <body>
+    <header>
+      <div class="container">
+        <nav role="navigation" aria-label="Primary navigation">
+          <div class="logo">
+            <img src="/assets/images/logo.png" alt="BraineX Logo" class="logo-img" />
+            <span>BraineX</span>
+          </div>
+          <button
+            class="mobile-menu-btn"
+            type="button"
+            aria-label="Toggle navigation menu"
+            aria-controls="navMenu"
+            aria-expanded="false"
+          >
+            ☰
+          </button>
+          <ul class="nav-menu" id="navMenu">
+            <li><a href="/pages/main.html">Home</a></li>
+            <li><a href="/pages/fields.html" class="active">Fields</a></li>
+            <li><a href="/pages/universities.html">Universities</a></li>
+            <li><a href="/pages/programs.html">Programs</a></li>
+            <li><a href="/pages/scholarships.html">Scholarships</a></li>
+            <li><a href="/pages/projects.html">Projects</a></li>
+            <li><a href="/pages/roadmaps.html">Roadmaps</a></li>
+            <li><a href="/pages/mentors.html">Mentors</a></li>
+            <li><a href="/pages/events.html">Events</a></li>
+            <li><a href="/pages/notion.html">My Goals</a></li>
+            <li><a href="/pages/about.html">About</a></li>
+          </ul>
+          <div class="auth-buttons">
+            <a href="#login" class="btn btn-outline">Log In</a>
+            <a href="#signup" class="btn btn-primary">Sign Up</a>
+          </div>
+          <button class="theme-toggle" type="button" aria-label="Toggle color theme">
+            🌙 Dark
+          </button>
+        </nav>
+      </div>
+    </header>
+    <main id="mainContent" role="main">
+      <!-- Hero Section -->
+      <section class="fields-hero">
+        <div class="container">
+          <h1>🌍 Explore Academic Fields</h1>
+          <p>
+            Discover diverse academic disciplines and career paths to find your perfect educational
+            journey
+          </p>
+
+          <div class="field-search">
+            <input
+              type="text"
+              placeholder="Search fields and disciplines..."
+              class="search-input"
+            />
+            <button class="btn-search">🔍 Search</button>
+          </div>
+
+          <div class="quick-stats">
+            <div class="stat-item">
+              <span class="stat-number">50+</span>
+              <span class="stat-label">Academic Fields</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number">200+</span>
+              <span class="stat-label">Specializations</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number">1000+</span>
+              <span class="stat-label">Career Paths</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Field Categories -->
+      <section class="field-categories">
+        <div class="container">
+          <h2>🎨 Field Categories</h2>
+          <div class="categories-grid">
+            <div class="category-card stem-card" data-category="stem">
+              <div class="category-header">
+                <div class="category-icon">🧬</div>
+                <h3>STEM Fields</h3>
+                <span class="field-count">7 Fields</span>
+              </div>
+              <p>
+                Science, Technology, Engineering, and Mathematics - the fields driving innovation
+                and discovery
+              </p>
+              <div class="sample-fields">
+                <span class="field-tag">Computer Science</span>
+                <span class="field-tag">Data Science</span>
+                <span class="field-tag">Engineering</span>
+                <span class="field-tag">Physics</span>
+              </div>
+              <button class="btn-explore" data-category="stem">Explore STEM →</button>
+            </div>
+
+            <div class="category-card business-card" data-category="business">
+              <div class="category-header">
+                <div class="category-icon">📊</div>
+                <h3>Business & Economics</h3>
+                <span class="field-count">2 Fields</span>
+              </div>
+              <p>
+                Business administration, economics, finance, and management - shaping the global
+                economy
+              </p>
+              <div class="sample-fields">
+                <span class="field-tag">Business Administration</span>
+                <span class="field-tag">Marketing</span>
+              </div>
+              <button class="btn-explore" data-category="business">Explore Business →</button>
+            </div>
+
+            <div class="category-card social-card" data-category="social">
+              <div class="category-header">
+                <div class="category-icon">🌍</div>
+                <h3>Social Sciences</h3>
+                <span class="field-count">6 Fields</span>
+              </div>
+              <p>Psychology, law, education, and understanding society and human behavior</p>
+              <div class="sample-fields">
+                <span class="field-tag">Psychology</span>
+                <span class="field-tag">Law</span>
+                <span class="field-tag">Education</span>
+                <span class="field-tag">Public Health</span>
+              </div>
+              <button class="btn-explore" data-category="social">Explore Social Sciences →</button>
+            </div>
+
+            <div class="category-card creative-card" data-category="creative">
+              <div class="category-header">
+                <div class="category-icon">🎨</div>
+                <h3>Creative & Design</h3>
+                <span class="field-count">4 Fields</span>
+              </div>
+              <p>Design, media, entertainment - bringing creativity and innovation to life</p>
+              <div class="sample-fields">
+                <span class="field-tag">Graphic Design</span>
+                <span class="field-tag">Film Studies</span>
+                <span class="field-tag">Architecture</span>
+                <span class="field-tag">Journalism</span>
+              </div>
+              <button class="btn-explore" data-category="creative">Explore Creative →</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Detailed Fields -->
+      <section class="detailed-fields" id="detailedFields">
+        <div class="container">
+          <div style="text-align: center; margin-bottom: 30px">
+            <h2>📋 All Academic Fields</h2>
+            <p style="color: #4a5568; font-size: 16px; margin-top: 10px">
+              Explore comprehensive information about each field including salary data, job growth,
+              required skills, and top universities
+            </p>
+          </div>
+
+          <div class="filter-tabs" style="justify-content: center; margin-bottom: 40px">
+            <button
+              class="filter-tab active"
+              data-filter="all"
+              style="font-weight: 600"
+              role="tab"
+              aria-selected="true"
+            >
+              All Fields
+            </button>
+            <button class="filter-tab" data-filter="stem">🧬 STEM</button>
+            <button class="filter-tab" data-filter="business">📊 Business</button>
+            <button class="filter-tab" data-filter="social">🌍 Social Sciences</button>
+            <button class="filter-tab" data-filter="creative">🎨 Creative</button>
+          </div>
+
+          <!-- Sort Controls -->
+          <!-- Sort Controls -->
+          <div class="sort-controls">
+            <span class="sort-label">Sort by:</span>
+            <select id="sortDropdown" class="sort-select">
+              <option value="name">📝 Name (A-Z)</option>
+              <option value="name-desc">📝 Name (Z-A)</option>
+              <option value="salary">💰 Salary (High to Low)</option>
+              <option value="salary-asc">💰 Salary (Low to High)</option>
+              <option value="growth">📈 Growth Rate</option>
+              <option value="category">🏷️ Category</option>
+            </select>
+            <button class="btn-reset">Reset</button>
+          </div>
+
+          <div class="fields-grid" id="fieldsGrid">
+            <!-- Static Fallback Content -->
+            <div class="field-card" data-category="stem">
+              <div class="field-icon">💻</div>
+              <h3>Computer Science</h3>
+              <p class="field-description">Study of computation, automation, and information.</p>
+              <div class="field-stats">
+                <div class="stat"><strong>Avg Salary:</strong> $110k</div>
+                <div class="stat"><strong>Growth:</strong> 15%</div>
+              </div>
+              <a
+                href="/scholarships?field=cs"
+                class="btn btn-primary btn-explore-field"
+                style="width: 100%; text-align: center; margin-top: 1rem; text-decoration: none"
+                >Explore CS Scholarships</a
+              >
+            </div>
+            <div class="field-card" data-category="business">
+              <div class="field-icon">📊</div>
+              <h3>Business Admin</h3>
+              <p class="field-description">
+                Management of business operations and decision making.
+              </p>
+              <div class="field-stats">
+                <div class="stat"><strong>Avg Salary:</strong> $85k</div>
+                <div class="stat"><strong>Growth:</strong> 8%</div>
+              </div>
+              <a
+                href="./scholarships.html?field=business"
+                class="btn btn-primary btn-explore-field"
+                style="text-decoration: none; display: inline-block; text-align: center"
+                >Explore Field</a
+              >
+            </div>
+            <!-- Additional cards will be loaded by JS -->
+          </div>
+        </div>
+      </section>
+
+      <!-- Career Pathways -->
+      <section class="career-pathways">
+        <div class="container">
+          <h2>🛤️ Popular Career Pathways</h2>
+          <div class="pathways-grid">
+            <div class="pathway-card">
+              <div class="pathway-icon">🤖</div>
+              <h3>AI & Machine Learning</h3>
+              <div class="pathway-info">
+                <span class="growth-rate">🔥 85% Growth</span>
+                <span class="avg-salary">💰 $120K+ avg</span>
+              </div>
+              <p>Build intelligent systems and algorithms that learn from data</p>
+              <div class="required-skills">
+                <span class="skill">Python</span>
+                <span class="skill">Statistics</span>
+                <span class="skill">Deep Learning</span>
+              </div>
+              <a href="/roadmaps?pathway=ai" class="btn-pathway" style="text-decoration: none"
+                >View Pathway</a
+              >
+            </div>
+
+            <div class="pathway-card">
+              <div class="pathway-icon">🩺</div>
+              <h3>Healthcare Innovation</h3>
+              <div class="pathway-info">
+                <span class="growth-rate">🔥 72% Growth</span>
+                <span class="avg-salary">💰 $95K+ avg</span>
+              </div>
+              <p>Combine technology with healthcare to improve patient outcomes</p>
+              <div class="required-skills">
+                <span class="skill">Biology</span>
+                <span class="skill">Healthcare Tech</span>
+                <span class="skill">Data Analysis</span>
+              </div>
+              <a
+                href="./roadmaps.html?pathway=healthcare"
+                class="btn-pathway"
+                style="text-decoration: none"
+                >View Pathway</a
+              >
+            </div>
+
+            <div class="pathway-card">
+              <div class="pathway-icon">🌱</div>
+              <h3>Sustainable Technology</h3>
+              <div class="pathway-info">
+                <span class="growth-rate">🔥 90% Growth</span>
+                <span class="avg-salary">💰 $85K+ avg</span>
+              </div>
+              <p>Develop solutions for environmental challenges and climate change</p>
+              <div class="required-skills">
+                <span class="skill">Environmental Science</span>
+                <span class="skill">Engineering</span>
+                <span class="skill">Policy</span>
+              </div>
+              <a
+                href="./roadmaps.html?pathway=sustainable"
+                class="btn-pathway"
+                style="text-decoration: none"
+                >View Pathway</a
+              >
+            </div>
+
+            <div class="pathway-card">
+              <div class="pathway-icon">💼</div>
+              <h3>Digital Business</h3>
+              <div class="pathway-info">
+                <span class="growth-rate">🔥 68% Growth</span>
+                <span class="avg-salary">💰 $75K+ avg</span>
+              </div>
+              <p>Lead digital transformation and e-commerce innovations</p>
+              <div class="required-skills">
+                <span class="skill">Digital Marketing</span>
+                <span class="skill">Analytics</span>
+                <span class="skill">Strategy</span>
+              </div>
+              <a
+                href="./roadmaps.html?pathway=digital"
+                class="btn-pathway"
+                style="text-decoration: none"
+                >View Pathway</a
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Resources Section - Enhanced with Real Links -->
+      <section class="field-resources">
+        <div class="container">
+          <h2>📖 Educational Resources</h2>
+          <p style="text-align: center; color: #4a5568; margin-bottom: 30px">
+            Access real online resources to help you explore and learn about different fields
+          </p>
+
+          <div class="resources-grid">
+            <a
+              href="https://www.bls.gov/ooh/"
+              target="_blank"
+              class="resource-card"
+              style="text-decoration: none; color: inherit"
+            >
+              <div class="resource-icon">📚</div>
+              <h3>Career Guides</h3>
+              <p>
+                Official US Bureau of Labor Statistics career guides with detailed job information
+              </p>
+              <span style="color: #667eea; font-size: 12px; display: block; margin-top: 10px"
+                >🔗 bls.gov/ooh</span
+              >
+              <div class="btn-resource">Browse Guides →</div>
+            </a>
+
+            <a
+              href="https://www.youtube.com/results?search_query=career+exploration"
+              target="_blank"
+              class="resource-card"
+              style="text-decoration: none; color: inherit"
+            >
+              <div class="resource-icon">🎥</div>
+              <h3>Video Tutorials</h3>
+              <p>
+                Watch comprehensive career exploration videos and field introductions on YouTube
+              </p>
+              <span style="color: #667eea; font-size: 12px; display: block; margin-top: 10px"
+                >🔗 youtube.com</span
+              >
+              <div class="btn-resource">Watch Videos →</div>
+            </a>
+
+            <a
+              href="https://www.coursera.org"
+              target="_blank"
+              class="resource-card"
+              style="text-decoration: none; color: inherit"
+            >
+              <div class="resource-icon">🎓</div>
+              <h3>Online Courses</h3>
+              <p>Free and paid courses from top universities on Coursera to learn any field</p>
+              <span style="color: #667eea; font-size: 12px; display: block; margin-top: 10px"
+                >🔗 coursera.org</span
+              >
+              <div class="btn-resource">Explore Courses →</div>
+            </a>
+
+            <a
+              href="https://www.linkedin.com/learning"
+              target="_blank"
+              class="resource-card"
+              style="text-decoration: none; color: inherit"
+            >
+              <div class="resource-icon">💼</div>
+              <h3>LinkedIn Learning</h3>
+              <p>
+                Professional development courses and career skills training from industry experts
+              </p>
+              <span style="color: #667eea; font-size: 12px; display: block; margin-top: 10px"
+                >🔗 linkedin.com/learning</span
+              >
+              <div class="btn-resource">Start Learning →</div>
+            </a>
+
+            <a
+              href="https://www.reddit.com/r/careeradvice"
+              target="_blank"
+              class="resource-card"
+              style="text-decoration: none; color: inherit"
+            >
+              <div class="resource-icon">👥</div>
+              <h3>Career Communities</h3>
+              <p>
+                Join Reddit career advice communities to connect with professionals and students
+              </p>
+              <span style="color: #667eea; font-size: 12px; display: block; margin-top: 10px"
+                >🔗 reddit.com/r/careeradvice</span
+              >
+              <div class="btn-resource">Join Communities →</div>
+            </a>
+
+            <a
+              href="https://www.glassdoor.com/Salaries/index.htm"
+              target="_blank"
+              class="resource-card"
+              style="text-decoration: none; color: inherit"
+            >
+              <div class="resource-icon">📊</div>
+              <h3>Salary Data</h3>
+              <p>Research real salary information and job market trends on Glassdoor</p>
+              <span style="color: #667eea; font-size: 12px; display: block; margin-top: 10px"
+                >🔗 glassdoor.com</span
+              >
+              <div class="btn-resource">View Salaries →</div>
+            </a>
+
+            <a
+              href="https://www.indeed.com/career-advice"
+              target="_blank"
+              class="resource-card"
+              style="text-decoration: none; color: inherit"
+            >
+              <div class="resource-icon">💡</div>
+              <h3>Career Advice</h3>
+              <p>Expert career advice, interview tips, and job search strategies from Indeed</p>
+              <span style="color: #667eea; font-size: 12px; display: block; margin-top: 10px"
+                >🔗 indeed.com/career-advice</span
+              >
+              <div class="btn-resource">Get Advice →</div>
+            </a>
+
+            <a
+              href="https://www.khanacademy.org"
+              target="_blank"
+              class="resource-card"
+              style="text-decoration: none; color: inherit"
+            >
+              <div class="resource-icon">📖</div>
+              <h3>Khan Academy</h3>
+              <p>Free educational content to learn fundamental concepts in any field</p>
+              <span style="color: #667eea; font-size: 12px; display: block; margin-top: 10px"
+                >🔗 khanacademy.org</span
+              >
+              <div class="btn-resource">Learn Free →</div>
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-section">
+            <h4>Academic Fields</h4>
+            <a href="#stem">STEM</a>
+            <a href="#business">Business</a>
+            <a href="#humanities">Humanities</a>
+            <a href="#health">Health Sciences</a>
+          </div>
+          <div class="footer-section">
+            <h4>Resources</h4>
+            <a href="#guides">Field Guides</a>
+            <a href="#careers">Career Info</a>
+            <a href="#comparison">Field Comparison</a>
+            <a href="#pathways">Career Pathways</a>
+          </div>
+          <div class="footer-section">
+            <h4>Support</h4>
+            <a href="#help">Help Center</a>
+            <a href="#contact">Contact</a>
+            <a href="#faq">FAQ</a>
+            <a href="#feedback">Feedback</a>
+          </div>
+          <div class="footer-section">
+            <h4>Connect</h4>
+            <a href="#">Twitter</a>
+            <a href="#">LinkedIn</a>
+            <a href="#">Newsletter</a>
+            <a href="#">Blog</a>
+          </div>
+        </div>
+        <p>&copy; 2025 BraineX. All rights reserved.</p>
+      </div>
+    </footer>
+
+
+    <!-- Login/Signup modals are injected by global.js ensureAuthModals() -->
+
+
+    <script defer src="/assets/js/auth-api.js?v=hotfix.2"></script>
+    <script defer src="/assets/js/global.js?v=hotfix.2"></script>
+
+    <script defer src="/assets/js/performance.js"></script>
+    <script defer src="/assets/js/interactions.js"></script>
+    <script defer src="/assets/js/functionality-fixes.js"></script>
+    <script defer src="/assets/js/fields.js"></script>
+  </body>
+</html>
+

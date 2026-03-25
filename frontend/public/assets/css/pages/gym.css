@@ -1,0 +1,157 @@
+/* Brain Gym Page Styles */
+
+.gym-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  min-height: 80vh;
+}
+
+.gym-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.gym-header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+  background: var(--color-brand-gradient);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gym-header .subtitle {
+  color: var(--text-secondary);
+  font-size: 1.1rem;
+}
+
+.game-selector {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 3rem;
+}
+
+.game-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: 16px;
+  padding: 2rem;
+  text-align: center;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    border-color 0.3s;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.game-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  border-color: var(--color-brand-primary);
+}
+
+.game-icon {
+  font-size: 3.5rem;
+  margin-bottom: 1rem;
+  line-height: 1;
+}
+
+.game-card h3 {
+  margin: 0.5rem 0;
+  font-size: 1.25rem;
+  color: var(--text-primary);
+}
+
+.game-card p {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  margin-bottom: 1.5rem;
+  flex-grow: 1;
+}
+
+.active-game-area {
+  min-height: 500px;
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: 20px;
+  padding: 2rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  display: none;
+  /* Hidden until game selected */
+}
+
+.active-game-area.visible {
+  display: block;
+  animation: fadeIn 0.5s ease;
+}
+
+/* Common Game Styles */
+.game-container {
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.game-stats {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+  background: var(--bg-secondary);
+  border-radius: 12px;
+  margin-bottom: 2rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  width: 300px;
+  margin: 0 auto 2rem;
+}
+
+.grid-cell {
+  width: 90px;
+  height: 90px;
+  background: var(--bg-tertiary);
+  /* Light background */
+  border: 2px solid var(--border-color);
+  border-radius: 12px;
+  transition:
+    background 0.2s,
+    transform 0.1s;
+}
+
+.grid-cell.active {
+  background: var(--color-info);
+  border-color: var(--color-info-dark);
+  box-shadow: 0 0 15px var(--color-info-light);
+}
+
+.controls {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
