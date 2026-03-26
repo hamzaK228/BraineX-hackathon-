@@ -1502,7 +1502,6 @@ footer {
     position: fixed;
     top: 60px;
     /* Reduced to match header height */
-    left: 0;
     height: calc(100vh - 60px);
     background: var(--bg-primary);
     /* Use a solid background for contrast */
@@ -2048,4 +2047,16 @@ html[data-theme='dark'] .faq-answer {
   background: var(--bg-secondary);
   border-radius: 12px;
   grid-column: 1 / -1;
+}
+
+/* Universal Header Override for all pages */
+header, .navbar {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
+  color: #ffffff !important;
+}
+
+/* Force all text, links, and icons in the header/navbar to be white */
+header a, header .nav-link, header .logo-text, header .brand-text, header .btn-login, header .btn-signup,
+.navbar a, .navbar .nav-link, .navbar .logo-text, .navbar .brand-text, .navbar .btn-login, .navbar .btn-signup {
+  color: #ffffff !important;
 }

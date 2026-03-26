@@ -477,6 +477,8 @@ function setupModalInteractions() {
 
   // Password toggles
   document.querySelectorAll('.btn-toggle-password').forEach(btn => {
+    if (btn.dataset.wired) return;
+    btn.dataset.wired = '1';
     btn.addEventListener('click', (e) => {
       e.preventDefault();
       const targetId = btn.dataset.target;
