@@ -125,6 +125,14 @@
         </ul>
       </div>
 
+      <div class="sidebar-section" id="ai-roadmaps-section">
+        <h4>🤖 AI Roadmaps</h4>
+        <div class="sidebar-menu" id="ai-roadmaps-list">
+          <!-- Populated dynamically by JS -->
+          <div class="sidebar-empty">No active roadmaps</div>
+        </div>
+      </div>
+
       <div class="sidebar-actions">
         <button class="btn-new js-new-item">+ New Page</button>
         <button class="btn-template js-show-templates">📋 Templates</button>
@@ -451,6 +459,26 @@
         </div>
         <div class="programs-grid" id="myProgramsGrid">
           <!-- Populated by JS -->
+        </div>
+      </section>
+
+      <!-- AI Roadmap Workspace View (Dynamic) -->
+      <section class="content-section" id="workspace-view">
+        <div class="page-header">
+            <h1 id="workspace-title">Roadmap Workspace</h1>
+            <p class="page-subtitle">Your personalized path to success, curated by BraineX AI.</p>
+        </div>
+
+        <div class="workspace-grid">
+            <div class="workspace-card main-path">
+                <h3>📋 Task List</h3>
+                <div id="workspace-tasks" class="workspace-tasks-container"></div>
+            </div>
+            
+            <div class="workspace-card side-info">
+                <h3>📖 Notes & Resources</h3>
+                <div id="workspace-notes" class="workspace-notes-container"></div>
+            </div>
         </div>
       </section>
     </main>

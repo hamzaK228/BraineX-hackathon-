@@ -34,6 +34,7 @@ import roadmapRoutes from './backend/routes/roadmaps.js';
 import adminRoutes from './backend/routes/admin.js';
 import universityRoutes from './backend/routes/universities.js';
 import programRoutes from './backend/routes/programs.js';
+import aiRoutes from './backend/routes/ai.js';
 
 // Import database and logger
 import { testConnection, closePool } from './backend/config/database.js';
@@ -159,6 +160,7 @@ app.use('/api/roadmaps', rateLimiter, roadmapRoutes);
 app.use('/api/admin', rateLimiter, adminRoutes);
 app.use('/api/universities', rateLimiter, universityRoutes);
 app.use('/api/programs', rateLimiter, programRoutes);
+app.use('/api/ai', rateLimiter, aiRoutes);
 
 // Frontend routes - serve HTML files
 app.get('/', (req, res) => {

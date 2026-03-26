@@ -46,7 +46,7 @@ async function runMigrations() {
       console.log(`  - ${Object.values(table)[0]}`);
     });
   } catch (error) {
-    console.error('❌ Migration failed:', error.message);
+    console.error('❌ Migration failed:', error);
     process.exit(1);
   } finally {
     if (connection) {

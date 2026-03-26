@@ -3,50 +3,80 @@ import { pool } from '../config/database.js';
 // Get all items (goals, tasks, notes)
 export const getItems = async (req, res) => {
   try {
-    const { type } = req.query;
+    const { type, parentId } = req.query;
     const userId = req.user.id;
 
-    const [items] = await pool.query(
-      'SELECT * FROM goals WHERE user_id = ? ORDER BY created_at DESC',
-      [userId]
-    );
+    let query = 'SELECT * FROM goals WHERE user_id = ?';
+    const params = [userId];
 
-    const filtered = type ? items.filter((i) => i.type === type) : items;
-    res.json({ success: true, count: filtered.length, data: filtered });
+    if (parentId !== undefined) {
+      query += ' AND parent_id ' + (parentId === 'null' ? 'IS NULL' : '= ?');
+      if (parentId !== 'null') params.push(parentId);
+    }
+
+    if (type) {
+      query += ' AND type = ?';
+      params.push(type);
+    }
+
+    query += ' ORDER BY created_at DESC';
+
+    const [items] = await pool.query(query, params);
+    const responseData = { success: true, count: items.length, data: items };
+
+    if (res && typeof res.json === 'function') {
+      return res.json(responseData);
+    }
+    return responseData;
   } catch (error) {
-    // Fallback or empty handle, currently no generic json for goals
-    res.json({ success: true, count: 0, data: [] });
+    const errorData = { success: false, error: error.message };
+    if (res && typeof res.status === 'function') {
+      return res.status(500).json(errorData);
+    }
+    return errorData;
   }
 };
+
 
 export const createItem = async (req, res) => {
   try {
-    const { type, title, description, priority, dueDate } = req.body;
+    const { type, title, description, priority, dueDate, parentId, category, milestones, content } = req.body;
     const userId = req.user.id;
 
     const [result] = await pool.query(
-      'INSERT INTO goals (user_id, type, title, description, priority, due_date) VALUES (?, ?, ?, ?, ?, ?)',
-      [userId, type, title, description, priority, dueDate]
+      'INSERT INTO goals (user_id, type, title, description, priority, due_date, parent_id, category, milestones, content) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)',
+      [userId, type || 'goal', title, description || null, priority || 'medium', dueDate || null, parentId || null, category || null, milestones ? JSON.stringify(milestones) : null, content || null]
     );
 
-    res.status(201).json({
+    const responseData = {
       success: true,
-      data: { id: result.insertId, type, title, description, priority, dueDate }
-    });
+      data: { id: result.insertId, type: type || 'goal', title, description, priority, dueDate, parentId, category, content }
+    };
+
+    // Support both real HTTP responses and mock AI tool calls
+    if (res && typeof res.status === 'function' && typeof res.status(201)?.json === 'function') {
+      return res.status(201).json(responseData);
+    }
+    return responseData;
   } catch (error) {
-    res.status(400).json({ success: false, error: error.message });
+    const errorData = { success: false, error: error.message };
+    if (res && typeof res.status === 'function') {
+      return res.status(400).json(errorData);
+    }
+    return errorData;
   }
 };
 
+
 export const updateItem = async (req, res) => {
   try {
-    const { status, title, description, priority, dueDate, progress } = req.body;
+    const { status, title, description, priority, dueDate, progress, content, milestones } = req.body;
     const { id } = req.params;
     const userId = req.user.id;
 
     await pool.query(
-      'UPDATE goals SET status = COALESCE(?, status), title = COALESCE(?, title), description = COALESCE(?, description), priority = COALESCE(?, priority), due_date = COALESCE(?, due_date), progress = COALESCE(?, progress) WHERE id = ? AND user_id = ?',
-      [status, title, description, priority, dueDate, progress, id, userId]
+      'UPDATE goals SET status = COALESCE(?, status), title = COALESCE(?, title), description = COALESCE(?, description), priority = COALESCE(?, priority), due_date = COALESCE(?, due_date), progress = COALESCE(?, progress), content = COALESCE(?, content), milestones = COALESCE(?, milestones) WHERE id = ? AND user_id = ?',
+      [status, title, description, priority, dueDate, progress, content, milestones ? JSON.stringify(milestones) : null, id, userId]
     );
 
     res.json({ success: true, message: 'Item updated successfully' });

@@ -3,8 +3,11 @@
  * Shared utilities and functions across all pages
  */
 
-// Initialize auth API on page load
+// Initialize auth API and AI Assistant on page load
 document.addEventListener('DOMContentLoaded', () => {
+  // Inject AI Assistant Assets
+  injectAIAssets();
+
   // Inject auth modals if missing (crucial for subpages)
   ensureAuthModals();
 
@@ -22,6 +25,28 @@ document.addEventListener('DOMContentLoaded', () => {
     updateUIForAuthenticatedUser();
   }
 });
+
+/**
+ * Dynamically inject AI Assistant CSS and JS
+ */
+function injectAIAssets() {
+  // CSS
+  if (!document.getElementById('ai-assistant-css')) {
+    const link = document.createElement('link');
+    link.id = 'ai-assistant-css';
+    link.rel = 'stylesheet';
+    link.href = '/assets/css/ai-assistant.css';
+    document.head.appendChild(link);
+  }
+
+  // JS
+  if (!document.getElementById('ai-assistant-js')) {
+    const script = document.createElement('script');
+    script.id = 'ai-assistant-js';
+    script.src = '/assets/js/ai-assistant.js';
+    document.body.appendChild(script);
+  }
+}
 
 /**
  * Update UI elements for authenticated users
@@ -538,6 +563,7 @@ async function handleSignup(e) {
     lastName: document.getElementById('lastName')?.value,
     email: document.getElementById('signupEmail')?.value,
     password: document.getElementById('signupPassword')?.value,
+    confirmPassword: document.getElementById('confirmPassword')?.value,
     field: document.getElementById('fieldOfInterest')?.value
   };
 

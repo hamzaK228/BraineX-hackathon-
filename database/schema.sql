@@ -11,6 +11,7 @@ DROP TABLE IF EXISTS mentors;
 DROP TABLE IF EXISTS projects;
 DROP TABLE IF EXISTS events;
 DROP TABLE IF EXISTS fields;
+DROP TABLE IF EXISTS ai_chat_history;
 DROP TABLE IF EXISTS users;
 
 -- Users table (central authentication)
@@ -222,3 +223,37 @@ CREATE TABLE event_registrations (
     INDEX idx_user (user_id),
     INDEX idx_status (status)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+-- AI Chat History table
+CREATE TABLE ai_chat_history (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    user_id INT NOT NULL,
+    role ENUM('user', 'assistant') NOT NULL,
+    content TEXT NOT NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE,
+    INDEX idx_user_id (user_id),
+    INDEX idx_created_at (created_at)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+-- Goals, Tasks, and Roadmaps (Notion-like system)
+CREATE TABLE IF NOT EXISTS goals (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  user_id INT NOT NULL,
+  parent_id INT DEFAULT NULL, -- Enables dedicated sub-pages/workspaces
+  type ENUM('goal', 'task', 'note', 'page', 'roadmap') NOT NULL DEFAULT 'goal',
+  title VARCHAR(255) NOT NULL,
+  description TEXT,
+  category VARCHAR(50) DEFAULT 'academic',
+  priority ENUM('low', 'medium', 'high') DEFAULT 'medium',
+  status VARCHAR(50) DEFAULT 'active',
+  progress INT DEFAULT 0,
+  due_date DATE,
+  start_date DATE,
+  content LONGTEXT, -- Stores page-specific notes or JSON structures
+  milestones JSON, -- Stores an array of milestones if needed
+  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+  updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE,
+  FOREIGN KEY (parent_id) REFERENCES goals(id) ON DELETE SET NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;

@@ -82,29 +82,84 @@ async function initData() {
         const response = await api.apiRequest('/goals');
 
         if (response && response.success && Array.isArray(response.data)) {
-            window.goalsData = response.data.filter(i => i.type === 'goal');
-            window.tasksData = response.data.filter(i => i.type === 'task');
-            window.notesData = response.data.filter(i => i.type === 'note');
+            const allItems = response.data;
+            window.goalsData = allItems.filter(i => i.type === 'goal' || i.type === 'roadmap');
+            window.tasksData = allItems.filter(i => i.type === 'task');
+            window.notesData = allItems.filter(i => i.type === 'note');
+            
+            // Re-render sidebar if we have roadmaps
+            refreshSidebar();
         } else {
-            // Fallback to LocalStorage if API fails or returns invalid data
-            console.warn('API unavailable or invalid response, loading from LocalStorage');
+            console.warn('API unavailable, loading from LocalStorage');
             loadFromLocalStorage();
         }
     } catch (err) {
-        console.warn('Backend unavailable, using localized data:', err);
+        console.warn('Backend unavailable:', err);
         loadFromLocalStorage();
     }
 
     // Normalize data
     window.goalsData.forEach(g => {
         g.progress = g.progress || 0;
-        g.endDate = g.dueDate || g.endDate; // Normalize date field
+        g.endDate = g.dueDate || g.endDate;
     });
 
-    // Handle initial routing
     const initialSection = window.location.hash.substring(1) || 'overview';
     internalSwitchSection(initialSection);
 }
+
+// Global Listener for AI Activities
+window.addEventListener('roadmapCreated', (e) => {
+    console.log('Syncing with AI Roadmap:', e.detail);
+    showNotification(`New Workspace Created: ${e.detail.title}`, 'success');
+    initData(); // Re-fetch everything
+});
+
+/**
+ * Dynamically adds Roadmaps/Workspaces to the Sidebar
+ */
+function refreshSidebar() {
+    const roadmaps = window.goalsData.filter(g => g.type === 'roadmap');
+    const roadmapContainer = document.getElementById('ai-roadmaps-list');
+    
+    if (!roadmaps.length || !roadmapContainer) return;
+
+    roadmapContainer.innerHTML = roadmaps.map(r => `
+        <a href="#roadmap-${r.id}" class="sidebar-link" data-section="workspace" data-roadmap-id="${r.id}" onclick="loadRoadmapWorkspace(${r.id})">
+            <span class="link-icon">🎯</span>
+            <span class="link-text">${r.title}</span>
+        </a>
+    `).join('');
+}
+
+/**
+ * Loads a dedicated workspace view for a specific roadmap
+ */
+window.loadRoadmapWorkspace = function(roadmapId) {
+    const roadmap = window.goalsData.find(g => g.id === roadmapId);
+    if (!roadmap) return;
+
+    // Switch to a generic "workspace" section
+    internalSwitchSection('workspace-view');
+
+    // Filter Tasks and Notes for THIS workspace
+    const workspaceTasks = window.tasksData.filter(t => t.parent_id === roadmapId);
+    const workspaceNotes = window.notesData.filter(n => n.parent_id === roadmapId);
+
+    // Update Workspace UI
+    const titleEl = document.getElementById('workspace-title');
+    if (titleEl) titleEl.textContent = roadmap.title;
+
+    const taskContainer = document.getElementById('workspace-tasks');
+    if (taskContainer) {
+        taskContainer.innerHTML = workspaceTasks.map(t => `
+            <div class="workspace-task-item">
+                <input type="checkbox" ${t.status === 'completed' ? 'checked' : ''} onchange="moveTask(${t.id}, this.checked ? 'completed' : 'todo')">
+                <span>${t.title}</span>
+            </div>
+        `).join('') || '<p class="empty-state">No tasks in this roadmap yet.</p>';
+    }
+};
 
 function loadFromLocalStorage() {
     window.goalsData = JSON.parse(localStorage.getItem('my_goals')) || [];
